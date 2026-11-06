@@ -246,3 +246,7 @@ Fine-pointer devices use a native paw cursor with a white outline for contrast. 
 ## Floating navigation dock
 
 Primary navigation is a React Floating Dock with the five original Vietnamese titles and anchor targets. It uses the supplied Aceternity neutral light/dark visual styles and Tabler icons. Desktop sits at bottom center; mobile expands at bottom right. Existing top header utility controls remain. Dock styles are built with Tailwind v4 and scoped to its root, preserving the page's incumbent Tailwind CDN styles. See FLOATING-DOCK.md for all source deviations and build/check instructions.
+
+## Hero and booking flow refinement
+
+Hero sits inside a 24px desktop gutter with 32px corners (12px gutter and 24px corners on mobile). Its copy uses locally hosted Nunito at medium body and extra-bold heading weights, with Latin and Vietnamese subsets; remaining sections retain Be Vietnam Pro. Hero spacing no longer reserves room for an overlapping form. The trust strip directly follows the hero. The original booking card now follows `#booking-steps`, before testimonials, with a 40px gap and its original `#booking-card` anchor preserved. Font license is stored in `assets/fonts/Nunito-LICENSE.txt`.

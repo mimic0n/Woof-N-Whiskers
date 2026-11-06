@@ -1,15 +1,49 @@
+/* nunito-vietnamese-500-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('fonts/nunito-vietnamese-500-normal.woff2') format('woff2');
+}
+/* nunito-latin-500-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('fonts/nunito-latin-500-normal.woff2') format('woff2');
+}
+/* nunito-vietnamese-800-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('fonts/nunito-vietnamese-800-normal.woff2') format('woff2');
+}
+/* nunito-latin-800-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('fonts/nunito-latin-800-normal.woff2') format('woff2');
+}
 /* Shared 1920 × 900 backgrounds; copy stays independent of slide changes. */
-.hero-slider { position: relative; isolation: isolate; overflow: hidden; background: #faf5f0; }
+.hero-slider { max-width: 1440px; margin: 24px auto 0; width: calc(100% - 48px); border-radius: 32px; position: relative; isolation: isolate; overflow: hidden; background: #faf5f0; }
 .hero-backgrounds, .hero-slide, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-backgrounds { z-index: -2; overflow: hidden; }
 .hero-slide { object-fit: cover; object-position: center; opacity: 0; }
 .hero-slide.is-active { opacity: 1; }
 .hero-shade { z-index: -1; background: linear-gradient(90deg, #faf5f0 0%, rgba(250,245,240,.96) 23%, rgba(250,245,240,.78) 42%, rgba(250,245,240,0) 65%); }
-.hero-inner { max-width: 1280px; margin-inline: auto; padding: 64px 24px 176px; min-height: 700px; display: flex; align-items: center; }
+.hero-inner { max-width: 1280px; margin-inline: auto; padding: 56px 40px 112px; min-height: 600px; display: flex; align-items: center; }
 .hero-copy { width: 55%; max-width: 640px; }
-.hero-copy h1 { font-size: clamp(2.25rem,3.25vw,3.25rem); text-wrap: balance; }
+.hero-copy { font-family: "Nunito", "Be Vietnam Pro", sans-serif; }
+.hero-copy h1 { font-family: "Nunito", "Be Vietnam Pro", sans-serif; font-weight: 800; line-height: 1.15; letter-spacing: -.025em; font-size: clamp(2.25rem,3.25vw,3.25rem); text-wrap: balance; }
+.hero-copy p { font-weight: 500; line-height: 1.65; }
 .hero-copy p { max-width: 54ch; }
-.hero-controls { position: absolute; bottom: 104px; left: max(24px,calc((100% - 1232px)/2)); display: flex; gap: 8px; align-items: center; }
+.hero-controls { position: absolute; bottom: 28px; left: max(40px,calc((100% - 1200px)/2)); display: flex; gap: 8px; align-items: center; }
 .hero-controls[hidden] { display: none; }
 .hero-controls button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #d4c3ba; border-radius: 50%; background: #fff8f5; color: #68462c; cursor: pointer; transition: background-color 150ms ease; }
 .hero-controls button:hover { background: #f9eed9; }
@@ -21,15 +55,16 @@
 .hero-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (min-width: 1600px) { .hero-inner { min-height: min(850px,46.875vw); } }
 @media (max-width: 1023px) {
-  .hero-inner { min-height: 690px; padding-top: 48px; }
+  .hero-inner { min-height: 600px; padding-top: 48px; }
   .hero-copy { width: 60%; }
   .hero-shade { background: linear-gradient(90deg,#faf5f0 0%,rgba(250,245,240,.96) 36%,rgba(250,245,240,.2) 75%); }
 }
 @media (max-width: 639px) {
-  .hero-backgrounds { height: 280px; }
+  .hero-slider { width: calc(100% - 24px); margin-top: 12px; border-radius: 24px; }
+  .hero-backgrounds { height: 260px; }
   .hero-slide { object-position: 88% center; }
-  .hero-shade { height: 282px; background: linear-gradient(0deg,#faf5f0 0%,rgba(250,245,240,0) 35%); }
-  .hero-inner { display: block; min-height: 0; padding: 278px 20px 180px; }
+  .hero-shade { height: 262px; background: linear-gradient(0deg,#faf5f0 0%,rgba(250,245,240,0) 35%); }
+  .hero-inner { display: block; min-height: 0; padding: 258px 20px 96px; }
   .hero-copy { width: 100%; max-width: none; }
   .hero-copy h1 { font-size: 2rem; }
   .hero-copy > .inline-flex { max-width: 100%; }
