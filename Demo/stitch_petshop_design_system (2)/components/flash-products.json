@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Bánh thưởng đông khô Orijen Tundra",
+    "image": "assets/products/orijen-tundra.webp",
+    "brand": "Orijen",
+    "discount": "-25%",
+    "price": "165.000đ",
+    "originalPrice": "220.000đ",
+    "reviews": "48",
+    "rating": 4.5,
+    "imageAlt": "Bánh thưởng đông khô Orijen Tundra cho mèo",
+    "imageNote": ""
+  },
+  {
+    "title": "Bóng lăn thông minh tự xoay Wicked Ball",
+    "image": "assets/products/cheerble-wicked-ball.webp",
+    "brand": "Cheerble",
+    "discount": "-20%",
+    "price": "390.000đ",
+    "originalPrice": "488.000đ",
+    "reviews": "129",
+    "rating": 5,
+    "imageAlt": "Bóng đồ chơi tự xoay Cheerble Wicked Ball màu xanh",
+    "imageNote": ""
+  },
+  {
+    "title": "Nệm lười công thái học siêu êm size M",
+    "image": "assets/products/pawnest-bed.webp",
+    "brand": "PawNest",
+    "discount": "-30%",
+    "price": "295.000đ",
+    "originalPrice": "420.000đ",
+    "reviews": "34",
+    "rating": 4,
+    "imageAlt": "Nệm thú cưng công thái học màu kem",
+    "imageNote": ""
+  },
+  {
+    "title": "Sữa tắm dưỡng lông mượt hương Lavender 500ml",
+    "image": "assets/products/bio-groom-shampoo.webp",
+    "brand": "Bio-Groom",
+    "discount": "-15%",
+    "price": "210.000đ",
+    "originalPrice": "248.000đ",
+    "reviews": "88",
+    "rating": 5,
+    "imageAlt": "Chai sữa tắm dưỡng lông Bio-Groom Protein Lanolin",
+    "imageNote": "Ảnh tham khảo dòng Bio-Groom Protein Lanolin"
+  }
+]

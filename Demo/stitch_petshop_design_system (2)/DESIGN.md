@@ -249,4 +249,8 @@ Primary navigation is a React Floating Dock with the five original Vietnamese ti
 
 ## Hero and booking flow refinement
 
-Hero sits inside a 24px desktop gutter with 32px corners (12px gutter and 24px corners on mobile). Its copy uses locally hosted Nunito at medium body and extra-bold heading weights, with Latin and Vietnamese subsets; remaining sections retain Be Vietnam Pro. Hero spacing no longer reserves room for an overlapping form. The trust strip directly follows the hero. The original booking card now follows `#booking-steps`, before testimonials, with a 40px gap and its original `#booking-card` anchor preserved. Font license is stored in `assets/fonts/Nunito-LICENSE.txt`.
+Hero occupies 90% of the viewport width, centered with 5% gutters on each side, with 32px corners on desktop and 24px corners on mobile. Its copy uses locally hosted Nunito at medium body and extra-bold heading weights, with Latin and Vietnamese subsets; remaining sections retain Be Vietnam Pro. Hero spacing no longer reserves room for an overlapping form. The trust strip directly follows the hero. The original booking card now follows `#booking-steps`, before testimonials, with a 40px gap and its original `#booking-card` anchor preserved. Font license is stored in `assets/fonts/Nunito-LICENSE.txt`.
+
+## Flash Sale product cards
+
+Use the local product-card-1663178758 reference: 25px corners, a 252px orange/red gradient head, WnW brand detail, large translucent WnW lettering and product imagery extending into a white body. Retain original pet-product data and cart actions. A bright green price tag extends 8px beyond the side; green badges use dark text for contrast. Preserve the earlier no-black-shadow preference. Grid remains responsive. CSS is scoped in assets/product-card.css and does not import the reference's global page styling. Details and adaptations are in FLASH-CARDS.md.

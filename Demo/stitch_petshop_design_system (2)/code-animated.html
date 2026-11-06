@@ -250,7 +250,9 @@
   }
 </style>
 <link rel="stylesheet" href="assets/hero-slider.css"/>
+<link rel="stylesheet" href="assets/product-stories.css"/>
 <link rel="stylesheet" href="assets/background.css"/>
+<link rel="stylesheet" href="assets/product-card.css"/>
 <link rel="stylesheet" href="assets/floating-dock.css"/>
 <style>
 .dock-ready .dock-fallback { display: none; }
@@ -398,6 +400,42 @@
 <button type="button" data-hero-pause aria-label="Tạm dừng tự chuyển ảnh"><span class="material-symbols-outlined" aria-hidden="true">pause</span></button>
 <span class="hero-status" role="status" aria-live="polite"></span>
 </div>
+</section>
+<!-- Product introduction and stories -->
+<section class="product-stories" id="product-stories" aria-labelledby="product-stories-title">
+  <div class="product-stories-heading">
+    <h2 id="product-stories-title">Những điều nhỏ bé.<br><em>Một đời được yêu thương.</em></h2>
+    <p>Từ bữa ăn ngon đến một giấc ngủ yên, khám phá những sản phẩm đồng hành cùng bé mỗi ngày.</p>
+  </div>
+  <div class="product-stories-grid">
+    <article class="product-story-card story-food">
+      <img src="assets/products/orijen-tundra.webp" alt="Bao bì bánh thưởng đông khô Orijen Tundra cho mèo" width="640" height="480" loading="lazy" decoding="async"/>
+      <div class="product-story-top"><h3><em>Ngon lành</em><br>từng khoảnh khắc</h3><span>Orijen Tundra · Bánh thưởng</span></div>
+      <div class="product-story-bottom"><p>Một phần thưởng nhỏ, thêm một lần bé cảm nhận được yêu thương.</p><a href="#story-mealtime">Khám phá câu chuyện <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="product-story-card story-play">
+      <img src="assets/products/cheerble-wicked-ball.webp" alt="Bóng đồ chơi Cheerble Wicked Ball" width="640" height="480" loading="lazy" decoding="async"/>
+      <div class="product-story-top"><h3><em>Niềm vui</em><br>không đứng yên</h3><span>Cheerble · Wicked Ball</span></div>
+      <div class="product-story-bottom"><p>Biến khoảng thời gian ở nhà thành những giờ chơi đầy háo hức.</p><a href="#story-playtime">Khám phá câu chuyện <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <article class="product-story-card story-rest">
+      <img src="assets/products/pawnest-bed.webp" alt="Chú chó ngủ yên trên chiếc đệm mềm trong phòng khách" width="512" height="279" loading="lazy" decoding="async"/>
+      <div class="product-story-top"><h3><em>Bình yên</em><br>có một chỗ riêng</h3><span>Đệm êm · Giấc ngủ của bé</span></div>
+      <div class="product-story-bottom"><p>Sau một ngày khám phá, bé chỉ cần một góc thật êm để cuộn mình.</p><a href="#story-resttime">Khám phá câu chuyện <span aria-hidden="true">↗</span></a></div>
+    </article>
+  </div>
+  <div class="product-story-editorial">
+    <div class="product-story-signature"><span class="story-wordmark">WnW<span aria-hidden="true">®</span></span><p>Hiểu bé hơn.<br>Thương bé đúng cách.</p><a href="#flash-sale">Khám phá sản phẩm <span aria-hidden="true">→</span></a></div>
+    <div class="product-story-narrative">
+      <h3>Mỗi bé một tính cách.<br>Mỗi món đồ, <em>một lời yêu thương.</em></h3>
+      <p>Bé không thể nói mình cần gì, nhưng những thói quen nhỏ luôn kể một câu chuyện: ánh mắt chờ bữa ăn, chiếc đuôi vẫy khi được chơi cùng, hay dáng nằm cuộn tròn lúc ngủ. Đó là nơi câu chuyện sản phẩm tại WnW bắt đầu.</p>
+      <div class="product-story-details">
+        <details id="story-mealtime"><summary>Từ một bữa ăn được mong chờ</summary><p>Tiếng mở túi bánh thưởng có thể khiến bé chạy đến bên bạn. Orijen Tundra góp mặt trong những khoảnh khắc gần gũi ấy: khi làm quen, khi chơi cùng nhau, hay sau một lần bé ngoan. Hãy chọn khẩu phần phù hợp với bé và hướng dẫn trên bao bì.</p></details>
+        <details id="story-playtime"><summary>Đến những giờ chơi bên nhau</summary><p>Một quả bóng lăn qua cũng đủ khơi dậy sự tò mò. Cheerble Wicked Ball mang đến một lựa chọn cho góc vui chơi của bé, để những bước đuổi bắt trở thành một phần của ngày. Chọn đồ chơi phù hợp với kích thước, thói quen và luôn quan sát bé khi chơi.</p></details>
+        <details id="story-resttime"><summary>Và một nơi để trở về</summary><p>Khi cuộc vui khép lại, một chiếc đệm êm là góc nhỏ quen thuộc để bé thả lỏng. Đặt đệm ở nơi yên tĩnh, chọn kích thước đủ cho bé duỗi mình và giữ đệm sạch sẽ — những điều giản dị làm nên cảm giác được chăm sóc mỗi ngày.</p></details>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- 4. TRUST BADGE STRIP -->
 <section class="pet-waypoint max-w-7xl mx-auto px-6 py-16">
@@ -550,130 +588,94 @@
 </div>
 </div>
 <!-- 4 Discounted Product Cards -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Product 1 -->
-<div class="bg-white rounded-2xl p-4 border border-border-subtle card-shadow-1 hover:card-shadow-2 hover:-translate-y-1 transition-all flex flex-col justify-between">
-<div>
-<div class="relative">
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-bg-canvas mb-3">
-<img class="w-full h-full object-cover" data-alt="Pack of high-grade natural cat freeze-dried treats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqIokuouqwrx7leFkGTj-Slk1ZPsCKENM8bODxxhhUVgYuo2LrV_--tsVG5KQC0ec_KPwbFE-6geT-jwCCRaXxK3RYODERkx92uXfwkzdV_CSVYqik5UWSlagqW1YZBbrdXyli1ScS9pYAJ85aBVdfD2MRDOSujm03NnHlsWuMGNyrhHtTdsO2Xj_Ymd2dsQ-yl22-neSwFY2CUSCS--J_jWmEhQ-NTAdsZNftA6lL"/>
+<div id="flash-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="wnw-product-card">
+  <div class="card-head">
+    <span class="card-logo" aria-hidden="true"><span class="material-symbols-outlined fill-icon">pets</span><b>WnW</b></span>
+    <div class="product-detail"><h3>Orijen</h3><p>Bánh thưởng</p></div>
+    <span class="back-text" aria-hidden="true">WnW</span>
+    <img src="assets/products/orijen-tundra.webp" alt="Bánh thưởng đông khô Orijen Tundra cho mèo" width="640" height="480" loading="lazy" decoding="async" class="product-img"/>
+  </div>
+  <div class="card-body">
+    <div class="product-desc">
+      <span class="badge">-25%</span>
+      <h3 class="product-title">Bánh thưởng đông khô Orijen Tundra</h3>
+      <p class="product-caption">Thương hiệu: Orijen</p>
+      <div class="product-rating" aria-label="4.5 trên 5 sao, 48 đánh giá"><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star_half</span><span class="review-count">(48)</span></div>
+      
+    </div>
+    <div class="product-properties">
+      <del class="product-original-price">220.000đ</del>
+      <span class="product-price"><b>165.000đ</b></span>
+    </div>
+    <button class="product-cart" type="button" aria-label="Thêm Bánh thưởng đông khô Orijen Tundra vào giỏ"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span> Thêm vào giỏ</button>
+  </div>
 </div>
-<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-danger text-white text-[11px] font-bold">-25%</span>
+<div class="wnw-product-card">
+  <div class="card-head">
+    <span class="card-logo" aria-hidden="true"><span class="material-symbols-outlined fill-icon">pets</span><b>WnW</b></span>
+    <div class="product-detail"><h3>Cheerble</h3><p>Đồ chơi</p></div>
+    <span class="back-text" aria-hidden="true">WnW</span>
+    <img src="assets/products/cheerble-wicked-ball.webp" alt="Bóng đồ chơi tự xoay Cheerble Wicked Ball màu xanh" width="640" height="480" loading="lazy" decoding="async" class="product-img"/>
+  </div>
+  <div class="card-body">
+    <div class="product-desc">
+      <span class="badge">-20%</span>
+      <h3 class="product-title">Bóng lăn thông minh tự xoay Wicked Ball</h3>
+      <p class="product-caption">Thương hiệu: Cheerble</p>
+      <div class="product-rating" aria-label="5 trên 5 sao, 129 đánh giá"><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="review-count">(129)</span></div>
+      
+    </div>
+    <div class="product-properties">
+      <del class="product-original-price">488.000đ</del>
+      <span class="product-price"><b>390.000đ</b></span>
+    </div>
+    <button class="product-cart" type="button" aria-label="Thêm Bóng lăn thông minh tự xoay Wicked Ball vào giỏ"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span> Thêm vào giỏ</button>
+  </div>
 </div>
-<span class="text-xs text-text-muted">Thương hiệu: Orijen</span>
-<h3 class="font-semibold text-text-main text-base line-clamp-1 mt-0.5">Bánh thưởng đông khô Orijen Tundra</h3>
-<div class="flex items-center gap-1 my-2">
-<span class="text-warning text-xs flex">
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star_half</span>
-</span>
-<span class="text-[11px] text-text-muted">(48)</span>
+<div class="wnw-product-card">
+  <div class="card-head">
+    <span class="card-logo" aria-hidden="true"><span class="material-symbols-outlined fill-icon">pets</span><b>WnW</b></span>
+    <div class="product-detail"><h3>PawNest</h3><p>Nệm thú cưng</p></div>
+    <span class="back-text" aria-hidden="true">WnW</span>
+    <img src="assets/products/pawnest-bed.webp" alt="Nệm thú cưng công thái học màu kem" width="640" height="480" loading="lazy" decoding="async" class="product-img product-img-scene"/>
+  </div>
+  <div class="card-body">
+    <div class="product-desc">
+      <span class="badge">-30%</span>
+      <h3 class="product-title">Nệm lười công thái học siêu êm size M</h3>
+      <p class="product-caption">Thương hiệu: PawNest</p>
+      <div class="product-rating" aria-label="4 trên 5 sao, 34 đánh giá"><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined rating-muted" aria-hidden="true">star</span><span class="review-count">(34)</span></div>
+      
+    </div>
+    <div class="product-properties">
+      <del class="product-original-price">420.000đ</del>
+      <span class="product-price"><b>295.000đ</b></span>
+    </div>
+    <button class="product-cart" type="button" aria-label="Thêm Nệm lười công thái học siêu êm size M vào giỏ"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span> Thêm vào giỏ</button>
+  </div>
 </div>
-<div class="flex items-baseline gap-2 mb-4">
-<span class="text-cta text-lg font-bold">165.000đ</span>
-<span class="text-xs text-text-muted line-through">220.000đ</span>
-</div>
-</div>
-<button class="w-full h-11 rounded-full bg-cta-soft hover:bg-cta text-cta hover:text-white font-semibold text-sm border border-cta/30 transition-all flex items-center justify-center gap-1.5 active:scale-95">
-<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
-              Thêm vào giỏ
-            </button>
-</div>
-<!-- Product 2 -->
-<div class="bg-white rounded-2xl p-4 border border-border-subtle card-shadow-1 hover:card-shadow-2 hover:-translate-y-1 transition-all flex flex-col justify-between">
-<div>
-<div class="relative">
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-bg-canvas mb-3">
-<img class="w-full h-full object-cover" data-alt="Interactive laser puzzle toy for cats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf-QQYwUQKvu9wsW0cAtzeEJHBp48sK5Nff0hygH6fkh_d4y3tqX1oLwbxSxDEE0JSgq4N-qUJlvtT6fXbu0Wmg_cEbonuduCRJ2awp0tP29a5oMTFrZcXe6T6c-9rfhTSUhZSRpSOimjNPs0OtX3KjolK8A7EN0mZuNysupLtWIPDZ5qXn0TLxecGeWnFDRScDcbVnZmApANHaWOtikSzF6ore4fUHOXYrCclGriY"/>
-</div>
-<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-danger text-white text-[11px] font-bold">-20%</span>
-</div>
-<span class="text-xs text-text-muted">Thương hiệu: Cheerble</span>
-<h3 class="font-semibold text-text-main text-base line-clamp-1 mt-0.5">Bóng lăn thông minh tự xoay Wicked Ball</h3>
-<div class="flex items-center gap-1 my-2">
-<span class="text-warning text-xs flex">
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-</span>
-<span class="text-[11px] text-text-muted">(129)</span>
-</div>
-<div class="flex items-baseline gap-2 mb-4">
-<span class="text-cta text-lg font-bold">390.000đ</span>
-<span class="text-xs text-text-muted line-through">488.000đ</span>
-</div>
-</div>
-<button class="w-full h-11 rounded-full bg-cta-soft hover:bg-cta text-cta hover:text-white font-semibold text-sm border border-cta/30 transition-all flex items-center justify-center gap-1.5 active:scale-95">
-<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
-              Thêm vào giỏ
-            </button>
-</div>
-<!-- Product 3 -->
-<div class="bg-white rounded-2xl p-4 border border-border-subtle card-shadow-1 hover:card-shadow-2 hover:-translate-y-1 transition-all flex flex-col justify-between">
-<div>
-<div class="relative">
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-bg-canvas mb-3">
-<img class="w-full h-full object-cover" data-alt="Premium orthopedic memory foam dog bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWUBT72G96M9b9LXWc_MTyyeJUXm0b-o_N2B2oQBrK5kyCbU62SAZ_AuRaKmtPiL9MNjhq6ML91vf-vqKVLyCvO-02LmCdHmIvwe5nLVFjWwBBfFtiFKnBC73ADKDWmtSQ9JpahKyFLlZ59X3aQ8m8O5C5NkWGSOISSShvgoiYnYa3fWST6dR66OJ_os6MERu-LQ3U7kl1jwtq150ROrVMNoz9ZbxA1_q61GiJHM91"/>
-</div>
-<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-danger text-white text-[11px] font-bold">-30%</span>
-</div>
-<span class="text-xs text-text-muted">Thương hiệu: PawNest</span>
-<h3 class="font-semibold text-text-main text-base line-clamp-1 mt-0.5">Nệm lười công thái học siêu êm size M</h3>
-<div class="flex items-center gap-1 my-2">
-<span class="text-warning text-xs flex">
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px]">star</span>
-</span>
-<span class="text-[11px] text-text-muted">(34)</span>
-</div>
-<div class="flex items-baseline gap-2 mb-4">
-<span class="text-cta text-lg font-bold">295.000đ</span>
-<span class="text-xs text-text-muted line-through">420.000đ</span>
-</div>
-</div>
-<button class="w-full h-11 rounded-full bg-cta-soft hover:bg-cta text-cta hover:text-white font-semibold text-sm border border-cta/30 transition-all flex items-center justify-center gap-1.5 active:scale-95">
-<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
-              Thêm vào giỏ
-            </button>
-</div>
-<!-- Product 4 -->
-<div class="bg-white rounded-2xl p-4 border border-border-subtle card-shadow-1 hover:card-shadow-2 hover:-translate-y-1 transition-all flex flex-col justify-between">
-<div>
-<div class="relative">
-<div class="aspect-square w-full rounded-xl overflow-hidden bg-bg-canvas mb-3">
-<img class="w-full h-full object-cover" data-alt="Gentle organic pet shampoo bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkGN_helxpeQBgdczFXoqSspqO28rhA08FgF4yjMHYoho3U5JDBEogEHwnvovp6_c10W8ptSoe6ITlqgqyJXNyPXmVcOOCR8Y9erw6dxoU0M1IDKzY0vQc9-zTEtR4gTEXPiAI3Vtc0KKccqsjjaXy6OK2giMdyt4ubctFDJcFzG_FeIGL1Fqp1LV0MXYVYPFX2xryNN1Z7Vlirl9waVVfmYCXyaVrO8BWvbkBxqhD"/>
-</div>
-<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-danger text-white text-[11px] font-bold">-15%</span>
-</div>
-<span class="text-xs text-text-muted">Thương hiệu: Bio-Groom</span>
-<h3 class="font-semibold text-text-main text-base line-clamp-1 mt-0.5">Sữa tắm dưỡng lông mượt hương Lavender 500ml</h3>
-<div class="flex items-center gap-1 my-2">
-<span class="text-warning text-xs flex">
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-<span class="material-symbols-outlined text-[14px] fill-icon">star</span>
-</span>
-<span class="text-[11px] text-text-muted">(88)</span>
-</div>
-<div class="flex items-baseline gap-2 mb-4">
-<span class="text-cta text-lg font-bold">210.000đ</span>
-<span class="text-xs text-text-muted line-through">248.000đ</span>
-</div>
-</div>
-<button class="w-full h-11 rounded-full bg-cta-soft hover:bg-cta text-cta hover:text-white font-semibold text-sm border border-cta/30 transition-all flex items-center justify-center gap-1.5 active:scale-95">
-<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
-              Thêm vào giỏ
-            </button>
+<div class="wnw-product-card">
+  <div class="card-head">
+    <span class="card-logo" aria-hidden="true"><span class="material-symbols-outlined fill-icon">pets</span><b>WnW</b></span>
+    <div class="product-detail"><h3>Bio-Groom</h3><p>Chăm sóc lông</p></div>
+    <span class="back-text" aria-hidden="true">WnW</span>
+    <img src="assets/products/bio-groom-shampoo.webp" alt="Chai sữa tắm dưỡng lông Bio-Groom Protein Lanolin" width="640" height="480" loading="lazy" decoding="async" class="product-img"/>
+  </div>
+  <div class="card-body">
+    <div class="product-desc">
+      <span class="badge">-15%</span>
+      <h3 class="product-title">Sữa tắm dưỡng lông mượt hương Lavender 500ml</h3>
+      <p class="product-caption">Thương hiệu: Bio-Groom</p>
+      <div class="product-rating" aria-label="5 trên 5 sao, 88 đánh giá"><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="material-symbols-outlined fill-icon" aria-hidden="true">star</span><span class="review-count">(88)</span></div>
+      <p class="product-image-note">Ảnh tham khảo dòng Bio-Groom Protein Lanolin</p>
+    </div>
+    <div class="product-properties">
+      <del class="product-original-price">248.000đ</del>
+      <span class="product-price"><b>210.000đ</b></span>
+    </div>
+    <button class="product-cart" type="button" aria-label="Thêm Sữa tắm dưỡng lông mượt hương Lavender 500ml vào giỏ"><span class="material-symbols-outlined" aria-hidden="true">add_shopping_cart</span> Thêm vào giỏ</button>
+  </div>
 </div>
 </div>
 </div>
@@ -1280,7 +1282,7 @@
 
   var main = $('main');
   if (!main) return;
-  var secs = $$(':scope > section', main);
+  var secs = $$(':scope > section:not(#product-stories)', main);
   // Thứ tự section: 0 hero | 1 tin cậy | 2 danh mục | 3 flash sale | 4 bán chạy | 5 dịch vụ | 6 3 bước | 7 đánh giá | 8 newsletter
 
   /* ---------- Gắn class hiệu ứng (hover + trang trí) ---------- */
@@ -1290,7 +1292,6 @@
   var heroCta = $('main a.bg-cta[href="#flash-sale"]');
   if (heroCta) heroCta.classList.add('fx-ring');
 
-  if (secs[3]) addClass($$('.grid > div', secs[3]), 'fx-product');
   if (secs[4]) addClass($$('.grid > div', secs[4]), 'fx-product');
   if (secs[2]) addClass($$('.grid > a', secs[2]), 'fx-cat');
   if (secs[5]) addClass($$('.grid > div', secs[5]), 'fx-service');
@@ -1464,15 +1465,11 @@
   /* ---------- Thêm vào giỏ: bay vào giỏ + tăng số lượng ---------- */
   var badge = $('header button[title="Giỏ hàng"] span.bg-danger');
   var cartBtn = $('header button[title="Giỏ hàng"]');
-  $$('main button').filter(function (b) { return /Thêm vào giỏ/.test(b.textContent); }).forEach(function (btn) {
-    var original = btn.innerHTML, busy = false;
-    btn.addEventListener('click', function () {
-      if (busy) return; busy = true;
+  function addProductToCart(btn) {
       if (badge) {
         badge.textContent = (parseInt(badge.textContent, 10) || 0) + 1;
         badge.classList.remove('cart-pop'); void badge.offsetWidth; badge.classList.add('cart-pop');
       }
-      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Đã thêm';
       if (!reduce && cartBtn && btn.animate) {
         var a = btn.getBoundingClientRect(), c = cartBtn.getBoundingClientRect();
         var dot = document.createElement('div'); dot.className = 'fly-dot'; document.body.appendChild(dot);
@@ -1485,12 +1482,23 @@
         ], { duration: 750, easing: 'cubic-bezier(.4,0,.2,1)' });
         anim.onfinish = function () { dot.remove(); };
       }
+  }
+  document.addEventListener('wnw:add-to-cart', function (event) {
+    if (event.detail && event.detail.button instanceof HTMLButtonElement) addProductToCart(event.detail.button);
+  });
+  $$('main button').filter(function (b) { return /Thêm vào giỏ/.test(b.textContent); }).forEach(function (btn) {
+    var original = btn.innerHTML, busy = false;
+    btn.addEventListener('click', function () {
+      if (busy) return; busy = true;
+      addProductToCart(btn);
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span> Đã thêm';
       setTimeout(function () { btn.innerHTML = original; busy = false; }, 1300);
     });
   });
 })();
 </script>
 <script src="assets/hero-slider.js"></script>
+<script src="assets/product-stories.js"></script>
 <script src="assets/background.js"></script>
 <script defer src="assets/floating-dock.js"></script>
 </body></html>

@@ -5,3 +5,4 @@ if (root) {
   createRoot(root).render(<FloatingDockDemo />);
   document.documentElement.classList.add("dock-ready");
 }
+
