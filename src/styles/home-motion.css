@@ -1,0 +1,40 @@
+.home-motion .home-landscape { position: relative; isolation: isolate; }
+.home-landscape::before, .home-landscape::after {
+  content: ''; position: absolute; z-index: -1; pointer-events: none;
+  width: min(44%, 520px); height: min(80%, 260px);
+  border-radius: 65% 35% 54% 46% / 48% 63% 37% 52%;
+  background: #f6e5d5; left: 0; top: 12px; opacity: .55;
+}
+.home-landscape::after { left: auto; top: auto; right: 0; bottom: 12px; background: #f5eacb; }
+.home-paw-trail { position: relative; height: 56px; width: 306px; max-width: 100%; margin: 0 0 24px auto; pointer-events: none; }
+.home-paw-trail span {
+  position: absolute; left: calc(var(--step) * 38px); top: 20px;
+  width: 21px; height: 25px; background: url('/assets/paw-mark.svg') center / contain no-repeat;
+  opacity: .22; rotate: 65deg;
+}
+.home-paw-trail span:nth-child(even) { top: 2px; rotate: 55deg; }
+@media (prefers-reduced-motion: no-preference) {
+  .home-landscape::before, .home-landscape::after {
+    animation: home-landscape-breathe 18s ease-in-out infinite;
+    animation-play-state: paused;
+  }
+  .home-landscape::after { animation-duration: 20s; animation-delay: -8s; }
+  .home-landscape.motion-visible::before, .home-landscape.motion-visible::after { animation-play-state: running; }
+}
+@keyframes home-landscape-breathe {
+  0%, 100% { transform: translateY(0) scale(.95, .97); }
+  50% { transform: translateY(8px) scale(1); }
+}
+@media (max-width: 767px) {
+  .home-paw-trail { width: 210px; height: 48px; margin-bottom: 16px; }
+  .home-paw-trail span { left: calc(var(--step) * 36px); width: 18px; height: 22px; }
+  .home-paw-trail span:nth-child(n+7) { display: none; }
+  .home-landscape::before, .home-landscape::after { height: 180px; }
+  @keyframes home-landscape-breathe {
+    0%, 100% { transform: translateY(0) scale(.97, .98); }
+    50% { transform: translateY(4px) scale(1); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-landscape::before, .home-landscape::after { animation: none; }
+}

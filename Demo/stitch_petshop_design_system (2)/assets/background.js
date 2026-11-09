@@ -1,27 +1,48 @@
 (() => {
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  if (preference.matches || !('IntersectionObserver' in window)) return;
-  const active = new Set();
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      observer.unobserve(entry.target);
-      if (preference.matches || document.hidden) return;
-      entry.target.querySelectorAll('span').forEach((paw, index) => {
-        if (typeof paw.animate !== 'function') return;
+  if (!('IntersectionObserver' in window)) return;
+  const seen = new WeakSet();
+  const visible = new Set();
+  const running = new Map();
+  const stop = trail => {
+    (running.get(trail) || []).forEach(animation => animation.cancel());
+    running.delete(trail);
+  };
+  const sync = () => {
+    visible.forEach(element => {
+      const enabled = !preference.matches && !document.hidden;
+      if (element.matches('.pet-landscape')) {
+        element.classList.toggle('background-in-view', enabled);
+        return;
+      }
+      if (!enabled) { stop(element); return; }
+      if (seen.has(element)) return;
+      seen.add(element);
+      const animations = [...element.children].filter(paw => getComputedStyle(paw).display !== 'none').map((paw, index) => {
+        if (!paw.animate) return null;
         const animation = paw.animate([
-          { opacity: 0, translate: '-3px 2px' },
-          { opacity: .27, translate: '0 0' }
-        ], { duration: 360, delay: index * 65, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'backwards' });
-        active.add(animation);
-        animation.onfinish = () => { active.delete(animation); animation.cancel(); };
-      });
+          { opacity: 0, transform: 'translateY(3px) scale(.92)', offset: 0 },
+          { opacity: .42, transform: 'translateY(0) scale(1)', offset: .3 },
+          { opacity: .27, transform: 'translateY(0) scale(1)', offset: 1 }
+        ], { duration: 1100, delay: index * 140, easing: 'ease-out', fill: 'backwards' });
+        animation.onfinish = () => animation.cancel();
+        return animation;
+      }).filter(Boolean);
+      running.set(element, animations);
     });
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) visible.add(target);
+      else {
+        visible.delete(target);
+        target.classList.remove('background-in-view');
+        stop(target);
+      }
+    });
+    sync();
   }, { threshold: 0, rootMargin: '0px 0px -32px 0px' });
-  document.querySelectorAll('.paw-trail').forEach(trail => observer.observe(trail));
-  const stop = () => { active.forEach(animation => animation.cancel()); active.clear(); };
-  preference.addEventListener('change', event => {
-    if (event.matches) { observer.disconnect(); stop(); }
-  });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+  document.querySelectorAll('.paw-trail, .pet-landscape').forEach(element => observer.observe(element));
+  preference.addEventListener('change', sync);
+  document.addEventListener('visibilitychange', sync);
 })();

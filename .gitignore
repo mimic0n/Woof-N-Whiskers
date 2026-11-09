@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.playwright/
+test-results/
+playwright-report/
+.vscode/
+.gemini/
+.codex/
+.impeccable/review/
+Demo/
+design/
+Instruction/
+scripts/
+tests/
+test-results/

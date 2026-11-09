@@ -54,3 +54,28 @@
   textarea, [contenteditable="true"] { cursor: text; }
   :disabled, [aria-disabled="true"] { cursor: not-allowed; }
 }
+
+/* Slow breathing stays inside the section edges and pauses outside the viewport. */
+@media (prefers-reduced-motion: no-preference) {
+  .pet-landscape::before, .pet-landscape::after {
+    animation: landscape-breathe 18s ease-in-out infinite;
+    animation-play-state: paused;
+    transform-origin: center;
+  }
+  .pet-landscape::after { animation-duration: 20s; animation-delay: -8s; }
+  .pet-landscape.background-in-view::before,
+  .pet-landscape.background-in-view::after { animation-play-state: running; }
+}
+@keyframes landscape-breathe {
+  0%, 100% { transform: translateY(0) scale(.95, .97); }
+  50% { transform: translateY(8px) scale(1, 1); }
+}
+@media (max-width: 767px) {
+  @keyframes landscape-breathe {
+    0%, 100% { transform: translateY(0) scale(.97, .98); }
+    50% { transform: translateY(4px) scale(1, 1); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pet-landscape::before, .pet-landscape::after { animation: none; }
+}

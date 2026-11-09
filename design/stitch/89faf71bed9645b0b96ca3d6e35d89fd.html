@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thanh toán đơn hàng - Woof N' Whiskers Đà Nẵng</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#e1e2e4",
+            "surface-cream": "#F9EED9",
+            "on-primary-fixed": "#001a41",
+            "secondary-fixed": "#ffdcc5",
+            "background": "#f8f9fb",
+            "primary-container": "#326dca",
+            "on-tertiary-fixed": "#261900",
+            "on-secondary-container": "#7a553b",
+            "text-muted": "#6B5646",
+            "footer-slate": "#3F5F78",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fff2df",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#f8f9fb",
+            "secondary-container": "#ffcdac",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#e6c27c",
+            "surface-container-high": "#e7e8ea",
+            "secondary-fixed-dim": "#edbd9c",
+            "on-secondary-fixed-variant": "#613f26",
+            "outline": "#737783",
+            "error-container": "#ffdad6",
+            "surface-container-low": "#f2f4f6",
+            "tertiary-fixed": "#ffdea2",
+            "primary-hover": "#2757A8",
+            "tertiary-container": "#876b2f",
+            "primary-fixed-dim": "#acc7ff",
+            "surface-dim": "#d9dadc",
+            "on-primary-fixed-variant": "#004492",
+            "on-tertiary-fixed-variant": "#5b4308",
+            "inverse-surface": "#2e3132",
+            "inverse-on-surface": "#f0f1f3",
+            "primary": "#0454b0",
+            "on-error-container": "#93000a",
+            "on-primary-container": "#f1f3ff",
+            "outline-variant": "#c2c6d4",
+            "on-surface": "#191c1e",
+            "on-primary": "#ffffff",
+            "surface": "#f8f9fb",
+            "surface-tint": "#185cb8",
+            "tertiary": "#6d5318",
+            "status-warning": "#B26A00",
+            "surface-container": "#edeef0",
+            "text-ink": "#2B1D14",
+            "secondary": "#7b563c",
+            "status-error": "#B3261E",
+            "surface-container-highest": "#e1e2e4",
+            "border-subtle": "#E8DFD0",
+            "on-background": "#191c1e",
+            "primary-fixed": "#d8e2ff",
+            "on-surface-variant": "#424752",
+            "status-success": "#2E7D4F",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#acc7ff",
+            "on-secondary-fixed": "#2e1502"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-md": "1rem",
+            "space-3xl": "4rem",
+            "space-2xl": "3rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Be Vietnam Pro"],
+            "caption": ["Be Vietnam Pro"],
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "headline-xl-mobile": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"],
+            "headline-sm": ["Be Vietnam Pro"],
+            "title-md": ["Be Vietnam Pro"],
+            "body-sm": ["Be Vietnam Pro"],
+            "label-sm": ["Be Vietnam Pro"],
+            "headline-xl": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl": ["44px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .watermark-badge {
+      backdrop-filter: blur(4px);
+      background-color: rgba(43, 29, 20, 0.65);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #E8DFD0;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-ink font-body-md antialiased min-h-screen flex flex-col selection:bg-tertiary-fixed selection:text-text-ink">
+<!-- 1. TOP ANNOUNCEMENT BAR -->
+<div class="bg-surface-cream border-b border-border-subtle py-2 px-4 text-center text-text-ink font-label-sm text-label-sm transition-colors">
+<div class="max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-x-3 gap-y-1">
+<span class="inline-flex items-center gap-1 font-semibold text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+        Giao siêu tốc 2h nội thành Đà Nẵng
+      </span>
+<span class="text-border-subtle hidden md:inline">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">call</span>
+        Hotline & Zalo: <strong class="font-semibold text-text-ink">093 560 5311</strong>
+</span>
+<span class="text-border-subtle hidden md:inline">•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">location_on</span>
+        49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn
+      </span>
+<span class="text-border-subtle hidden md:inline">•</span>
+<span class="inline-flex items-center gap-1 text-text-muted">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+        Mở cửa: 08:00 - 20:00
+      </span>
+</div>
+</div>
+<!-- 2. TOP WEB HEADER (Shared Component Execution) -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest border-b border-border-subtle shadow-sm">
+<div class="flex justify-between items-center w-full px-6 md:px-12 max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2.5 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-surface-cream border border-border-subtle flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl text-secondary" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-secondary tracking-tight">Woof N' Whiskers</span>
+<span class="text-[11px] font-medium text-text-muted tracking-wide -mt-1 hidden sm:block">A little more love for every little paw</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-text-ink hover:text-primary-container transition-colors font-label-md text-label-md" href="#">Trang chủ</a>
+<a class="text-text-ink hover:text-primary-container transition-colors font-label-md text-label-md" href="#">Về chúng tôi</a>
+<a class="text-text-ink hover:text-primary-container transition-colors font-label-md text-label-md flex items-center gap-1" href="#">
+          Dịch vụ
+          <span class="material-symbols-outlined text-sm">expand_more</span>
+</a>
+<!-- Active link: Cửa hàng -->
+<a class="border-b-2 border-primary-container text-primary-container pb-1 font-semibold font-label-md text-label-md" href="#">Cửa hàng</a>
+<a class="text-text-ink hover:text-primary-container transition-colors font-label-md text-label-md" href="#">Đặt lịch</a>
+</nav>
+<!-- Right Utility Actions -->
+<div class="flex items-center gap-3 md:gap-4">
+<!-- Language Switcher -->
+<div class="hidden sm:flex items-center bg-surface-container-low p-1 rounded-full border border-border-subtle text-caption font-caption">
+<button class="px-2.5 py-1 bg-primary-container text-white rounded-full font-semibold shadow-xs">VI</button>
+<button class="px-2.5 py-1 text-text-muted hover:text-text-ink transition-colors font-medium">EN</button>
+</div>
+<!-- Search Icon Action -->
+<button aria-label="Tìm kiếm" class="w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-cream transition-colors duration-150">
+<span class="material-symbols-outlined">search</span>
+</button>
+<!-- Cart Action with Count Badge -->
+<a aria-label="Giỏ hàng" class="relative w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-cream transition-colors duration-150" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-5 h-5 bg-primary-container text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-sm">3</span>
+</a>
+<!-- User Profile Pill -->
+<div class="hidden md:flex items-center gap-2 pl-2 border-l border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-surface-cream border border-border-subtle flex items-center justify-center text-secondary font-bold text-xs overflow-hidden">
+<span class="material-symbols-outlined text-secondary text-xl">account_circle</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="text-[13px] font-semibold text-text-ink leading-tight">Phương Thảo</span>
+<span class="text-[10px] font-medium text-status-warning inline-flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">star</span> Gold Paw
+            </span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 py-6">
+<!-- BREADCRUMB & PROGRESS STEPPER -->
+<div class="mb-6 space-y-4">
+<nav class="flex items-center text-caption font-caption text-text-muted">
+<a class="hover:text-primary-container transition-colors" href="#">Trang chủ</a>
+<span class="mx-2 text-border-subtle">›</span>
+<a class="hover:text-primary-container transition-colors" href="#">Cửa hàng</a>
+<span class="mx-2 text-border-subtle">›</span>
+<a class="hover:text-primary-container transition-colors" href="#">Giỏ hàng</a>
+<span class="mx-2 text-border-subtle">›</span>
+<span class="text-text-ink font-semibold">Thanh toán đơn hàng</span>
+</nav>
+<!-- Stepper Component -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle p-4 md:p-6 shadow-xs">
+<div class="grid grid-cols-3 relative">
+<!-- Step 1: Giỏ hàng (Completed) -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#EAF5EE] text-status-success flex items-center justify-center font-bold text-sm shrink-0 border border-[#2E7D4F]/20">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="hidden sm:block">
+<p class="text-[12px] font-semibold text-status-success uppercase tracking-wider">Bước 1</p>
+<p class="text-label-md font-label-md text-text-ink">Giỏ hàng</p>
+</div>
+</div>
+<!-- Step 2: Thanh toán & Giao hàng (Active) -->
+<div class="flex items-center gap-3 justify-center">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md ring-4 ring-primary-container/20">
+              2
+            </div>
+<div class="hidden sm:block">
+<p class="text-[12px] font-semibold text-primary-container uppercase tracking-wider">Bước 2</p>
+<p class="text-label-md font-label-md text-text-ink font-bold">Thanh toán & Giao nhận</p>
+</div>
+</div>
+<!-- Step 3: Xác nhận đơn hàng (Pending) -->
+<div class="flex items-center gap-3 justify-end">
+<div class="w-10 h-10 rounded-full bg-surface-container-low text-text-muted flex items-center justify-center font-bold text-sm shrink-0 border border-border-subtle">
+              3
+            </div>
+<div class="hidden sm:block">
+<p class="text-[12px] font-semibold text-text-muted uppercase tracking-wider">Bước 3</p>
+<p class="text-label-md font-label-md text-text-muted">Hoàn tất đơn</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. NOTICE BANNER (Demo Simulator Notice) -->
+<div class="mb-6 p-4 rounded-xl bg-surface-cream border border-[#F8D38C] text-text-ink flex items-start gap-3 shadow-xs">
+<span class="material-symbols-outlined text-status-warning text-2xl shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">info</span>
+<div class="text-body-sm font-body-sm">
+<p class="font-semibold text-text-ink">Môi trường thử nghiệm đơn hàng</p>
+<p class="text-text-muted">Thanh toán mô phỏng – Không phát sinh giao dịch tiền tệ thật. Đơn hàng sẽ được tiếp nhận và xử lý giao nhanh trong 2h tại Đà Nẵng bởi đội ngũ Woof N' Whiskers.</p>
+</div>
+</div>
+<!-- 4. TWO-COLUMN CHECKOUT LAYOUT -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN (~62% = 7 cols on 12-col grid) -->
+<div class="lg:col-span-7 space-y-6">
+<!-- KHỐI 1: THÔNG TIN GIAO HÀNG & LIÊN HỆ -->
+<section class="bg-surface-container-lowest rounded-2xl border border-border-subtle p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 mb-5 border-b border-border-subtle">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-cream text-secondary font-bold text-sm flex items-center justify-center">1</span>
+<h2 class="text-title-md font-title-md text-text-ink">Thông tin giao hàng</h2>
+</div>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-caption font-semibold bg-[#EAF5EE] text-status-success border border-[#2E7D4F]/20">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Khách hàng thân thiết
+            </span>
+</div>
+<div class="space-y-4">
+<!-- Row 1: Full name & Phone -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="fullname">Họ và tên người nhận <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none transition-all" id="fullname" type="text" value="Nguyễn Phương Thảo"/>
+<span class="material-symbols-outlined text-status-success text-xl absolute right-3 top-3" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="phone">Số điện thoại liên hệ <span class="text-error">*</span></label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none transition-all" id="phone" type="tel" value="093 560 5311"/>
+<span class="material-symbols-outlined text-status-success text-xl absolute right-3 top-3" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Email -->
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="email">Email nhận hóa đơn & vận đơn <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none transition-all" id="email" type="email" value="phuongthao.danang@gmail.com"/>
+<span class="text-caption font-caption text-text-muted mt-1 block">Mã vận đơn bưu cục sẽ tự động gửi qua email này sau khi điều phối tài xế.</span>
+</div>
+<!-- Row 3: City, District, Ward -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="city">Tỉnh / Thành phố <span class="text-error">*</span></label>
+<select class="w-full h-11 px-3 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none" id="city">
+<option selected="">Đà Nẵng</option>
+<option>Quảng Nam</option>
+<option>Thừa Thiên Huế</option>
+</select>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="district">Quận / Huyện <span class="text-error">*</span></label>
+<select class="w-full h-11 px-3 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none" id="district">
+<option selected="">Ngũ Hành Sơn</option>
+<option>Hải Châu</option>
+<option>Sơn Trà</option>
+<option>Thanh Khê</option>
+<option>Cẩm Lệ</option>
+</select>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="ward">Phường / Xã <span class="text-error">*</span></label>
+<select class="w-full h-11 px-3 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none" id="ward">
+<option selected="">Khuê Mỹ</option>
+<option>Mỹ An</option>
+<option>Hòa Hải</option>
+<option>Hòa Quý</option>
+</select>
+</div>
+</div>
+<!-- Row 4: Detailed Address -->
+<div>
+<label class="block text-label-sm font-label-sm text-text-ink mb-1.5" for="address">Địa chỉ chi tiết (Số nhà, tên đường, tòa nhà) <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none transition-all" id="address" type="text" value="128/14 Hồ Xuân Hương, Phường Khuê Mỹ"/>
+</div>
+<!-- Row 5: Notes -->
+<div>
+<div class="flex justify-between items-center mb-1.5">
+<label class="text-label-sm font-label-sm text-text-ink" for="delivery-notes">Ghi chú giao hàng & hướng dẫn cưng cún</label>
+<span class="text-caption font-caption text-text-muted">95 / 500 ký tự</span>
+</div>
+<textarea class="w-full p-3 bg-surface-container-lowest border border-border-subtle rounded-lg text-body-sm font-body-sm text-text-ink focus:border-primary-container focus:ring-2 focus:ring-primary-container/15 outline-none resize-none transition-all" id="delivery-notes" rows="2">Giao giờ hành chính, gọi trước 15 phút, nhà có nuôi cún Poodle vui lòng gọi chuông không bấm còi xe</textarea>
+</div>
+<!-- Checkbox additions -->
+<div class="pt-2 space-y-2 border-t border-border-subtle">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary-container border-border-subtle" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-text-ink">Lưu địa chỉ này vào sổ địa chỉ tài khoản của tôi</span>
+</label>
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-primary-container border-border-subtle" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-text-ink">Giao hàng không tiếp xúc (đặt trước cửa / gửi lễ tân bảo vệ)</span>
+</label>
+</div>
+</div>
+</section>
+<!-- KHỐI 2: PHƯƠNG THỨC VẬN CHUYỂN -->
+<section class="bg-surface-container-lowest rounded-2xl border border-border-subtle p-6 shadow-sm">
+<div class="flex items-center gap-2.5 pb-4 mb-4 border-b border-border-subtle">
+<span class="w-7 h-7 rounded-full bg-surface-cream text-secondary font-bold text-sm flex items-center justify-center">2</span>
+<h2 class="text-title-md font-title-md text-text-ink">Phương thức vận chuyển</h2>
+</div>
+<div class="space-y-3">
+<!-- Option 1: Selected Express -->
+<label class="relative flex items-start p-4 rounded-xl border-2 border-primary-container bg-primary-container/5 cursor-pointer transition-all">
+<input checked="" class="mt-1 w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="shipping_method" type="radio" value="express"/>
+<div class="ml-3.5 flex-1">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-text-ink text-body-md">Giao hàng hỏa tốc 2h nội thành Đà Nẵng</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-[#F8D38C] text-text-ink">Nhanh nhất</span>
+</div>
+<div class="text-right">
+<span class="text-status-success font-bold text-body-md">0đ</span>
+<span class="line-through text-caption text-text-muted ml-1.5">35.000đ</span>
+</div>
+</div>
+<p class="text-body-sm font-body-sm text-text-muted mt-1">Đơn hàng được chuẩn bị trực tiếp từ kho 49 Phạm Kiệt. Nhận hàng hôm nay trước <strong class="text-text-ink">17:30</strong>.</p>
+<div class="mt-2 inline-flex items-center gap-1.5 text-caption font-semibold text-status-success">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+                  Miễn phí vận chuyển cho đơn hàng từ 500.000đ
+                </div>
+</div>
+</label>
+<!-- Option 2: Standard Shipping -->
+<label class="relative flex items-start p-4 rounded-xl border border-border-subtle hover:border-outline-variant bg-surface-container-lowest cursor-pointer transition-all">
+<input class="mt-1 w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="shipping_method" type="radio" value="standard"/>
+<div class="ml-3.5 flex-1">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-text-ink text-body-md">Giao hàng tiêu chuẩn (1 - 2 ngày)</span>
+<span class="text-status-success font-bold text-body-md">0đ</span>
+</div>
+<p class="text-body-sm font-body-sm text-text-muted mt-1">Phù hợp khi bạn không cần hàng gấp. Vận chuyển qua đối tác Viettel Post / GHTK.</p>
+</div>
+</label>
+</div>
+</section>
+<!-- KHỐI 3: PHƯƠNG THỨC THANH TOÁN -->
+<section class="bg-surface-container-lowest rounded-2xl border border-border-subtle p-6 shadow-sm">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-border-subtle">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-surface-cream text-secondary font-bold text-sm flex items-center justify-center">3</span>
+<h2 class="text-title-md font-title-md text-text-ink">Phương thức thanh toán</h2>
+</div>
+<span class="text-caption font-caption text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-status-success" style="font-variation-settings: 'FILL' 1;">lock</span>
+              Bảo mật SSL 256-bit
+            </span>
+</div>
+<div class="space-y-3">
+<!-- Radio Card 1: VietQR (Selected) -->
+<div class="rounded-xl border-2 border-primary-container bg-surface-container-lowest overflow-hidden transition-all shadow-xs">
+<label class="flex items-center justify-between p-4 bg-primary-container/5 cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="payment_method" type="radio" value="vietqr"/>
+<div>
+<span class="font-bold text-text-ink text-body-md flex items-center gap-2">
+                      Quét mã VietQR 24/7 (Khuyên dùng)
+                      <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-[#F8D38C] text-text-ink">Xác nhận 30s</span>
+</span>
+<span class="text-caption font-caption text-text-muted">Hỗ trợ tất cả ứng dụng ngân hàng và ví điện tử Việt Nam</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-2xl">qr_code_2</span>
+</label>
+<!-- VietQR Expanded Details -->
+<div class="p-5 border-t border-primary-container/20 bg-surface-bright">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+<!-- QR Mockup Box -->
+<div class="md:col-span-5 flex flex-col items-center">
+<div class="relative p-3 bg-white rounded-xl border border-border-subtle shadow-sm flex flex-col items-center">
+<!-- Watermark badge -->
+<div class="absolute top-2 right-2 watermark-badge text-white px-1.5 py-0.5 rounded text-[9px] font-semibold tracking-wider">
+                        QR minh họa
+                      </div>
+<!-- Realistic SVG QR Canvas representation -->
+<div class="w-40 h-40 bg-surface-container-lowest border border-border-subtle/80 rounded-lg p-2 flex flex-col items-center justify-center relative">
+<svg class="w-36 h-36" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!-- QR Corner 1 -->
+<rect fill="white" height="26" rx="4" stroke="#2B1D14" stroke-width="4" width="26" x="5" y="5"></rect>
+<rect fill="#326DCA" height="14" rx="2" width="14" x="11" y="11"></rect>
+<!-- QR Corner 2 -->
+<rect fill="white" height="26" rx="4" stroke="#2B1D14" stroke-width="4" width="26" x="69" y="5"></rect>
+<rect fill="#326DCA" height="14" rx="2" width="14" x="75" y="11"></rect>
+<!-- QR Corner 3 -->
+<rect fill="white" height="26" rx="4" stroke="#2B1D14" stroke-width="4" width="26" x="5" y="69"></rect>
+<rect fill="#326DCA" height="14" rx="2" width="14" x="11" y="75"></rect>
+<!-- Dynamic QR patterns -->
+<rect fill="#2B1D14" height="6" width="6" x="36" y="8"></rect>
+<rect fill="#2B1D14" height="12" width="6" x="46" y="8"></rect>
+<rect fill="#2B1D14" height="6" width="6" x="56" y="8"></rect>
+<rect fill="#2B1D14" height="6" width="16" x="36" y="20"></rect>
+<rect fill="#2B1D14" height="18" width="6" x="8" y="36"></rect>
+<rect fill="#2B1D14" height="6" width="10" x="20" y="42"></rect>
+<rect fill="#F9EED9" height="28" rx="4" stroke="#835D42" stroke-width="2" width="28" x="36" y="36"></rect>
+<circle cx="50" cy="50" fill="#835D42" r="7"></circle>
+<rect fill="#2B1D14" height="6" width="10" x="68" y="36"></rect>
+<rect fill="#2B1D14" height="12" width="10" x="82" y="42"></rect>
+<rect fill="#2B1D14" height="8" width="8" x="36" y="68"></rect>
+<rect fill="#2B1D14" height="6" width="14" x="48" y="74"></rect>
+<rect fill="#2B1D14" height="18" width="6" x="68" y="68"></rect>
+<rect fill="#2B1D14" height="8" width="14" x="78" y="78"></rect>
+</svg>
+</div>
+<span class="text-[11px] font-semibold text-text-ink mt-2">Quét bằng Mobile Banking</span>
+</div>
+</div>
+<!-- Bank Info Details -->
+<div class="md:col-span-7 space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between items-center py-1 border-b border-border-subtle/80">
+<span class="text-text-muted">Ngân hàng:</span>
+<strong class="text-text-ink font-semibold">MB Bank (Quân Đội)</strong>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-border-subtle/80">
+<span class="text-text-muted">Số tài khoản:</span>
+<div class="flex items-center gap-1.5">
+<strong class="text-primary-container font-mono font-bold tracking-wider">0935605311</strong>
+<button class="text-caption text-secondary hover:underline flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-xs">content_copy</span>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-border-subtle/80">
+<span class="text-text-muted">Chủ tài khoản:</span>
+<strong class="text-text-ink font-semibold">NGUYEN PHUONG THAO</strong>
+</div>
+<div class="flex justify-between items-center py-1 border-b border-border-subtle/80">
+<span class="text-text-muted">Nội dung CK:</span>
+<span class="px-2 py-0.5 bg-surface-cream rounded text-text-ink font-mono font-bold text-xs border border-border-subtle">WNW-ORD-8821</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="text-text-muted">Số tiền:</span>
+<strong class="text-primary-container font-bold text-headline-sm">747.100đ</strong>
+</div>
+</div>
+</div>
+<div class="mt-4 p-2.5 rounded-lg bg-surface-cream/70 text-text-muted text-caption flex items-center gap-2">
+<span class="material-symbols-outlined text-status-warning text-base" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span>Hệ thống tự động ghi nhận thanh toán sau khi giao dịch thành công. Không cần chụp biên lai.</span>
+</div>
+</div>
+</div>
+<!-- Radio Card 2: COD -->
+<label class="flex items-center justify-between p-4 rounded-xl border border-border-subtle hover:border-outline-variant bg-surface-container-lowest cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="payment_method" type="radio" value="cod"/>
+<div>
+<span class="font-bold text-text-ink text-body-md">Thanh toán khi nhận hàng (COD)</span>
+<p class="text-body-sm font-body-sm text-text-muted">Kiểm tra hàng trước khi thanh toán tiền mặt cho shipper.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">payments</span>
+</label>
+<!-- Radio Card 3: Manual Bank Transfer -->
+<label class="flex items-center justify-between p-4 rounded-xl border border-border-subtle hover:border-outline-variant bg-surface-container-lowest cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="payment_method" type="radio" value="bank_transfer"/>
+<div>
+<span class="font-bold text-text-ink text-body-md">Chuyển khoản ngân hàng thủ công</span>
+<p class="text-body-sm font-body-sm text-text-muted">Thông tin số tài khoản và mã đơn hàng sẽ gửi qua SMS/Email.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">account_balance</span>
+</label>
+<!-- Radio Card 4: E-Wallets -->
+<label class="flex items-center justify-between p-4 rounded-xl border border-border-subtle hover:border-outline-variant bg-surface-container-lowest cursor-pointer transition-all">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 text-primary-container focus:ring-primary-container border-border-subtle" name="payment_method" type="radio" value="e_wallet"/>
+<div>
+<span class="font-bold text-text-ink text-body-md">Ví điện tử (MoMo / ZaloPay / ShopeePay)</span>
+<p class="text-body-sm font-body-sm text-text-muted">Chuyển hướng an toàn tới ứng dụng ví điện tử liên kết.</p>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-1 rounded bg-[#A50064] text-white font-bold text-[10px]">MoMo</span>
+<span class="px-2 py-1 rounded bg-[#0068FF] text-white font-bold text-[10px]">ZaloPay</span>
+</div>
+</label>
+</div>
+</section>
+<!-- ĐIỀU KHOẢN & CAM KẾT -->
+<div class="p-4 rounded-xl bg-surface-cream/50 border border-border-subtle space-y-3">
+<label class="flex items-start gap-2.5 cursor-pointer select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary-container focus:ring-primary-container border-border-subtle" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-text-ink">
+              Tôi đồng ý với <a class="text-primary-container font-semibold underline" href="#">Điều khoản dịch vụ</a> và <a class="text-primary-container font-semibold underline" href="#">Chính sách đổi trả hàng trong 7 ngày</a> của Woof N' Whiskers.
+            </span>
+</label>
+<div class="flex flex-wrap items-center gap-4 pt-2 border-t border-border-subtle text-caption text-text-muted">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-status-success text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+              Bảo mật SSL 256-bit
+            </span>
+<span>•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-sm">published_with_changes</span>
+              Đổi trả dễ dàng trong 7 ngày
+            </span>
+<span>•</span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-sm">support_agent</span>
+              Hỗ trợ Da Nang 24/7
+            </span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (~38% = 5 cols on 12-col grid - Sticky Order Summary Card) -->
+<div class="lg:col-span-5 sticky top-28 space-y-4">
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle p-6 shadow-md">
+<div class="flex items-center justify-between pb-4 mb-4 border-b border-border-subtle">
+<h2 class="text-title-md font-title-md text-text-ink">Đơn hàng của bạn</h2>
+<span class="px-2.5 py-0.5 rounded-full text-caption font-bold bg-surface-cream text-secondary border border-border-subtle">3 sản phẩm</span>
+</div>
+<!-- Product Line Items List -->
+<div class="space-y-4 divide-y divide-border-subtle/70 pb-4 max-h-[380px] overflow-y-auto pr-1 custom-scrollbar">
+<!-- Item 1: Royal Canin -->
+<div class="pt-3 first:pt-0 flex items-center gap-3.5">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container-low border border-border-subtle overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="High quality pet product packaging for Royal Canin Mini Adult dog food displayed on a clean studio table in soft morning light, surrounded by subtle pet boutique accessories in warm cream and light wood tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL65ZUnJev2Ji_atWRqPa3bRvqpsa0edjwcahsj2r9wc8GYntnhw1YgEJBXipdWpXJMNkXT5QQNSUp0OG7yhvb4S2MFZKupeelz_desVq4_PtkK6yJ9GqIfQ0MptBiidEgv1PC9UV9MpfPPY7jHwoIj9IbyxLQUb5LCXpWzNGu29x4oa9_ZeI2nybhC8lLl1wqpG1e6w2SO1LQe95m0wtceIBm8zS0C9zQ7itDYZyb"/>
+<span class="absolute bottom-1 right-1 watermark-badge text-white px-1 py-0.2 rounded text-[8px] font-semibold">Ảnh minh họa</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-body-sm font-semibold text-text-ink truncate">Thức ăn hạt Royal Canin Mini Adult</h4>
+<p class="text-caption font-caption text-text-muted">Gói 800g · Số lượng: 1</p>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-cream text-[10px] text-secondary font-medium">Sản phẩm demo</span>
+</div>
+<div class="text-right">
+<p class="text-body-md font-bold text-text-ink">189.000đ</p>
+</div>
+</div>
+<!-- Item 2: Orijen Cat & Kitten -->
+<div class="pt-3 flex items-center gap-3.5">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container-low border border-border-subtle overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Premium grain-free cat food packaging for Orijen Cat and Kitten staged in an elegant modern pet shop interior with warm amber lighting and pristine display shelves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjrzzPkZ7S130ozzAOBPrZ_IU6KJfJPkPDLWHcRXrhRsuGBSSyRQwKI_HAyzWXYE6RDcWMXg3mX_9ccx3yNGL-p9QeMIwRKAHHfHzRC1gV3mLwlRz-8s940k8vl_OsrJDuwO5qKyECl9ZvZFY9djz0e-ZodnBGpRO-tMbPpiqGpDkdi18KYx_W5c_Qrb8Xgwk_YLEX6IR44qnDXf2yjSS0Ha3wq_omEqz4FzCTk58A"/>
+<span class="absolute bottom-1 right-1 watermark-badge text-white px-1 py-0.2 rounded text-[8px] font-semibold">Ảnh minh họa</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-body-sm font-semibold text-text-ink truncate">Hạt dinh dưỡng cao cấp Orijen Cat & Kitten</h4>
+<p class="text-caption font-caption text-text-muted">Gói 1.8kg · Số lượng: 1</p>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-cream text-[10px] text-secondary font-medium">Sản phẩm demo</span>
+</div>
+<div class="text-right">
+<p class="text-body-md font-bold text-text-ink">540.000đ</p>
+</div>
+</div>
+<!-- Item 3: Ciao Churu -->
+<div class="pt-3 flex items-center gap-3.5">
+<div class="relative w-16 h-16 rounded-xl bg-surface-container-low border border-border-subtle overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Gourmet puree cat treats Ciao Churu tuna flavor in vibrant packaging presented neatly on a polished wooden counter with domestic pet warmth and bright light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK-tpPRnL7t1Be1sEO-Gp5PN6uoFfgUOKORfnXpFgN9dKv8lPvItw1RjurQJV6WMy8TGAMXrxawxE0q3Z8j9SKskPl4-lqbheTkCoENioiWFzMArXofqg_oIERwRKKcbhQHts_2mWGz6fBNhUk3k0NSRV1k9Yz4qzqxJSef443gV2TFb2aQ2oFxH_ti_eCvrj6H9vNs-I1X2VBfutUIkHJXbs2jdnnkL7t4Vii1BbF"/>
+<span class="absolute bottom-1 right-1 watermark-badge text-white px-1 py-0.2 rounded text-[8px] font-semibold">Ảnh minh họa</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="text-body-sm font-semibold text-text-ink truncate">Súp thưởng Ciao Churu cá ngừ & sò điệp</h4>
+<p class="text-caption font-caption text-text-muted">Gói 4 thanh · Số lượng: 2</p>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-cream text-[10px] text-secondary font-medium">Sản phẩm demo</span>
+</div>
+<div class="text-right">
+<p class="text-body-md font-bold text-text-ink">90.000đ</p>
+</div>
+</div>
+</div>
+<!-- Price Calculation Breakdown -->
+<div class="space-y-2.5 pt-4 border-t border-border-subtle text-body-sm font-body-sm">
+<div class="flex justify-between items-center text-text-muted">
+<span>Tạm tính (4 món):</span>
+<span class="text-text-ink font-semibold">819.000đ</span>
+</div>
+<div class="flex justify-between items-center text-text-muted">
+<span class="flex items-center gap-1">
+                Phí vận chuyển hỏa tốc 2h:
+                <span class="material-symbols-outlined text-xs text-text-muted">help_outline</span>
+</span>
+<span class="text-status-success font-semibold">0đ (Freeship)</span>
+</div>
+<div class="flex justify-between items-center text-text-muted">
+<span class="flex items-center gap-1.5">
+                Mã giảm giá <strong class="text-text-ink bg-surface-cream px-1.5 py-0.5 rounded text-caption border border-border-subtle">PAWLOVE10</strong> (-10%):
+              </span>
+<span class="text-error font-semibold">-81.900đ</span>
+</div>
+<div class="flex justify-between items-center text-text-muted">
+<span class="flex items-center gap-1">
+                Đóng góp Quỹ cứu hộ thú cưng ĐN:
+                <span class="material-symbols-outlined text-xs text-secondary" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</span>
+<span class="text-text-ink font-medium">+10.000đ</span>
+</div>
+<div class="flex justify-between items-center text-caption text-text-muted">
+<span>Thuế giá trị gia tăng (VAT 8%):</span>
+<span>Đã bao gồm</span>
+</div>
+</div>
+<!-- Total Due -->
+<div class="mt-4 pt-4 border-t-2 border-border-subtle">
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-title-md font-title-md text-text-ink">Tổng thanh toán:</span>
+<div class="text-right">
+<span class="text-headline-md font-headline-md font-bold text-primary-container">747.100đ</span>
+</div>
+</div>
+<!-- Loyalty Savings Tag -->
+<div class="p-2.5 rounded-lg bg-surface-cream border border-[#F8D38C] text-caption font-medium text-text-ink flex items-center gap-2 mb-5">
+<span class="material-symbols-outlined text-status-warning text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">savings</span>
+<span>Bạn tiết kiệm được <strong>81.900đ</strong> và tích lũy <strong class="text-status-success">+75 điểm Paw Loyalty</strong>.</span>
+</div>
+<!-- Primary Action CTA -->
+<button class="w-full min-h-[50px] py-3.5 px-6 rounded-xl bg-primary-container hover:bg-primary-hover active:scale-[0.98] text-white font-label-md text-label-md font-bold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2" type="button">
+<span>Xác nhận đặt hàng (747.100đ)</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+<!-- Secondary Cart Link -->
+<a class="mt-3 block text-center text-body-sm font-medium text-secondary hover:underline transition-all" href="#">
+              ← Quay lại chỉnh sửa giỏ hàng
+            </a>
+</div>
+</div>
+<!-- Reassurance & Boutique Origin Box -->
+<div class="bg-surface-cream rounded-2xl border border-border-subtle p-4 space-y-2 text-body-sm font-body-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">storefront</span>
+<div>
+<p class="font-semibold text-text-ink">Giao từ chi nhánh Woof N' Whiskers</p>
+<p class="text-text-muted text-caption">49 Phạm Kiệt, Phường Khuê Mỹ, Quận Ngũ Hành Sơn, Đà Nẵng</p>
+</div>
+</div>
+<div class="flex items-center gap-2.5 pt-2 border-t border-border-subtle/80 text-caption text-text-muted">
+<span class="material-symbols-outlined text-secondary text-base">support_agent</span>
+<span>Hotline hỗ trợ xử lý đơn hàng: <strong class="text-text-ink">093 560 5311</strong></span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 5. STANDARD WEB FOOTER (Shared Component Execution) -->
+<footer class="mt-16 w-full rounded-t-3xl bg-footer-slate text-surface-container-lowest border-t border-border-subtle">
+<div class="w-full px-6 md:px-12 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+<!-- Cột 1: Về chúng tôi -->
+<div class="space-y-4">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-cream/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-cream text-xl" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<span class="text-title-md font-title-md font-bold text-surface-container-lowest">Woof N' Whiskers</span>
+</div>
+<p class="text-body-sm font-body-sm text-surface-container-low">
+            "A little more love for every little paw."<br/>
+            Hệ sinh thái chăm sóc, lưu trú và cung ứng dinh dưỡng cao cấp chuẩn y khoa cho thú cưng tại Đà Nẵng.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a aria-label="Facebook" class="w-9 h-9 rounded-full bg-surface-container-low/15 hover:bg-surface-cream hover:text-text-ink flex items-center justify-center transition-colors duration-150" href="#">
+<span class="font-bold text-xs">FB</span>
+</a>
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-surface-container-low/15 hover:bg-surface-cream hover:text-text-ink flex items-center justify-center transition-colors duration-150" href="#">
+<span class="font-bold text-xs">IG</span>
+</a>
+<a aria-label="Zalo" class="w-9 h-9 rounded-full bg-surface-container-low/15 hover:bg-surface-cream hover:text-text-ink flex items-center justify-center transition-colors duration-150" href="#">
+<span class="font-bold text-xs">ZL</span>
+</a>
+</div>
+</div>
+<!-- Cột 2: Hỗ trợ khách hàng (Exact JSON Links) -->
+<div class="space-y-3">
+<h3 class="text-title-md font-title-md text-surface-container-lowest">Hỗ trợ khách hàng</h3>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li>
+<a class="text-surface-container-low hover:text-surface-container-lowest transition-colors" href="#">Chính sách đổi trả</a>
+</li>
+<li>
+<a class="text-surface-container-low hover:text-surface-container-lowest transition-colors" href="#">Hướng dẫn đặt lịch</a>
+</li>
+<li>
+<a class="text-surface-container-low hover:text-surface-container-lowest transition-colors" href="#">Câu hỏi thường gặp</a>
+</li>
+<li>
+<a class="text-surface-container-low hover:text-surface-container-lowest transition-colors" href="#">Điều khoản dịch vụ</a>
+</li>
+</ul>
+</div>
+<!-- Cột 3: Chi nhánh Đà Nẵng & Liên hệ -->
+<div class="space-y-3">
+<h3 class="text-title-md font-title-md text-surface-container-lowest">Chi nhánh Đà Nẵng</h3>
+<ul class="space-y-2.5 text-body-sm font-body-sm text-surface-container-low">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-sm mt-1 shrink-0 text-surface-cream">location_on</span>
+<span>49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm shrink-0 text-surface-cream">call</span>
+<span>Hotline & Zalo: <strong class="text-surface-container-lowest">093 560 5311</strong></span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm shrink-0 text-surface-cream">mail</span>
+<span>support@woofnwhiskers.vn</span>
+</li>
+</ul>
+</div>
+<!-- Cột 4: Giờ hoạt động -->
+<div class="space-y-3">
+<h3 class="text-title-md font-title-md text-surface-container-lowest">Giờ hoạt động</h3>
+<div class="p-3.5 rounded-xl bg-surface-container-low/10 border border-white/10 space-y-1">
+<p class="text-body-sm font-semibold text-surface-container-lowest">Thứ 2 - Chủ Nhật</p>
+<p class="text-headline-sm font-bold text-surface-cream">08:00 - 20:00</p>
+<p class="text-[11px] text-surface-container-low opacity-80">(Giờ demo, cần cập nhật theo lịch lễ)</p>
+</div>
+<p class="text-caption text-surface-container-low">Dịch vụ lưu trú thú cưng (Pet Hotel) có kỹ thuật viên túc trực 24/7.</p>
+</div>
+</div>
+<!-- Footer Bottom Copyright Bar -->
+<div class="mt-12 pt-6 border-t border-[#4F7390] flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-surface-container-low gap-3">
+<p>© 2026 Woof N' Whiskers. Bảo lưu mọi quyền.</p>
+<p class="text-caption opacity-80">Thiết kế bởi Woof N' Whiskers Da Nang Team • Chuẩn hóa theo Stitch 2.18 Frame B</p>
+</div>
+</div>
+</footer>
+<script>
+    // Lightweight interaction logic
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle payment method accordion mock
+      const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+      paymentRadios.forEach(radio => {
+        radio.addEventListener('change', (e) => {
+          // Responsive feedback state can be wired here
+        });
+      });
+    });
+  </script>
+</body></html>

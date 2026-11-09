@@ -1,0 +1,88 @@
+/* Shared tactile feedback; colors continue to come from each page's theme. */
+.site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a) {
+ transition: transform 220ms cubic-bezier(.16,1,.3,1), background-color 180ms ease-out, border-color 180ms ease-out, box-shadow 220ms ease-out;
+ transform-origin: center;
+}
+.site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a)>svg {
+ transition: transform 240ms cubic-bezier(.16,1,.3,1);
+}
+.site-shell :is(.icon-button, .languages button, .account-menu summary) {
+ transition: transform 180ms cubic-bezier(.16,1,.3,1), background-color 180ms ease-out, color 180ms ease-out;
+}
+@media (hover: hover) {
+ .site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a):not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px #201a1624;
+  text-decoration: none;
+ }
+ .site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a):not(:disabled):hover>svg {
+  transform: translateX(3px) rotate(-5deg);
+ }
+ .site-shell :is(.button.secondary, .hero-actions a+a):not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: none;
+ }
+ .site-shell :is(.icon-button, .account-menu summary):hover { transform: translateY(-2px); }
+}
+.site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a):not(:disabled):active {
+ transform: translateY(1px) scale(.96);
+ box-shadow: none;
+ transition-duration: 100ms;
+}
+.site-shell :is(.icon-button, .languages button, .account-menu summary):active { transform: scale(.93); }
+.site-shell .add-cart-button[data-added],
+.site-shell .demo-home #flash-products .add-cart-button[data-added] {
+ background: var(--c-success);
+ border-color: var(--c-success);
+ color: #fff;
+ opacity: 1;
+ cursor: default;
+ transform: none;
+ box-shadow: none;
+}
+.site-shell .add-cart-button[data-added]>svg { animation: cart-confirm 280ms cubic-bezier(.16,1,.3,1) both; }
+@keyframes cart-confirm {
+ from { opacity: .4; transform: scale(.6) rotate(-15deg); }
+ 70% { opacity: 1; transform: scale(1.12) rotate(0); }
+ to { opacity: 1; transform: scale(1); }
+}
+/* Keep the supplied dock magnification; add a contained color reveal beneath its icons. */
+[data-floating-dock] :is(.dock-disc, [data-dock-mobile] .dock-link) {
+ isolation: isolate;
+}
+[data-floating-dock] .dock-disc::before,
+[data-floating-dock] [data-dock-mobile] .dock-link::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ z-index: -1;
+ border-radius: inherit;
+ background: var(--dock-hover);
+ clip-path: circle(0% at 50% 50%);
+ transition: clip-path 240ms cubic-bezier(.16,1,.3,1);
+ pointer-events: none;
+}
+[data-floating-dock] .dock-link[aria-current="page"] .dock-disc::before,
+[data-floating-dock] [data-dock-mobile] .dock-link[aria-current="page"]::before { background: #2757a8; }
+[data-floating-dock] .dock-link svg { transition: rotate 240ms cubic-bezier(.16,1,.3,1); }
+@media (hover: hover) {
+ [data-floating-dock] .dock-link:hover .dock-disc,
+ [data-floating-dock] [data-dock-mobile] .dock-link:hover { background: var(--dock-surface); }
+ [data-floating-dock] .dock-link[aria-current="page"]:hover .dock-disc,
+ [data-floating-dock] [data-dock-mobile] .dock-link[aria-current="page"]:hover { background: var(--dock-active); }
+ [data-floating-dock] .dock-link:hover .dock-disc::before,
+ [data-floating-dock] [data-dock-mobile] .dock-link:hover::before { clip-path: circle(72% at 50% 50%); }
+ [data-floating-dock] .dock-link:hover svg { rotate: -9deg; }
+}
+[data-floating-dock] .dock-link:active svg { scale: .9; }
+@media (prefers-reduced-motion: reduce) {
+ .site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a, .icon-button, .languages button, .account-menu summary),
+ .site-shell :is(.button, .add-cart-button, .hero-actions a, .demo-final-cta>a)>svg {
+  transition: background-color 120ms ease-out, color 120ms ease-out;
+  transform: none !important;
+  animation: none !important;
+ }
+ [data-floating-dock] .dock-link svg { transition: none; rotate: none !important; scale: none !important; }
+ [data-floating-dock] .dock-disc::before,
+ [data-floating-dock] [data-dock-mobile] .dock-link::before { transition: none; }
+}

@@ -1,0 +1,83 @@
+/* nunito-vietnamese-500-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('fonts/nunito-vietnamese-500-normal.woff2') format('woff2');
+}
+/* nunito-latin-500-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('fonts/nunito-latin-500-normal.woff2') format('woff2');
+}
+/* nunito-vietnamese-800-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('fonts/nunito-vietnamese-800-normal.woff2') format('woff2');
+}
+/* nunito-latin-800-normal */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url('fonts/nunito-latin-800-normal.woff2') format('woff2');
+}
+/* Shared 1920 × 900 backgrounds; copy stays independent of slide changes. */
+.hero-slider { margin: 24px auto 0; width: 90%; border-radius: 32px; position: relative; isolation: isolate; overflow: hidden; background: #faf5f0; }
+.hero-backgrounds, .hero-slide, .hero-shade { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-backgrounds { z-index: -2; overflow: hidden; }
+.hero-slide { object-fit: cover; object-position: center; opacity: 0; }
+.hero-slide.is-active { opacity: 1; }
+.hero-shade { z-index: -1; background: linear-gradient(90deg, #faf5f0 0%, rgba(250,245,240,.96) 23%, rgba(250,245,240,.78) 42%, rgba(250,245,240,0) 65%); }
+.hero-inner { max-width: 1280px; margin-inline: auto; padding: 56px 40px 112px; min-height: 600px; display: flex; align-items: center; }
+.hero-copy { width: 55%; max-width: 640px; }
+.hero-copy { font-family: "Nunito", "Be Vietnam Pro", sans-serif; }
+.hero-copy h1 { font-family: "Nunito", "Be Vietnam Pro", sans-serif; font-weight: 800; line-height: 1.15; letter-spacing: -.025em; font-size: clamp(2.25rem,3.25vw,3.25rem); text-wrap: balance; }
+.hero-copy p { font-weight: 500; line-height: 1.65; }
+.hero-copy p { max-width: 54ch; }
+.hero-controls { position: absolute; bottom: 28px; left: max(40px,calc((100% - 1200px)/2)); display: flex; gap: 8px; align-items: center; }
+.hero-controls[hidden] { display: none; }
+.hero-controls button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #d4c3ba; border-radius: 50%; background: #fff8f5; color: #68462c; cursor: pointer; transition: background-color 150ms ease; }
+.hero-controls button:hover { background: #f9eed9; }
+.hero-controls button:focus-visible { outline: 2px solid #326dca; outline-offset: 3px; }
+.hero-dots { display: flex; }
+.hero-dots button { border: 0; background: transparent; width: 32px; border-radius: 8px; }
+.hero-dots span { width: 8px; height: 8px; background: #82746c; border-radius: 50%; }
+.hero-dots [aria-current="true"] span { width: 20px; border-radius: 8px; background: #68462c; }
+.hero-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (min-width: 1600px) { .hero-inner { min-height: min(850px,46.875vw); } }
+@media (max-width: 1023px) {
+  .hero-inner { min-height: 600px; padding-top: 48px; }
+  .hero-copy { width: 60%; }
+  .hero-shade { background: linear-gradient(90deg,#faf5f0 0%,rgba(250,245,240,.96) 36%,rgba(250,245,240,.2) 75%); }
+}
+@media (max-width: 639px) {
+  .hero-slider { margin-top: 12px; border-radius: 24px; }
+  .hero-backgrounds { height: 260px; }
+  .hero-slide { object-position: 88% center; }
+  .hero-shade { height: 262px; background: linear-gradient(0deg,#faf5f0 0%,rgba(250,245,240,0) 35%); }
+  .hero-inner { display: block; min-height: 0; padding: 258px 20px 96px; }
+  .hero-copy { width: 100%; max-width: none; }
+  .hero-copy h1 { font-size: 2rem; }
+  .hero-copy > .inline-flex { max-width: 100%; }
+  .hero-copy p { font-size: 16px; }
+  .hero-controls { left: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-slide { transition-duration: 100ms; } }
+/* Keep the existing header actions within the mobile viewport above the slider. */
+@media (max-width: 639px) {
+  header > div { padding-inline: 16px !important; gap: 8px; }
+  header > div > a { flex-shrink: 0; }
+  header > div > a > span { font-size: 18px !important; }
+  header > div > .flex { gap: 8px; }
+  header button[title="Yêu thích"], header button[title="Thông báo"] { display: none; }
+  header > div > .flex > a:last-child { width: 44px; height: 44px; padding: 12px; font-size: 0; gap: 0; flex-shrink: 0; }
+}

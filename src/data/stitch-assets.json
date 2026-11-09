@@ -1,0 +1,86 @@
+{
+  "home": [
+    "/assets/stitch/home-1.webp",
+    "/assets/stitch/home-2.webp",
+    "/assets/stitch/home-3.webp",
+    "/assets/stitch/home-4.webp",
+    "/assets/stitch/home-5.webp",
+    "/assets/stitch/home-6.webp",
+    "/assets/stitch/home-7.webp",
+    "/assets/stitch/home-8.webp",
+    "/assets/stitch/home-9.webp",
+    "/assets/stitch/home-10.webp",
+    "/assets/stitch/home-11.webp",
+    "/assets/stitch/home-12.webp",
+    "/assets/stitch/home-13.webp",
+    "/assets/stitch/home-14.webp",
+    "/assets/stitch/home-15.webp",
+    "/assets/stitch/home-16.webp"
+  ],
+  "about": [
+    "/assets/stitch/about-1.webp",
+    "/assets/stitch/about-2.webp",
+    "/assets/stitch/about-3.webp",
+    "/assets/stitch/about-4.webp",
+    "/assets/stitch/about-5.webp"
+  ],
+  "services": [
+    "/assets/stitch/services-1.webp",
+    "/assets/stitch/services-2.webp",
+    "/assets/stitch/services-3.webp",
+    "/assets/stitch/services-4.webp",
+    "/assets/stitch/services-5.webp",
+    "/assets/stitch/services-6.webp",
+    "/assets/stitch/services-7.webp",
+    "/assets/stitch/services-8.webp"
+  ],
+  "daycare": [
+    "/assets/stitch/daycare-1.webp",
+    "/assets/stitch/daycare-2.webp",
+    "/assets/stitch/daycare-3.webp",
+    "/assets/stitch/daycare-4.webp"
+  ],
+  "boarding": [
+    "/assets/stitch/boarding-1.webp",
+    "/assets/stitch/boarding-2.webp",
+    "/assets/stitch/boarding-3.webp",
+    "/assets/stitch/boarding-4.webp",
+    "/assets/stitch/boarding-5.webp"
+  ],
+  "grooming": [
+    "/assets/stitch/grooming-1.webp",
+    "/assets/stitch/grooming-2.webp",
+    "/assets/stitch/grooming-3.webp",
+    "/assets/stitch/grooming-4.webp",
+    "/assets/stitch/grooming-5.webp",
+    "/assets/stitch/grooming-6.webp",
+    "/assets/stitch/grooming-7.webp",
+    "/assets/stitch/grooming-8.webp",
+    "/assets/stitch/grooming-9.webp"
+  ],
+  "shop": [
+    "/assets/stitch/shop-1.webp",
+    "/assets/stitch/shop-2.webp",
+    "/assets/stitch/shop-3.webp",
+    "/assets/stitch/shop-4.webp",
+    "/assets/stitch/shop-5.webp",
+    "/assets/stitch/shop-6.webp",
+    "/assets/stitch/shop-7.webp",
+    "/assets/stitch/shop-8.webp",
+    "/assets/stitch/shop-9.webp"
+  ],
+  "account": [
+    "/assets/stitch/account-1.webp"
+  ],
+  "product": [
+    "/assets/stitch/product-1.webp",
+    "/assets/stitch/product-2.webp",
+    "/assets/stitch/product-3.webp",
+    "/assets/stitch/product-4.webp",
+    "/assets/stitch/product-5.webp",
+    "/assets/stitch/product-6.webp",
+    "/assets/stitch/product-7.webp",
+    "/assets/stitch/product-8.webp",
+    "/assets/stitch/product-9.webp"
+  ]
+}

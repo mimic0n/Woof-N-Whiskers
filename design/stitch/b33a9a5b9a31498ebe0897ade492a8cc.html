@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Về chúng tôi | Woof N' Whiskers Đà Nẵng</title>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#e6c27c",
+            "tertiary-fixed": "#ffdea2",
+            "inverse-on-surface": "#f0f1f3",
+            "surface-tint": "#185cb8",
+            "status-error": "#B3261E",
+            "surface-dim": "#d9dadc",
+            "primary-hover": "#2757A8",
+            "on-secondary-container": "#7a553b",
+            "on-primary-fixed": "#001a41",
+            "surface-variant": "#e1e2e4",
+            "on-tertiary-fixed-variant": "#5b4308",
+            "text-ink": "#2B1D14",
+            "surface": "#f8f9fb",
+            "inverse-surface": "#2e3132",
+            "secondary-container": "#ffcdac",
+            "on-secondary-fixed": "#2e1502",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#e1e2e4",
+            "outline": "#737783",
+            "on-primary-fixed-variant": "#004492",
+            "surface-cream": "#F9EED9",
+            "tertiary-container": "#876b2f",
+            "status-success": "#2E7D4F",
+            "surface-container-low": "#f2f4f6",
+            "on-secondary": "#ffffff",
+            "secondary-fixed-dim": "#edbd9c",
+            "on-error-container": "#93000a",
+            "on-error": "#ffffff",
+            "on-background": "#191c1e",
+            "text-muted": "#6B5646",
+            "on-primary-container": "#f1f3ff",
+            "border-subtle": "#E8DFD0",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#424752",
+            "surface-container-lowest": "#ffffff",
+            "primary": "#0454b0",
+            "on-secondary-fixed-variant": "#613f26",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#6d5318",
+            "on-surface": "#191c1e",
+            "background": "#f8f9fb",
+            "surface-bright": "#f8f9fb",
+            "on-tertiary-container": "#fff2df",
+            "status-warning": "#B26A00",
+            "secondary-fixed": "#ffdcc5",
+            "primary-container": "#326dca",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#261900",
+            "surface-container-high": "#e7e8ea",
+            "outline-variant": "#c2c6d4",
+            "primary-fixed": "#d8e2ff",
+            "footer-slate": "#3F5F78",
+            "surface-container": "#edeef0",
+            "secondary": "#7b563c",
+            "primary-fixed-dim": "#acc7ff",
+            "inverse-primary": "#acc7ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-3xl": "4rem",
+            "space-2xl": "3rem",
+            "gutter": "1.5rem"
+          },
+          "fontFamily": {
+            "label-md": ["Be Vietnam Pro"],
+            "caption": ["Be Vietnam Pro"],
+            "title-md": ["Be Vietnam Pro"],
+            "headline-sm": ["Be Vietnam Pro"],
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"],
+            "label-sm": ["Be Vietnam Pro"],
+            "body-sm": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"],
+            "headline-xl": ["Be Vietnam Pro"],
+            "headline-xl-mobile": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl": ["44px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+          },
+          "boxShadow": {
+            "warm-sm": "0 2px 8px -1px rgba(43, 29, 20, 0.06), 0 1px 4px -1px rgba(43, 29, 20, 0.04)",
+            "warm-md": "0 8px 24px -4px rgba(43, 29, 20, 0.10), 0 4px 12px -2px rgba(43, 29, 20, 0.05)",
+            "warm-lg": "0 16px 36px -6px rgba(43, 29, 20, 0.14)"
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-text-ink font-body-md min-h-screen flex flex-col antialiased selection:bg-tertiary-fixed selection:text-text-ink">
+<!-- 1. Top Announcement Bar -->
+<div class="bg-surface-cream text-text-ink border-b border-border-subtle py-2 px-margin text-caption font-caption flex flex-wrap items-center justify-between gap-space-sm z-50">
+<div class="flex items-center gap-space-xs font-medium">
+<span class="material-symbols-outlined text-secondary text-base leading-none" data-icon="calendar_month">calendar_month</span>
+<span>Đặt lịch online từ Thứ 2 đến Chủ nhật</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-status-success mx-1"></span>
+<span class="text-status-success font-semibold">Mở cửa đón bé: 08:00 - 20:00</span>
+</div>
+<div class="flex items-center gap-space-lg">
+<a class="flex items-center gap-1 hover:text-primary font-semibold transition-colors duration-200" href="tel:0935605311">
+<span class="material-symbols-outlined text-base leading-none text-secondary" data-icon="call">call</span>
+<span>Hotline: 093 560 5311</span>
+</a>
+<span class="text-border-subtle">|</span>
+<span class="text-text-muted">49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</span>
+</div>
+</div>
+<!-- 2. Standard Sticky Header -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface docked full-width top-0 sticky z-50 shadow-sm border-b border-border-subtle dark:border-outline">
+<div class="w-full px-gutter md:px-margin max-w-7xl mx-auto flex items-center justify-between min-h-[72px]">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-secondary dark:text-secondary-fixed font-bold flex items-center gap-space-xs group" href="#">
+<span class="w-10 h-10 rounded-xl bg-surface-cream border border-border-subtle flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl" data-icon="pets">pets</span>
+</span>
+<div class="flex flex-col">
+<span class="leading-tight text-secondary font-headline-sm">Woof N' Whiskers</span>
+<span class="font-caption text-[11px] text-text-muted font-normal tracking-wide">Pet Care &amp; Boutique Đà Nẵng</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Trang chủ</a>
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md border-b-2 border-primary dark:border-inverse-primary pb-1" href="#">Về chúng tôi</a>
+<div class="relative group">
+<button class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200 flex items-center gap-1">
+<span>Dịch vụ</span>
+<span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180" data-icon="expand_more">expand_more</span>
+</button>
+<div class="absolute top-full left-0 mt-2 w-52 bg-surface-container-lowest border border-border-subtle rounded-xl shadow-warm-md py-2 hidden group-hover:block transition-all">
+<a class="block px-4 py-2 hover:bg-surface-cream text-text-ink text-body-sm" href="#">Grooming &amp; Spa thư giãn</a>
+<a class="block px-4 py-2 hover:bg-surface-cream text-text-ink text-body-sm" href="#">Khách sạn thú cưng lưu trú</a>
+<a class="block px-4 py-2 hover:bg-surface-cream text-text-ink text-body-sm" href="#">Nhà trẻ Daycare ban ngày</a>
+</div>
+</div>
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Cửa hàng</a>
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Đặt lịch</a>
+</nav>
+<!-- Right Utility Actions -->
+<div class="flex items-center gap-space-md">
+<!-- Search Trigger -->
+<button aria-label="Tìm kiếm" class="w-11 h-11 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<!-- Language Pill Switch -->
+<div class="hidden sm:flex items-center bg-surface-container-low border border-border-subtle rounded-full p-1 text-label-sm font-label-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-bold shadow-xs">VI</span>
+<span class="px-2.5 py-1 text-text-muted hover:text-text-ink cursor-pointer">EN</span>
+</div>
+<!-- Cart Trigger with Badge -->
+<a aria-label="Giỏ hàng" class="w-11 h-11 relative flex items-center justify-center text-secondary hover:bg-surface-container-low rounded-full transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-5 h-5 rounded-full bg-primary-container text-white text-[11px] font-bold flex items-center justify-center border-2 border-surface-container-lowest">0</span>
+</a>
+<!-- Login / User Account -->
+<a class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full border border-border-subtle hover:border-primary text-text-ink hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-secondary" data-icon="account_circle">account_circle</span>
+<span class="font-label-md text-label-md">Đăng nhập</span>
+</a>
+<!-- Trailing Primary CTA -->
+<a class="hidden lg:inline-flex items-center justify-center bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md px-5 min-h-[44px] rounded-full transition-all duration-200 shadow-warm-sm active:scale-95" href="#">
+          Đặt lịch ngay
+        </a>
+</div>
+</div>
+</header>
+<!-- 3. Breadcrumb -->
+<div class="bg-surface py-3 border-b border-border-subtle">
+<div class="max-w-7xl mx-auto px-gutter md:px-margin flex items-center gap-2 text-caption font-caption text-text-muted">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="home">home</span>
+<span>Trang chủ</span>
+</a>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-text-ink font-semibold">Về chúng tôi</span>
+</div>
+</div>
+<!-- 4. Two-Column Hero: Câu chuyện thương hiệu -->
+<main class="flex-grow">
+<section class="max-w-7xl mx-auto px-gutter md:px-margin py-space-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- LEFT: Large rounded photo with watermark badge -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-2xl overflow-hidden border border-border-subtle shadow-warm-md bg-surface-container-lowest aspect-[4/3] group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Modern high-end pet care boutique and daycare interior in Da Nang Vietnam, bathed in natural morning light through tall windows. Caring staff in pastel uniforms gently brushing a happy golden retriever and cuddling a fluffy British shorthair cat on warm wooden benches. Soft beige and cream walls, warm ambient interior lights, pristine cleanliness, and joyful domestic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2sAw_sPjssF354drdEzCH01uaH7CznrlUNicmK3lTd6euyrAWJ2Hey8L9_DEvdt4ulDxyzfbnCoJkXvEkAHy-601zEjibkPvcFcJiCnTKAJza0jZqxdQoSCqktT8Js0SslsQykpGJpkajUFFc9BvgFISvdOGV_W9B_j-OYXdO-86t8KVgt9FigTZMhj_Ea1LD4ZnM32zb8jrgbrtWImSShpWHsHXrmGAKiX5KOeYt"/>
+<!-- Watermark Tag -->
+<div class="absolute bottom-3 right-3 backdrop-blur-sm bg-[#2B1D14]/70 text-white font-label-sm text-[11px] px-3 py-1 rounded-full border border-white/20 select-none pointer-events-none">
+              Ảnh minh họa
+            </div>
+<!-- Decorative Badge -->
+<div class="absolute top-4 left-4 bg-surface-cream/95 backdrop-blur-sm border border-border-subtle rounded-xl px-3.5 py-2 shadow-warm-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="verified">verified</span>
+<div class="text-left">
+<p class="font-label-sm text-label-sm text-text-ink leading-tight">Yêu thương chuẩn mực</p>
+<p class="text-[11px] text-text-muted leading-tight">Không gian thân thiện không lồng nhốt gò bó</p>
+</div>
+</div>
+</div>
+<!-- Decorative Background Blob behind hero image -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-tertiary-fixed-dim/30 rounded-full blur-2xl -z-10 pointer-events-none"></div>
+</div>
+<!-- RIGHT: Editorial Story Content -->
+<div class="lg:col-span-6 space-y-space-md lg:pl-space-md">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-cream border border-border-subtle">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-secondary font-label-md text-label-sm uppercase tracking-wider font-bold">VỀ CHÚNG TÔI • CÂU CHUYỆN THƯƠNG HIỆU</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-text-ink leading-tight">
+            Một nơi yêu thương dành cho những người bạn bốn chân
+          </h1>
+<div class="space-y-4 text-text-muted font-body-md text-body-md">
+<p class="leading-relaxed">
+              Tại Woof N' Whiskers, chúng tôi tin rằng mỗi thú cưng đều xứng đáng được yêu thương và chăm sóc chu đáo. Không chỉ là cửa hàng cung cấp các sản phẩm dành cho thú cưng, chúng tôi còn mang đến những dịch vụ chăm sóc toàn diện, từ vui chơi ban ngày, lưu trú qua đêm đến grooming.
+            </p>
+<p class="leading-relaxed">
+              Với sự tận tâm và quan tâm đến từng bé, Woof N' Whiskers mong muốn trở thành người bạn đồng hành đáng tin cậy trên hành trình chăm sóc thú cưng của bạn.
+            </p>
+</div>
+<!-- Highlight Quotation / Tagline -->
+<div class="p-space-md bg-surface-cream/60 border-l-4 border-secondary rounded-r-xl">
+<p class="italic text-secondary font-title-md text-title-md">
+              “A little more love for every little paw.”
+            </p>
+<p class="text-caption font-caption text-text-muted mt-1">— Tôn chỉ dịch vụ của đội ngũ bảo mẫu Woof N' Whiskers Đà Nẵng</p>
+</div>
+<!-- Actions -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center justify-center bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md px-6 py-3 min-h-[44px] rounded-full transition-all duration-200 shadow-warm-md active:scale-95" href="#">
+              Trải nghiệm ngay
+            </a>
+<a class="inline-flex items-center justify-center bg-surface-container-lowest hover:bg-surface-cream text-primary border border-border-subtle font-label-md text-label-md px-6 py-3 min-h-[44px] rounded-full transition-all duration-200 group" href="#">
+<span>Khám phá dịch vụ</span>
+<span class="material-symbols-outlined text-base ml-1.5 transition-transform group-hover:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Four Value Cards -->
+<section class="bg-surface-cream/50 py-space-2xl border-y border-border-subtle">
+<div class="max-w-7xl mx-auto px-gutter md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-secondary font-label-md text-label-sm uppercase tracking-wider font-bold">CAM KẾT CHẤT LƯỢNG</span>
+<h2 class="font-headline-lg text-headline-lg text-text-ink mt-1">4 Giá trị cốt lõi tại Woof N' Whiskers</h2>
+<p class="text-text-muted font-body-md text-body-md mt-2">Mỗi quy trình và trải nghiệm đều được thiết kế xoay quanh sự an toàn, vệ sinh và cảm xúc thoải mái của các bé.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all duration-300 hover:-translate-y-1 flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-surface-cream flex items-center justify-center text-secondary mb-space-md border border-border-subtle">
+<span class="material-symbols-outlined text-3xl" data-icon="receipt_long">receipt_long</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-ink mb-2">Thông tin dịch vụ minh bạch</h3>
+<p class="text-text-muted font-body-sm text-body-sm leading-relaxed flex-grow">
+              Bảng giá niêm yết rõ ràng, không phụ phí ẩn. Hệ thống camera cập nhật liên tục để ba mẹ theo dõi sinh hoạt của bé mọi lúc mọi nơi.
+            </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle flex items-center text-status-success font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-base" data-icon="check_circle">check_circle</span>
+<span>100% Niêm yết công khai</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all duration-300 hover:-translate-y-1 flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-surface-cream flex items-center justify-center text-secondary mb-space-md border border-border-subtle">
+<span class="material-symbols-outlined text-3xl" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-ink mb-2">Quan tâm đến từng thú cưng</h3>
+<p class="text-text-muted font-body-sm text-body-sm leading-relaxed flex-grow">
+              Chế độ chăm sóc cá nhân hóa theo tính cách, thói quen ăn uống và thể trạng riêng biệt của từng bạn nhỏ cả ngày lẫn đêm.
+            </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle flex items-center text-status-success font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-base" data-icon="check_circle">check_circle</span>
+<span>Chăm sóc cá thể hóa</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all duration-300 hover:-translate-y-1 flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-surface-cream flex items-center justify-center text-secondary mb-space-md border border-border-subtle">
+<span class="material-symbols-outlined text-3xl" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-ink mb-2">Quy trình rõ ràng</h3>
+<p class="text-text-muted font-body-sm text-body-sm leading-relaxed flex-grow">
+              Kiểm tra sức khỏe đầu vào nghiêm ngặt (sổ tiêm phòng, ve rận), quy chuẩn khử khuẩn bề mặt theo tiêu chuẩn y khoa thú y.
+            </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle flex items-center text-status-success font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-base" data-icon="check_circle">check_circle</span>
+<span>Khử khuẩn đa tầng</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all duration-300 hover:-translate-y-1 flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-surface-cream flex items-center justify-center text-secondary mb-space-md border border-border-subtle">
+<span class="material-symbols-outlined text-3xl" data-icon="event_available">event_available</span>
+</div>
+<h3 class="font-title-md text-title-md text-text-ink mb-2">Dễ dàng đặt lịch</h3>
+<p class="text-text-muted font-body-sm text-body-sm leading-relaxed flex-grow">
+              Thao tác trực tuyến nhanh chóng từ Thứ 2 đến Chủ nhật, xác nhận qua tin nhắn tức thời và linh hoạt điều chỉnh khung giờ hẹn.
+            </p>
+<div class="mt-space-md pt-space-sm border-t border-border-subtle flex items-center text-status-success font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-base" data-icon="check_circle">check_circle</span>
+<span>Đặt lịch online 24/7</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Photo Gallery Section: Không gian chăm sóc & Trải nghiệm thực tế -->
+<section class="max-w-7xl mx-auto px-gutter md:px-margin py-space-2xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm">
+<div>
+<span class="text-secondary font-label-md text-label-sm uppercase tracking-wider font-bold">CƠ SỞ VẬT CHẤT ĐẠT CHUẨN</span>
+<h2 class="font-headline-lg text-headline-lg text-text-ink mt-1">Không gian chăm sóc &amp; Trải nghiệm thực tế</h2>
+</div>
+<p class="text-text-muted font-body-sm text-body-sm max-w-md">
+          Môi trường sinh hoạt tràn ngập ánh sáng tự nhiên, phòng cách âm riêng biệt và hệ thống lọc khí khử mùi ozone chuyên dụng.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Photo 01 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A modern welcoming pet care reception area in Da Nang Vietnam with light oak wood counter, warm ambient lighting, pet treat display shelves, and clean tile floor. A smiling Vietnamese staff member welcoming a pet owner carrying a small pomeranian dog. Bright clean aesthetic with indoor potted plants and warm modernism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVZ85JWrlQpGFGQ_4QebwyseLE0Ypj8cdJEYxfa8dRCQ4cLLo_5FQuJr7iOmZdkAH_dOF1xyX_NPz73j5lp9_Cn-PY-Ps1uRU6HZ9AUAAZflTpdhCI4fay1tKMwCPgexLgAXKFeVdA8tXPk_Wup-ZJKJ6c1U9I0JYCuGvOGaSPGO5AxIdo_VSjnlnrDiSlx43PYgGiuCPwrTkQ56UIomAVaKp0wpda1RtCdZ5IGA-i"/>
+<div class="absolute bottom-2 right-2 backdrop-blur-sm bg-[#2B1D14]/70 text-white font-label-sm text-[11px] px-2.5 py-0.5 rounded-full border border-white/20 select-none pointer-events-none">
+              Ảnh minh họa
+            </div>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-text-ink font-bold text-caption px-2 py-0.5 rounded-md border border-border-subtle">
+              01
+            </div>
+</div>
+<div class="p-space-md">
+<h3 class="font-title-md text-title-md text-text-ink font-semibold">Khu vực lễ tân &amp; Đón tiếp ấm áp</h3>
+<p class="text-text-muted font-body-sm text-body-sm mt-1">Nơi tư vấn tận tâm và làm quen nhẹ nhàng với các bé trước khi sử dụng dịch vụ.</p>
+</div>
+</div>
+<!-- Photo 02 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="A professional hygienic pet grooming spa salon room with stainless steel hydraulic bathtubs, gentle warm blow dryers, sanitized grooming tables, and neatly organized organic dog shampoo bottles. A clean, sterile yet cozy setting in soft cream and baby blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDh9UKnDDIDl9GwmG1vbGBvSwgLEzsOulxqS6fr1RWk1X5SXNW9EiSj4PJA2Ds6q3GnB0XbegyOu1buFdFTsnm2QzwWc43YxmrQ2QsezQtqN3PmegKRSzX0Y3dN52Q51gv__K9Uq0FxywWa9pFEpT2X9nlgd2rY2TxbRwYdk3rEGLCUTxf82JOYl3NjuKHhV4CHPh8urInQ6snSUZ4YVjNPy59EG3qgUTK5ai-atdx"/>
+<div class="absolute bottom-2 right-2 backdrop-blur-sm bg-[#2B1D14]/70 text-white font-label-sm text-[11px] px-2.5 py-0.5 rounded-full border border-white/20 select-none pointer-events-none">
+              Ảnh minh họa
+            </div>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-text-ink font-bold text-caption px-2 py-0.5 rounded-md border border-border-subtle">
+              02
+            </div>
+</div>
+<div class="p-space-md">
+<h3 class="font-title-md text-title-md text-text-ink font-semibold">Phòng spa &amp; Grooming chuẩn vệ sinh</h3>
+<p class="text-text-muted font-body-sm text-body-sm mt-1">Dụng cụ tiệt trùng bằng tia cực tím, sữa tắm hữu cơ dịu nhẹ cho làn da nhạy cảm.</p>
+</div>
+</div>
+<!-- Photo 03 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Cozy upscale overnight pet boarding suites for dogs and cats with warm wood grain partitions, soft plush orthopedic mattresses, individual fresh water dispensers, clean ambient night lighting, and clear glass doors providing safe visibility without cold cages." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXU83HJ--GPW70JNgf165BJLJDz22a1VnUo0Qfhuf8P6dCosyBlFCEMU3-mhBvyqiL4U0tViPpr_CBIIOHm2wu0XoMYSVpWP1metq_VA8kUOm5nbpEzVjPWO5rkMQu8xI6r9u4KTofSNBKxwDZagNBFAe_MH-3w_lXcfGjCbq8Ts4smbXSmK0KfIMTAcPSOD99a6SKpprlcabfoqBHH0XZqdta4FfszJYYzsDU5mw_"/>
+<div class="absolute bottom-2 right-2 backdrop-blur-sm bg-[#2B1D14]/70 text-white font-label-sm text-[11px] px-2.5 py-0.5 rounded-full border border-white/20 select-none pointer-events-none">
+              Ảnh minh họa
+            </div>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-text-ink font-bold text-caption px-2 py-0.5 rounded-md border border-border-subtle">
+              03
+            </div>
+</div>
+<div class="p-space-md">
+<h3 class="font-title-md text-title-md text-text-ink font-semibold">Lưu trú qua đêm thoáng mát, đệm êm</h3>
+<p class="text-text-muted font-body-sm text-body-sm mt-1">Phòng kính cách âm riêng biệt, điều hòa 24/7 kiểm soát độ ẩm và nhiệt độ lý tưởng.</p>
+</div>
+</div>
+<!-- Photo 04 -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-border-subtle shadow-warm-sm hover:shadow-warm-md transition-all group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" data-alt="Sunlit spacious indoor pet daycare playground with safe anti-slip rubber flooring, soft agility ramps, interactive wooden tunnels, colorful chew toys, and supervised small dog socializing peacefully under warm daylight. Cheerful compassionate pet care atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-YVLslYsyJ65VcQt_qGFBxxgJADxhel-gor9zl--HdLK5b9thg0Nc6TbWznggP30avUfoyzU_4UbHHZVFk-DpExBSkYFaWSDUtCWrwE1b2n8_8EC3YJSYiJ76fKrtfKfSN2xX2p0UI5WNFRP4Ljr3HQ86qqbSxKP7tuuxRpcJfTsQqC-6px7vM4eoXaa9QOFUoJeAzfnr17gWaQjbduUbjCneEXHT08toYCT5vars"/>
+<div class="absolute bottom-2 right-2 backdrop-blur-sm bg-[#2B1D14]/70 text-white font-label-sm text-[11px] px-2.5 py-0.5 rounded-full border border-white/20 select-none pointer-events-none">
+              Ảnh minh họa
+            </div>
+<div class="absolute top-2 left-2 bg-white/90 backdrop-blur-sm text-text-ink font-bold text-caption px-2 py-0.5 rounded-md border border-border-subtle">
+              04
+            </div>
+</div>
+<div class="p-space-md">
+<h3 class="font-title-md text-title-md text-text-ink font-semibold">Sân chơi Daycare vận động &amp; Xã hội</h3>
+<p class="text-text-muted font-body-sm text-body-sm mt-1">Khu tương tác vận động tự do có giám sát viên đồng hành vui chơi suốt ngày dài.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Store Info & Contact Section -->
+<section class="bg-surface py-space-2xl border-t border-border-subtle">
+<div class="max-w-7xl mx-auto px-gutter md:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="text-secondary font-label-md text-label-sm uppercase tracking-wider font-bold">ĐỊA ĐIỂM TIỆN LỢI</span>
+<h2 class="font-headline-lg text-headline-lg text-text-ink mt-1">Ghé thăm Woof N' Whiskers tại Đà Nẵng</h2>
+<p class="text-text-muted font-body-md text-body-md mt-2">Nằm ngay trung tâm quận Ngũ Hành Sơn, thuận tiện dừng đỗ ô tô và đưa đón các bé an toàn.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+<!-- Left Details Card -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-2xl p-space-xl border border-border-subtle shadow-warm-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-space-md">
+<span class="p-2 rounded-xl bg-surface-cream text-secondary">
+<span class="material-symbols-outlined text-2xl" data-icon="storefront">storefront</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-text-ink">Cửa hàng &amp; Trung tâm Dịch vụ</h3>
+<p class="text-caption font-caption text-text-muted">Khuê Mỹ, Ngũ Hành Sơn, TP. Đà Nẵng</p>
+</div>
+</div>
+<!-- List of Info -->
+<div class="space-y-4 pt-2">
+<!-- Address -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-cream flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-text-muted">Địa chỉ cơ sở:</p>
+<p class="font-body-md text-body-md text-text-ink font-semibold">49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</p>
+</div>
+</div>
+<!-- Phone -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-cream flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-text-muted">Điện thoại hotline:</p>
+<a class="font-body-md text-body-md text-primary font-bold hover:underline" href="tel:0935605311">093 560 5311</a>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-cream flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-text-muted">Hòm thư hỗ trợ:</p>
+<a class="font-body-md text-body-md text-text-ink font-medium hover:text-primary transition-colors" href="mailto:phungntldn@gmail.com">phungntldn@gmail.com</a>
+</div>
+</div>
+<!-- Hours -->
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-cream flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-text-muted">Giờ hoạt động:</p>
+<p class="font-body-md text-body-md text-text-ink font-semibold">Thứ 2 – Chủ nhật: 08:00 – 20:00</p>
+<p class="text-caption font-caption text-status-warning italic mt-0.5">*Giờ demo, cần cập nhật*</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action buttons in card -->
+<div class="mt-space-xl pt-space-md border-t border-border-subtle flex flex-wrap gap-space-sm">
+<a class="inline-flex items-center gap-2 bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md px-5 py-2.5 min-h-[44px] rounded-xl transition-all shadow-warm-sm active:scale-95" href="https://maps.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base" data-icon="directions">directions</span>
+<span>Chỉ đường trên Google Maps</span>
+</a>
+<a class="inline-flex items-center gap-2 bg-surface-cream hover:bg-surface-cream/80 text-text-ink border border-border-subtle font-label-md text-label-md px-5 py-2.5 min-h-[44px] rounded-xl transition-all" href="tel:0935605311">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="support_agent">support_agent</span>
+<span>Liên hệ tư vấn ngay</span>
+</a>
+</div>
+</div>
+<!-- Right Map Card Placeholder -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-2xl border border-border-subtle shadow-warm-sm overflow-hidden flex flex-col min-h-[380px]">
+<div class="p-space-md border-b border-border-subtle bg-surface-cream/40 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="map">map</span>
+<span class="font-label-md text-label-md text-text-ink">Vị trí trung tâm trên bản đồ</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-status-success/10 text-status-success font-label-sm text-[12px] font-bold">Khu dân cư an tĩnh</span>
+</div>
+<div class="relative flex-grow bg-surface-container-high flex items-center justify-center overflow-hidden min-h-[300px]">
+<!-- Mock Map UI -->
+<div class="absolute inset-0 bg-[#e5e3df] opacity-80" data-location="Ngũ Hành Sơn, Đà Nẵng" style="">
+<!-- Map Grid Simulation Graphic -->
+<div class="w-full h-full relative" style="background-image: radial-gradient(#d3cfc7 1.5px, transparent 1.5px); background-size: 24px 24px;">
+<!-- Mock Street Roads -->
+<div class="absolute top-1/2 left-0 right-0 h-6 bg-white shadow-xs -rotate-6"></div>
+<div class="absolute top-0 bottom-0 left-1/3 w-6 bg-white shadow-xs rotate-12"></div>
+<div class="absolute top-1/3 left-0 right-0 h-4 bg-tertiary-fixed/60 -rotate-1"></div>
+<div class="absolute bottom-10 left-10 text-caption font-bold text-text-muted bg-white/90 px-2 py-0.5 rounded shadow-xs">
+                    Đường Võ Nguyên Giáp (Biển Mỹ Khê)
+                  </div>
+<div class="absolute top-12 right-12 text-caption font-bold text-text-muted bg-white/90 px-2 py-0.5 rounded shadow-xs">
+                    Đường Lê Văn Hiến
+                  </div>
+</div>
+</div>
+<!-- Map Pin Center -->
+<div class="relative z-10 flex flex-col items-center animate-bounce">
+<div class="bg-primary text-white p-3 rounded-full shadow-warm-lg flex items-center justify-center border-2 border-white">
+<span class="material-symbols-outlined text-2xl" data-icon="pets">pets</span>
+</div>
+<div class="w-3 h-1.5 bg-black/20 rounded-full blur-[1px] mt-1"></div>
+</div>
+<!-- Pin Information Card Box -->
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/95 backdrop-blur-md p-3.5 rounded-xl border border-border-subtle shadow-warm-md flex items-center justify-between z-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-cream flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-lg" data-icon="pin_drop">pin_drop</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-text-ink leading-tight">49 Phạm Kiệt</h4>
+<p class="text-[12px] text-text-muted leading-tight">Cách bãi biển Mỹ Khê 400m</p>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-primary-container text-white font-label-sm text-xs hover:bg-primary-hover flex items-center gap-1 transition-colors" href="tel:0935605311">
+<span class="material-symbols-outlined text-sm" data-icon="call">call</span>
+<span>Gọi ngay</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Closing CTA Banner on Warm Cream -->
+<section class="max-w-7xl mx-auto px-gutter md:px-margin py-space-2xl">
+<div class="relative rounded-3xl bg-surface-cream border border-border-subtle p-space-xl md:p-space-2xl overflow-hidden shadow-warm-sm text-center">
+<!-- Floating soft paw background accents -->
+<span class="material-symbols-outlined absolute -top-8 -left-8 text-9xl text-border-subtle/40 pointer-events-none select-none" data-icon="pets">pets</span>
+<span class="material-symbols-outlined absolute -bottom-10 -right-8 text-9xl text-border-subtle/40 pointer-events-none select-none" data-icon="favorite">favorite</span>
+<div class="relative z-10 max-w-2xl mx-auto space-y-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-secondary font-label-sm text-xs border border-border-subtle">
+<span class="material-symbols-outlined text-sm" data-icon="sparkles">arrow_back_ios_new</span>
+<span>Chăm sóc tận tâm — An tâm trọn vẹn</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-text-ink leading-tight">
+            Sẵn sàng mang đến trải nghiệm tốt nhất cho bé cưng?
+          </h2>
+<p class="text-text-muted font-body-lg text-body-lg">
+            Hãy để Woof N' Whiskers chăm chút từng bữa ăn, giấc ngủ và ngoại hình sạch đẹp cho các thiên thần bốn chân của bạn.
+          </p>
+<div class="pt-space-sm flex flex-wrap items-center justify-center gap-space-md">
+<a class="inline-flex items-center justify-center bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md px-8 py-3.5 min-h-[44px] rounded-full transition-all duration-200 shadow-warm-md active:scale-95" href="#">
+              Đặt lịch ngay
+            </a>
+<a class="inline-flex items-center justify-center bg-surface-container-lowest hover:bg-surface-cream text-secondary border border-border-subtle font-label-md text-label-md px-8 py-3.5 min-h-[44px] rounded-full transition-all duration-200" href="#">
+              Xem các dịch vụ
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. Standard Desktop Footer -->
+<footer class="bg-footer-slate dark:bg-inverse-surface text-surface-container-lowest dark:text-inverse-on-surface w-full rounded-t-3xl mt-space-3xl border-t border-border-subtle dark:border-outline">
+<div class="w-full max-w-7xl mx-auto px-gutter md:px-margin py-space-2xl grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Cột 1: Về chúng tôi -->
+<div class="space-y-space-sm">
+<a class="text-headline-md font-headline-md text-surface-container-lowest dark:text-inverse-on-surface font-bold flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl" data-icon="pets">pets</span>
+<span>Woof N' Whiskers</span>
+</a>
+<p class="font-body-sm text-body-sm text-surface-variant dark:text-outline-variant italic leading-relaxed">
+          “A little more love for every little paw.”
+        </p>
+<p class="text-caption font-caption text-surface-variant dark:text-outline-variant leading-relaxed">
+          Trung tâm chăm sóc, khách sạn thú cưng cao cấp và cửa hàng vật phẩm chọn lọc tại thành phố biển Đà Nẵng.
+        </p>
+<div class="flex items-center gap-3 pt-2">
+<a aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-container-lowest transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+</a>
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-container-lowest transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="photo_camera">photo_camera</span>
+</a>
+<a aria-label="Hotline" class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-container-lowest transition-colors" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+</a>
+</div>
+</div>
+<!-- Cột 2: Hỗ trợ khách hàng -->
+<div class="space-y-space-sm">
+<h4 class="font-title-md text-title-md text-surface-container-lowest font-semibold border-b border-white/10 pb-2">Hỗ trợ khách hàng</h4>
+<ul class="space-y-2 font-body-sm text-body-sm">
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">Chính sách đổi trả</a>
+</li>
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">Hướng dẫn đặt lịch</a>
+</li>
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">Câu hỏi thường gặp (FAQ)</a>
+</li>
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">Điều khoản dịch vụ</a>
+</li>
+</ul>
+</div>
+<!-- Cột 3: Liên hệ -->
+<div class="space-y-space-sm">
+<h4 class="font-title-md text-title-md text-surface-container-lowest font-semibold border-b border-white/10 pb-2">Liên hệ</h4>
+<div class="space-y-2.5 font-body-sm text-body-sm text-surface-variant dark:text-outline-variant">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-lg shrink-0 mt-0.5" data-icon="location_on">location_on</span>
+<span>49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-lg shrink-0" data-icon="call">call</span>
+<a class="hover:text-white transition-colors" href="tel:0935605311">Hotline: 093 560 5311</a>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-lg shrink-0" data-icon="mail">mail</span>
+<a class="hover:text-white transition-colors" href="mailto:phungntldn@gmail.com">phungntldn@gmail.com</a>
+</p>
+</div>
+</div>
+<!-- Cột 4: Giờ hoạt động -->
+<div class="space-y-space-sm">
+<h4 class="font-title-md text-title-md text-surface-container-lowest font-semibold border-b border-white/10 pb-2">Giờ hoạt động</h4>
+<div class="space-y-2 font-body-sm text-body-sm text-surface-variant dark:text-outline-variant">
+<p class="text-surface-cream font-bold text-body-md">Thứ 2 - CN: 08:00 - 20:00</p>
+<p class="text-caption font-caption text-tertiary-fixed italic leading-normal">
+            (Giờ demo, cần cập nhật)
+          </p>
+<div class="mt-3 p-3 rounded-xl bg-white/5 border border-white/10 text-caption font-caption text-surface-variant leading-relaxed">
+            Nhận đặt lịch dịch vụ nội trú xuyên đêm và đón tiễn các bé linh hoạt theo lịch hẹn riêng của phụ huynh.
+          </div>
+</div>
+</div>
+</div>
+<!-- Bottom Bar Copyright -->
+<div class="border-t border-[#4F7390] py-4">
+<div class="max-w-7xl mx-auto px-gutter md:px-margin flex flex-col sm:flex-row items-center justify-between text-caption font-caption text-surface-variant dark:text-outline-variant gap-2">
+<p>© 2026 Woof N' Whiskers. Bảo lưu mọi quyền. A little more love for every little paw.</p>
+<p>Đà Nẵng, Việt Nam</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,103 @@
+/* Tailwind v4 utilities for the supplied Aceternity component only; no global preflight. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+@source '../**/*.{ts,tsx}';
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* WnW navigation: warm brand surfaces with blue wayfinding. */
+[data-floating-dock] {
+  --dock-tray: #ffffff;
+  --dock-surface: #f0dfc8;
+  --dock-ink: #755039;
+  --dock-hover: #f8d38c;
+  --dock-active: #326dca;
+  --dock-focus: #2757a8;
+}
+[data-floating-dock] [data-dock-desktop] {
+  background: var(--dock-tray);
+  box-shadow: 0 8px 28px #51391f26;
+}
+[data-floating-dock] .dock-link {
+  position: relative;
+  border-radius: 50%;
+  color: var(--dock-ink);
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+[data-floating-dock] .dock-disc,
+[data-floating-dock] [data-dock-mobile] .dock-link,
+[data-floating-dock] .dock-toggle {
+  background: var(--dock-surface);
+  color: inherit;
+  transition: background-color 180ms ease-out, box-shadow 180ms ease-out, transform 180ms ease-out;
+}
+[data-floating-dock] .dock-link[aria-current="page"] {
+  color: #fff;
+}
+[data-floating-dock] .dock-link[aria-current="page"] .dock-disc,
+[data-floating-dock] [data-dock-mobile] .dock-link[aria-current="page"] {
+  background: var(--dock-active);
+  box-shadow: inset 0 -3px 0 #00000026;
+}
+[data-floating-dock] .dock-link:focus-visible,
+[data-floating-dock] .dock-toggle:focus-visible {
+  outline: 3px solid var(--dock-focus);
+  outline-offset: 5px;
+}
+[data-floating-dock] .dock-link:focus-visible .dock-disc {
+  background: var(--dock-hover);
+  color: var(--dock-ink);
+}
+[data-floating-dock] .dock-tooltip {
+  background: #755039;
+  color: #fff;
+  border: 0;
+  padding: 5px 10px;
+  box-shadow: 0 4px 12px #51391f26;
+  pointer-events: none;
+}
+[data-floating-dock] .dock-toggle {
+  width: 48px;
+  height: 48px;
+  color: var(--dock-ink);
+  background: var(--dock-tray);
+  box-shadow: 0 6px 20px #51391f26;
+}
+[data-floating-dock] .dock-toggle svg { color: inherit; }
+[data-floating-dock] .dock-toggle[aria-expanded="true"] {
+  background: var(--dock-active);
+  color: white;
+}
+[data-floating-dock] [data-dock-mobile] .dock-link { width: 48px; height: 48px; }
+@media (hover: hover) {
+  [data-floating-dock] .dock-link:hover .dock-disc,
+  [data-floating-dock] [data-dock-mobile] .dock-link:hover,
+  [data-floating-dock] .dock-toggle:hover {
+    background: var(--dock-hover);
+    color: var(--dock-ink);
+    box-shadow: 0 6px 14px #51391f26;
+    transform: translateY(-3px);
+  }
+  [data-floating-dock] .dock-link[aria-current="page"]:hover .dock-disc,
+  [data-floating-dock] [data-dock-mobile] .dock-link[aria-current="page"]:hover {
+    background: #2757a8;
+    color: white;
+  }
+}
+.dark [data-floating-dock] {
+  --dock-tray: #352b24;
+  --dock-surface: #4b3b2e;
+  --dock-ink: #f8d38c;
+  --dock-hover: #604931;
+  --dock-active: #2757a8;
+  --dock-focus: #f8d38c;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-floating-dock] .dock-disc,
+  [data-floating-dock] .dock-link,
+  [data-floating-dock] .dock-toggle { transition: none; }
+  [data-floating-dock] .dock-link:hover .dock-disc,
+  [data-floating-dock] [data-dock-mobile] .dock-link:hover,
+  [data-floating-dock] .dock-toggle:hover { transform: none; }
+}

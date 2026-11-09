@@ -1,0 +1,191 @@
+{
+  "projectId": "17480892489591456143",
+  "screens": [
+    {
+      "id": "8e802d3b81dc4b078068493b1c8f96c1",
+      "title": "Woof N’Whiskers - Chi tiết sản phẩm (PDP)",
+      "type": "text/html"
+    },
+    {
+      "id": "00c2d4a2d054471495a5e551e84fc907",
+      "title": "PawHouse - Danh sách sản phẩm (Search & Filter)",
+      "type": "text/html"
+    },
+    {
+      "id": "bbe0ca78181544d5ba36baf4ff6991ed",
+      "title": "PawHouse - Tìm kiếm rỗng (Empty Search State)",
+      "type": "text/html"
+    },
+    {
+      "id": "300f9ed131b642239587dd191112cf31",
+      "title": "Woof N' Whiskers - Câu hỏi thường gặp (FAQ - chuẩn mục 2.19)",
+      "type": "text/html"
+    },
+    {
+      "id": "91daf6aa992944c0a931f3a5eb033639",
+      "title": "Woof N’Whiskers - Trang chủ (Homepage)",
+      "type": "text/html"
+    },
+    {
+      "id": "4958526f822648f79b6adacf719a850c",
+      "title": "Woof N' Whiskers - Đặt lịch: Trang tổng & Bước 1 Dịch vụ chuẩn mục 2.7",
+      "type": "text/html"
+    },
+    {
+      "id": "6305587768129788419",
+      "title": "stitch-woofnwhiskers.md",
+      "type": "text/markdown"
+    },
+    {
+      "id": "4ba10639ff9e46149d76e725bc481238",
+      "title": "PawHouse - Trang chủ (Homepage)",
+      "type": "text/html"
+    },
+    {
+      "id": "ff6a2e4e04424204a985ea1fa13dc41a",
+      "title": "Woof N' Whiskers - Cửa hàng: Danh sách sản phẩm (Search & Filter - chuẩn mục 2.16)",
+      "type": "text/html"
+    },
+    {
+      "id": "5ff34fff8c674c448b753096221d1199",
+      "title": "Woof N' Whiskers - Hồ sơ thú cưng: Form thêm / sửa (chuẩn mục 2.15)",
+      "type": "text/html"
+    },
+    {
+      "id": "792b4d8878004abc83c7a9b835a01fa2",
+      "title": "Woof N' Whiskers - Chính sách hủy lịch & Tiêm phòng (chuẩn mục 2.19)",
+      "type": "text/html"
+    },
+    {
+      "id": "ac471392a0db4a14bf59a80ff2c1e5e3",
+      "title": "Woof N' Whiskers - Cửa hàng: Trạng thái tìm kiếm rỗng (Frame B - chuẩn mục 2.16)",
+      "type": "text/html"
+    },
+    {
+      "id": "84f118f4e06a47c5809775baf247a0c0",
+      "title": "Woof N' Whiskers - Chi tiết dịch vụ Lưu trú ban đêm (Overnight Boarding) chuẩn mục 2.5",
+      "type": "text/html"
+    },
+    {
+      "id": "08d16cc021814cd3a5234ce4c49f787a",
+      "title": "Woof N' Whiskers - Chi tiết dịch vụ Chăm sóc ban ngày (Daycare) chuẩn mục 2.4",
+      "type": "text/html"
+    },
+    {
+      "id": "7abd612eeaae48fcb2914d8e30d3d615",
+      "title": "Woof N’Whiskers - Danh sách sản phẩm (Search & Filter)",
+      "type": "text/html"
+    },
+    {
+      "id": "2f6d146cd9024d7ea70e5441d37e55f8",
+      "title": "Woof N’Whiskers - Xác nhận đặt hàng (Order Confirmation)",
+      "type": "text/html"
+    },
+    {
+      "id": "b33a9a5b9a31498ebe0897ade492a8cc",
+      "title": "Woof N' Whiskers - Về chúng tôi (About Us) chuẩn mục 2.2",
+      "type": "text/html"
+    },
+    {
+      "id": "677c0d67193f47c28643e78372d010c1",
+      "title": "Woof N’Whiskers - Tìm kiếm rỗng (Empty Search State)",
+      "type": "text/html"
+    },
+    {
+      "id": "46d6948c4cbf4fbcb9afc2f1304b7564",
+      "title": "Woof N' Whiskers - Liên hệ & Bản đồ chỉ đường (chuẩn mục 2.19)",
+      "type": "text/html"
+    },
+    {
+      "id": "67c1649d22a14260a8a8a7af8894d9db",
+      "title": "Woof N' Whiskers - Giỏ hàng (Cart - chuẩn mục 2.18)",
+      "type": "text/html"
+    },
+    {
+      "id": "493cf76f53d647638af72d51e6fb8c51",
+      "title": "Woof N' Whiskers - Đặt lịch: Bước 2 Thông tin thú cưng (Frame A & Frame B) chuẩn mục 2.8",
+      "type": "text/html"
+    },
+    {
+      "id": "ffeed68b00434f0d9d14232f6f146232",
+      "title": "Woof N' Whiskers - Tài khoản: Đăng nhập / Đăng ký (chuẩn mục 2.11)",
+      "type": "text/html"
+    },
+    {
+      "id": "72350f6b839046c08c5262660257e340",
+      "title": "Woof N' Whiskers - Hồ sơ thú cưng: Danh sách (chuẩn mục 2.13)",
+      "type": "text/html"
+    },
+    {
+      "id": "6bc6015d8d7a4f64bc7b47324ff30b72",
+      "title": "Woof N' Whiskers - Xác nhận đặt hàng thành công (chuẩn mục 2.18)",
+      "type": "text/html"
+    },
+    {
+      "id": "5108f37184c24cb891f25cae45a48482",
+      "title": "Woof N' Whiskers - Chi tiết dịch vụ Chăm sóc lông (Pet Grooming) chuẩn mục 2.6",
+      "type": "text/html"
+    },
+    {
+      "id": "c2dafeee74314442b2afc3edc391bf65",
+      "title": "Woof N' Whiskers - Đặt lịch: Bước 4 Xác nhận & Màn hình thành công chuẩn mục 2.10",
+      "type": "text/html"
+    },
+    {
+      "id": "16626270026154957844",
+      "title": "codex-petshop-guide.md",
+      "type": "text/markdown"
+    },
+    {
+      "id": "bc064869936e474cb3eb4b7c8a6beb26",
+      "title": "Woof N’Whiskers - Giỏ hàng (Shopping Cart)",
+      "type": "text/html"
+    },
+    {
+      "id": "1facd968a4d44821b2af5c6306ab3d08",
+      "title": "Woof N' Whiskers - Đặt lịch: Bước 3 Thông tin khách hàng (Validation Error Preview) chuẩn mục 2.9",
+      "type": "text/html"
+    },
+    {
+      "id": "4cf1d7cf7a0b49b3944d90edddc53db8",
+      "title": "Woof N' Whiskers - Hồ sơ thú cưng: Chi tiết có Tabs (chuẩn mục 2.14)",
+      "type": "text/html"
+    },
+    {
+      "id": "d5b7ec9464d240c8ba29098a53a18c2a",
+      "title": "Woof N' Whiskers - Cửa hàng: Gợi ý tìm kiếm (Frame C - chuẩn mục 2.16)",
+      "type": "text/html"
+    },
+    {
+      "id": "89faf71bed9645b0b96ca3d6e35d89fd",
+      "title": "Woof N' Whiskers - Thanh toán (Checkout - chuẩn mục 2.18 Frame B)",
+      "type": "text/html"
+    },
+    {
+      "id": "e83ddaa62c6c4cf59ae6a9a33f6bbda4",
+      "title": "Woof N’Whiskers - Thanh toán (Checkout)",
+      "type": "text/html"
+    },
+    {
+      "id": "2bb48242e8a14651b567fe355326bbcf",
+      "title": "Woof N' Whiskers - Dịch vụ tổng quan (Services Overview) chuẩn mục 2.3",
+      "type": "text/html"
+    },
+    {
+      "id": "1ed6315c6ec044e1bf4b5ad64066a1ee",
+      "title": "Woof N' Whiskers - Tài khoản: Thông tin, Lịch đã đặt, Đơn hàng (chuẩn mục 2.12)",
+      "type": "text/html"
+    },
+    {
+      "id": "20b34155a00f4c31b2521d0c47f74d54",
+      "title": "Woof N' Whiskers - Chi tiết sản phẩm (PDP - chuẩn mục 2.17)",
+      "type": "text/html"
+    },
+    {
+      "id": "545abbb89bfb47acb712f6c5978e1b50",
+      "title": "Woof N' Whiskers - Trang chủ (Homepage) chuẩn mục 2.1",
+      "type": "text/html",
+      "hidden": true
+    }
+  ]
+}

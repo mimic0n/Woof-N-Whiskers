@@ -1,0 +1,3 @@
+import { Icon } from '../site/UI';
+const mapping={shopping_bag:'cart',shopping_cart:'cart',add_shopping_cart:'cart',pets:'paw',pet_supplies:'paw',sound_detection_dog_barking:'paw',set_meal:'heart',sports_baseball:'heart',link:'arrow',sanitizer:'info',bed:'heart',vital_signs:'heart',delete_sweep:'info',workspace_premium:'check',schedule:'calendar',ac_unit:'info',stethoscope:'heart',shower:'heart',hotel:'calendar',sunny:'paw',content_cut:'heart',calendar_month:'calendar',sell:'cart',close:'close',menu:'menu',arrow_forward:'arrow',bolt:'arrow'};
+export default function DemoIcon({name,...props}){return <Icon name={mapping[name]||'paw'} {...props}/>;}

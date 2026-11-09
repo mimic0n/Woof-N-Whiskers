@@ -1,0 +1,10 @@
+import { useI18n } from '../../i18n';
+import { Field } from '../../components/site/UI';
+export const blankPet={name:'',species:'dog',breed:'',weight:'',birthday:'',vaccine:'unknown',health:'',allergies:'',behavior:'',food:'',image:'',lastVaccine:'',nextVaccine:''};
+export default function PetFields({value,onChange,errors={},booking=false}) {
+ const {t}=useI18n();const update=key=>event=>onChange({...value,[key]:event.target.value});
+ return <div className="form-grid"><Field id="petName" label={t('petName')} required value={value.name} onChange={update('name')} error={errors.petName}/><Field id="species" label={t('species')} required error={errors.species}><select id="species" value={value.species} onChange={update('species')} aria-invalid={!!errors.species} aria-describedby={errors.species?'species-error':undefined}>{['dog','cat',...(!booking?['other']:[])].map(s=><option key={s} value={s}>{t(s)}</option>)}</select></Field><Field id="breed" label={t('breed')} required={booking} value={value.breed} onChange={update('breed')} error={errors.breed}/><Field id="weight" label={t('weight')} required type="number" min="0.01" step="0.01" value={value.weight} onChange={update('weight')} error={errors.weight}/>{!booking&&<Field id="birthday" label={t('birthday')} error={errors.birthday} type="date" value={value.birthday} onChange={update('birthday')} max={new Date().toLocaleDateString('en-CA')}/>}
+ <Field id="vaccine" label={t('vaccine')} required={booking}><select id="vaccine" value={value.vaccine} onChange={update('vaccine')}>{['unknown','full','partial'].map(v=><option key={v} value={v}>{t(v)}</option>)}</select></Field>
+ {value.vaccine==='full'&&!booking&&<><Field id="lastVaccine" label={t('vaccine')+' — '+t('date')} type="date" value={value.lastVaccine} onChange={update('lastVaccine')}/><Field id="nextVaccine" label={t('vaccine')+' — '+t('next')} type="date" value={value.nextVaccine} onChange={update('nextVaccine')}/></>}
+ {['health','allergies','behavior',...(!booking?['food']:[])].map(key=><Field key={key} id={key} label={t(key)}><textarea id={key} rows="3" value={value[key]} onChange={update(key)}/></Field>)}</div>;
+}

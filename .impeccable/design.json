@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T15:48:35.515568+00:00",
+  "title": "Design System: Woof N’ Whiskers",
+  "extensions": {
+    "colorMeta": {
+      "brown": {
+        "role": "primary",
+        "displayName": "Brown"
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Yellow"
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Blue"
+      },
+      "cream": {
+        "role": "secondary",
+        "displayName": "Cream"
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted"
+      },
+      "blue-dark": {
+        "role": "neutral",
+        "displayName": "Blue Dark"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line"
+      },
+      "success": {
+        "role": "neutral",
+        "displayName": "Success"
+      },
+      "warning": {
+        "role": "neutral",
+        "displayName": "Warning"
+      },
+      "danger": {
+        "role": "neutral",
+        "displayName": "Danger"
+      },
+      "footer": {
+        "role": "neutral",
+        "displayName": "Footer"
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White"
+      },
+      "warm": {
+        "role": "neutral",
+        "displayName": "Warm"
+      },
+      "blue-soft": {
+        "role": "secondary",
+        "displayName": "Blue Soft"
+      },
+      "home-sale-orange": {
+        "role": "secondary",
+        "displayName": "Homepage sale orange"
+      },
+      "home-sale-red": {
+        "role": "secondary",
+        "displayName": "Homepage sale red"
+      },
+      "home-sale-green": {
+        "role": "secondary",
+        "displayName": "Homepage sale green"
+      },
+      "home-sale-ink": {
+        "role": "neutral",
+        "displayName": "Homepage sale text"
+      },
+      "home-dock": {
+        "role": "neutral",
+        "displayName": "Homepage dock surface"
+      },
+      "home-dock-button": {
+        "role": "neutral",
+        "displayName": "Homepage dock button"
+      },
+      "home-dock-ink": {
+        "role": "neutral",
+        "displayName": "Homepage dock icon"
+      },
+      "dock-gray-50": {
+        "role": "neutral",
+        "displayName": "Dock gray 50"
+      },
+      "dock-gray-100": {
+        "role": "neutral",
+        "displayName": "Dock gray 100"
+      },
+      "dock-gray-200": {
+        "role": "neutral",
+        "displayName": "Dock gray 200"
+      },
+      "dock-neutral-300": {
+        "role": "neutral",
+        "displayName": "Dock neutral 300"
+      },
+      "dock-neutral-400": {
+        "role": "neutral",
+        "displayName": "Dock neutral 400"
+      },
+      "dock-neutral-500": {
+        "role": "neutral",
+        "displayName": "Dock neutral 500"
+      },
+      "dock-neutral-700": {
+        "role": "neutral",
+        "displayName": "Dock neutral 700"
+      },
+      "dock-neutral-800": {
+        "role": "neutral",
+        "displayName": "Dock neutral 800"
+      },
+      "dock-neutral-900": {
+        "role": "neutral",
+        "displayName": "Dock neutral 900"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Shared display",
+        "purpose": "Shared responsive display role; restored homepage uses home-display."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Shared Vietnamese/English body copy."
+      },
+      "home-display": {
+        "displayName": "Homepage Nunito display",
+        "purpose": "Restored homepage hero; self-hosted Nunito 800, 2rem below 640px and 1.8rem below 380px."
+      },
+      "home-hero-body": {
+        "displayName": "Homepage Nunito body",
+        "purpose": "Restored hero paragraph; self-hosted Nunito 500."
+      },
+      "home-story-emphasis": {
+        "displayName": "Homepage story emphasis",
+        "purpose": "Georgia italic emphasis within product stories."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-sm",
+        "value": "0 1px 3px rgba(43,29,20,.08)",
+        "purpose": "Shared panels."
+      },
+      {
+        "name": "shadow",
+        "value": "0 10px 30px rgba(43,29,20,.10)",
+        "purpose": "Modals and toasts."
+      },
+      {
+        "name": "stitch-shadow",
+        "value": "0 4px 12px rgba(43,29,20,.06)",
+        "purpose": "Product-card hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": "background-color .18s, color .18s, border-color .18s",
+        "purpose": "Links and buttons."
+      },
+      {
+        "name": "product-transition",
+        "value": "box-shadow .2s, transform .2s",
+        "purpose": "Product hover; disabled for reduced motion."
+      },
+      {
+        "name": "home-hero-slide",
+        "value": "transform .8s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Horizontal background slide every 4500ms; pauses on hover/focus, manual pause and reduced motion."
+      },
+      {
+        "name": "dock-magnification",
+        "value": "distance [-150,0,150]; item [40,80,40]px; icon [20,40,20]px; spring mass 0.1, stiffness 150, damping 12",
+        "purpose": "Source desktop proximity magnification."
+      },
+      {
+        "name": "dock-mobile-stack",
+        "value": "0.05s stagger; reversed entry order; opacity and 10px y displacement",
+        "purpose": "Source mobile open/close."
+      },
+      {
+        "name": "dock-reduced-motion",
+        "value": "fixed item/icon 40/20px; no displacement or stagger; tooltip/mobile duration 0",
+        "purpose": "User reduced-motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-phone-max",
+        "value": "379px"
+      },
+      {
+        "name": "phone-max",
+        "value": "479px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1023px"
+      },
+      {
+        "name": "compact-nav-max",
+        "value": "1099px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1199px"
+      }
+    ],
+    "documentationSource": {
+      "path": "DESIGN.md",
+      "sha256": "eeef22069b8da44472ca627a36757a77faea32eff3caa984b833ce2718283465",
+      "note": "Synchronized with shared Aceternity primary navigation; existing shared and homepage tokens preserved."
+    },
+    "homepageVariation": {
+      "route": "/",
+      "source": "Demo/stitch_petshop_design_system (2)/code-animated.html",
+      "scope": [
+        ".demo-home",
+        ".home-reference"
+      ],
+      "layout": "1280px source container; 1240px stories. Hero width 90%, radius 32px, desktop minimum height 600px. Below 640px: 24px radius, 260px photograph above copy. Stories stack below 700px; booking stacks below 768px. Shared dock navigation follows its own 768px breakpoint.",
+      "materials": "Nunito 500/800 hero, Be Vietnam Pro body, Georgia story italics; local pet photographs.",
+      "components": "Orange/red Flash Sale gradient with green badges and price ribbons; brown closing banner and warm footer with square upper corners.",
+      "authority": "Shared root tokens continue to govern other routes."
+    },
+    "sharedNavigation": {
+      "source": "src/components/ui/floating-dock.tsx",
+      "adapter": "src/components/floating-dock-demo.tsx",
+      "utilities": "src/styles/floating-dock.css",
+      "ownership": "One shared layout instance on every route; supersedes header primary links/mobile navigation drawer and homepage-only dock. Header brand/search/language/account/cart actions remain.",
+      "destinations": [
+        "Home",
+        "Shop",
+        "Services",
+        "About (paw)",
+        "Booking",
+        "Account",
+        "Contact"
+      ],
+      "desktop": "At least 768px: fixed bottom-center, 24px bottom offset, z-40; 64px tray, 16px radius/gaps/horizontal padding, 12px bottom padding; 40→80px circles, 20→40px icons.",
+      "mobile": "Below 768px: fixed right/bottom 20px, z-40; 40px circles, 16px destination icons, 20px toggle icon, vertical stack with 8px gaps.",
+      "accessibility": "Localized icon names, aria-current page, hover/focus tooltip, expanded/control state and Escape focus return. Source 40px targets explicitly chosen by user.",
+      "authority": "Pinned source utilities and Motion own styling; no replacement custom CSS or legacy home-dock palette. Tailwind v4 utilities omit global preflight.",
+      "dark": "Ancestor .dark enables original neutral-900/800 surfaces, neutral-300/400 icons and white tooltip text; no added site theme switch."
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Shared action control; hero action groups use pill corners.",
+      "html": "<button class=\"ds-primary\">Đặt lịch</button>",
+      "css": ".ds-primary{font-family:var(--font, Be Vietnam Pro, system-ui, -apple-system, Segoe UI, Roboto, sans-serif);display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border:1px solid var(--c-line,#EBE5DF);border-radius:var(--radius-sm,10px);background:var(--c-blue,#326DCA);color:white;border-color:var(--c-blue,#326DCA);font-size:.9rem;font-weight:600;line-height:1.4;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;}.ds-primary:hover{background:var(--c-blue-dark,#2757A8);box-shadow:0 3px 8px rgba(50,109,202,.15);}.ds-primary:focus-visible{outline:3px solid var(--c-blue,#326DCA);outline-offset:2px;}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Shared action control; hero action groups use pill corners.",
+      "html": "<button class=\"ds-secondary\">Đặt lịch</button>",
+      "css": ".ds-secondary{font-family:var(--font, Be Vietnam Pro, system-ui, -apple-system, Segoe UI, Roboto, sans-serif);display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 22px;border:1px solid var(--c-line,#EBE5DF);border-radius:var(--radius-sm,10px);background:white;color:var(--c-ink,#201A16);font-size:.9rem;font-weight:600;line-height:1.4;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s;}.ds-secondary:hover{background:var(--stitch-blue-soft,#E8F0FE);color:var(--c-blue,#326DCA);border-color:var(--c-blue,#326DCA);box-shadow:0 3px 8px rgba(50,109,202,.15);}.ds-secondary:focus-visible{outline:3px solid var(--c-blue,#326DCA);outline-offset:2px;}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Labeled shared field with an invalid-state border.",
+      "html": "<label class=\"ds-field\">Họ và tên<input placeholder=\"Tên của bạn\" /></label>",
+      "css": ".ds-field{font-family:var(--font, Be Vietnam Pro, system-ui, -apple-system, Segoe UI, Roboto, sans-serif);display:grid;gap:8px;color:var(--c-ink,#201A16);font-size:.8rem;}.ds-field input{font:inherit;font-size:1rem;min-width:0;min-height:48px;padding:11px 14px;border:1px solid var(--c-line,#EBE5DF);border-radius:8px;background:white;color:var(--c-ink,#201A16);line-height:1.5;}.ds-field input:hover{border-color:#b8a99d;}.ds-field input[aria-invalid=true]{border-color:var(--c-danger,#B3261E);}.ds-field input:focus-visible{outline:3px solid var(--c-blue,#326DCA);outline-offset:2px;}"
+    },
+    {
+      "name": "Category Chip",
+      "kind": "chip",
+      "refersTo": "category-chip",
+      "description": "Blue marks the active category.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"true\">Cho chó</button>",
+      "css": ".ds-chip{font-family:var(--font, Be Vietnam Pro, system-ui, -apple-system, Segoe UI, Roboto, sans-serif);min-height:44px;padding:10px 16px;border:1px solid var(--c-line,#EBE5DF);border-radius:999px;background:white;color:var(--c-ink,#201A16);font-size:.8rem;cursor:pointer;}.ds-chip[aria-pressed=true]{background:var(--c-blue,#326DCA);border-color:var(--c-blue,#326DCA);color:white;}.ds-chip:hover{text-decoration:underline;}.ds-chip:focus-visible{outline:3px solid var(--c-blue,#326DCA);outline-offset:2px;}"
+    },
+    {
+      "name": "Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "White container for form and support content.",
+      "html": "<section class=\"ds-panel\"><h3>Thông tin thú cưng</h3><p>Quản lý hồ sơ và thông tin chăm sóc.</p></section>",
+      "css": ".ds-panel{font-family:var(--font, Be Vietnam Pro, system-ui, -apple-system, Segoe UI, Roboto, sans-serif);padding:32px;background:white;color:var(--c-ink,#201A16);border:1px solid var(--c-line,#EBE5DF);border-radius:var(--radius,16px);box-shadow:var(--shadow-sm,0 1px 3px rgba(43,29,20,.08));}.ds-panel h3{font-size:1.2rem;font-weight:600;margin:0 0 12px;}.ds-panel p{color:var(--c-muted,#6E6259);line-height:1.6;margin:0;}"
+    },
+    {
+      "name": "Shared Floating Dock",
+      "kind": "nav",
+      "description": "Primary navigation on every route. Static desktop source specimen; runtime TSX supplies spring magnification, mobile stack and reduced motion.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Main navigation\"><a href=\"/\" aria-label=\"Home\" aria-current=\"page\" title=\"Home\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"m3 10 9-7 9 7M5 9v12h14V9M9 21v-8h6v8\"/></svg></a><a href=\"/cua-hang/\" aria-label=\"Shop\" title=\"Shop\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 7h14l1 14H4L5 7ZM9 7V5a3 3 0 0 1 6 0v2\"/></svg></a></nav>",
+      "css": ".ds-dock{display:flex;align-items:flex-end;gap:16px;height:64px;box-sizing:border-box;padding:0 16px 12px;border-radius:16px;background:oklch(98.5% 0.002 247.839)}.ds-dock a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:9999px;background:oklch(92.8% 0.006 264.531);color:oklch(55.6% 0 none);text-decoration:none}.ds-dock svg{width:20px;height:20px}.ds-dock a:focus-visible{outline:auto}.ds-dock a:hover{cursor:pointer}.dark .ds-dock{background:oklch(20.5% 0 none)}.dark .ds-dock a{background:oklch(26.9% 0 none);color:oklch(87% 0 none)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The selected Stitch pet shop templates",
+    "overview": "The selected Stitch page templates establish warm pet photography, brown identity details, blue actions and rounded white surfaces. The same language continues through service pages, booking, accounts, shopping and reading pages; operational screens use tighter spacing and visible borders. The / homepage follows the pinned local code-animated.html variation within .demo-home and .home-reference; shared tokens continue to govern other routes. One shared user-pinned Aceternity Floating Dock supplies primary navigation across every route; header utility actions remain.",
+    "keyCharacteristics": [
+      "Warm cream beside pale gray and white surfaces.",
+      "Blue controls and prices; brown identity and care accents.",
+      "Self-hosted Vietnamese typography and natural pet/shop imagery."
+    ],
+    "rules": [],
+    "dos": [
+      "Do follow the exported Stitch pages and implemented tokens; preserve the pinned local HTML variation and scoped source styles for /.",
+      "Do preserve visible focus, validation, empty states and bilingual text wrapping.",
+      "Do retain illustration/demo labels where the application shows them.",
+      "Do preserve one shared source Floating Dock on every route, with explicitly chosen 40px targets, exact neutral utilities, dark variants and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don’t substitute the unrelated coral project metadata for the page palette.",
+      "Don’t assume every button is a pill: form and card controls use smaller corners.",
+      "Don’t introduce remote fonts or remove reduced-motion behavior."
+    ]
+  }
+}

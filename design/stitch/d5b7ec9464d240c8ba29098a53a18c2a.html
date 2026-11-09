@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cửa hàng — Gợi ý tìm kiếm (Frame C) | Woof N' Whiskers Đà Nẵng</title>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "tertiary-container": "#876b2f",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#613f26",
+            "surface-dim": "#d9dadc",
+            "outline": "#737783",
+            "text-muted": "#6B5646",
+            "surface": "#f8f9fb",
+            "surface-variant": "#e1e2e4",
+            "background": "#f8f9fb",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#2e1502",
+            "on-secondary": "#ffffff",
+            "surface-bright": "#f8f9fb",
+            "tertiary-fixed": "#ffdea2",
+            "secondary-container": "#ffcdac",
+            "status-success": "#2E7D4F",
+            "surface-cream": "#F9EED9",
+            "error": "#ba1a1a",
+            "surface-container-high": "#e7e8ea",
+            "tertiary-fixed-dim": "#e6c27c",
+            "surface-container": "#edeef0",
+            "primary-hover": "#2757A8",
+            "primary-container": "#326dca",
+            "outline-variant": "#c2c6d4",
+            "secondary": "#7b563c",
+            "primary-fixed-dim": "#acc7ff",
+            "secondary-fixed-dim": "#edbd9c",
+            "on-primary-fixed": "#001a41",
+            "border-subtle": "#E8DFD0",
+            "inverse-surface": "#2e3132",
+            "on-tertiary-fixed": "#261900",
+            "surface-tint": "#185cb8",
+            "on-secondary-container": "#7a553b",
+            "inverse-primary": "#acc7ff",
+            "primary-fixed": "#d8e2ff",
+            "status-warning": "#B26A00",
+            "surface-container-low": "#f2f4f6",
+            "on-tertiary": "#ffffff",
+            "status-error": "#B3261E",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#5b4308",
+            "on-surface-variant": "#424752",
+            "on-primary": "#ffffff",
+            "tertiary": "#6d5318",
+            "inverse-on-surface": "#f0f1f3",
+            "primary": "#0454b0",
+            "surface-container-highest": "#e1e2e4",
+            "footer-slate": "#3F5F78",
+            "on-primary-fixed-variant": "#004492",
+            "on-tertiary-container": "#fff2df",
+            "text-ink": "#2B1D14",
+            "on-primary-container": "#f1f3ff",
+            "on-surface": "#191c1e",
+            "on-background": "#191c1e",
+            "secondary-fixed": "#ffdcc5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1rem",
+            "space-2xl": "3rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-xl": "2rem",
+            "space-md": "1rem",
+            "space-3xl": "4rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "label-sm": ["Be Vietnam Pro"],
+            "headline-xl-mobile": ["Be Vietnam Pro"],
+            "headline-xl": ["Be Vietnam Pro"],
+            "caption": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "title-md": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "headline-sm": ["Be Vietnam Pro"],
+            "body-sm": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl": ["44px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f2f4f6;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #c2c6d4;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #737783;
+    }
+  </style>
+</head>
+<body class="bg-background text-text-ink font-body-md antialiased selection:bg-secondary-fixed selection:text-text-ink min-h-screen flex flex-col">
+<!-- 1. Top Announcement Bar -->
+<aside class="bg-surface-cream text-text-ink border-b border-border-subtle py-2 px-4 md:px-12 text-center text-xs md:text-sm font-medium tracking-normal flex flex-wrap items-center justify-between gap-2 z-50">
+<div class="flex items-center gap-2 mx-auto md:mx-0">
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-secondary text-surface-container-lowest text-[11px] font-bold">★</span>
+<span><strong>Miễn phí vận chuyển</strong> đơn từ 500.000đ tại Đà Nẵng</span>
+<span class="text-text-muted hidden sm:inline">•</span>
+<span class="hidden sm:inline">Hotline &amp; Zalo: <strong class="text-secondary">093 560 5311</strong></span>
+</div>
+<div class="hidden lg:flex items-center gap-4 text-text-muted text-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+        49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng
+      </span>
+<span>|</span>
+<span>08:00 - 20:00 Hàng ngày</span>
+</div>
+</aside>
+<!-- 2. Header (TopNavBar based on Shared Components) -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface border-b border-border-subtle dark:border-outline-variant shadow-sm transition-all duration-200">
+<div class="flex justify-between items-center w-full px-6 md:px-12 max-w-7xl mx-auto h-20">
+<!-- Logo Branding -->
+<a class="flex items-center gap-2.5 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-surface-cream border border-border-subtle flex items-center justify-center text-secondary group-hover:scale-105 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">pets</span>
+</div>
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-secondary dark:text-secondary-fixed tracking-tight">Woof N' Whiskers</div>
+<p class="text-[11px] font-body-sm text-text-muted leading-none hidden sm:block">A little more love for every little paw</p>
+</div>
+</a>
+<!-- Desktop Navigation Links (JSON Navigation) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-text-ink dark:text-on-surface hover:text-primary-container dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="#">Trang chủ</a>
+<a class="text-text-ink dark:text-on-surface hover:text-primary-container dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="#">Về chúng tôi</a>
+<div class="relative group cursor-pointer">
+<div class="flex items-center gap-1 text-text-ink dark:text-on-surface hover:text-primary-container dark:hover:text-inverse-primary transition-colors font-label-md text-label-md py-2">
+<span>Dịch vụ</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</div>
+</div>
+<!-- Active Nav: Cửa hàng -->
+<a class="border-b-2 border-primary-container dark:border-inverse-primary text-primary-container dark:text-inverse-primary pb-1 font-semibold font-label-md text-label-md" href="#">Cửa hàng</a>
+<a class="text-text-ink dark:text-on-surface hover:text-primary-container dark:hover:text-inverse-primary transition-colors font-label-md text-label-md" href="#">Đặt lịch</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<!-- Search Trigger Icon (Focused visual indicator) -->
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-primary-container bg-primary-fixed/40 transition-colors" title="Tìm kiếm">
+<span class="material-symbols-outlined text-xl">search</span>
+</button>
+<!-- Language toggle pill: VI | EN -->
+<div class="hidden sm:flex items-center bg-surface-container-low p-1 rounded-full border border-border-subtle text-xs font-semibold">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-on-primary">VI</span>
+<span class="px-2.5 py-1 rounded-full text-text-muted hover:text-text-ink cursor-pointer">EN</span>
+</div>
+<!-- Cart Trigger (JSON: shopping_bag) -->
+<button class="relative w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-cream text-text-ink border border-border-subtle transition-colors" title="Giỏ hàng">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-primary-container text-on-primary text-xs font-bold flex items-center justify-center shadow-sm">2</span>
+</button>
+<!-- User account profile link -->
+<div class="hidden lg:flex items-center gap-2 pl-2 border-l border-border-subtle">
+<div class="w-9 h-9 rounded-full bg-surface-cream border border-border-subtle flex items-center justify-center text-secondary font-bold text-sm">
+            NT
+          </div>
+<div class="text-left leading-tight pr-1">
+<div class="font-label-sm text-label-sm text-text-ink">Nguyễn P. Thảo</div>
+<div class="text-[11px] font-caption text-status-warning font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">star</span> Gold Paw
+            </div>
+</div>
+</div>
+<!-- Trailing Primary Action (JSON) -->
+<a class="hidden xl:inline-flex items-center justify-center h-10 px-5 rounded-full bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md font-semibold transition-all duration-200 active:scale-95 shadow-sm" href="#">
+          Đặt lịch ngay
+        </a>
+</div>
+</div>
+</header>
+<!-- 3. State Switcher Toolbar (Frame C Showcase) -->
+<section class="bg-surface-container-lowest border-b border-border-subtle py-3 px-6 md:px-12">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 text-text-muted text-xs md:text-sm">
+<span class="material-symbols-outlined text-secondary text-lg">layers</span>
+<span class="font-semibold text-text-ink">Trạng thái Demo 2.16:</span>
+<span class="hidden sm:inline text-text-muted">Cửa hàng — Tương tác thanh tìm kiếm</span>
+</div>
+<div class="flex items-center gap-2 p-1 bg-surface-container-low rounded-xl border border-border-subtle text-xs font-medium">
+<a class="px-3 py-1.5 rounded-lg text-text-muted hover:text-text-ink transition-colors" href="#">Frame A: Danh sách (42)</a>
+<a class="px-3 py-1.5 rounded-lg text-text-muted hover:text-text-ink transition-colors" href="#">Frame B: Tìm kiếm rỗng</a>
+<div class="px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-semibold shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+<span>Frame C: Gợi ý Dropdown (Active)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Breadcrumb Navigation -->
+<nav aria-label="Breadcrumb" class="w-full px-6 md:px-12 max-w-7xl mx-auto pt-6 pb-2">
+<ol class="flex items-center gap-2 text-xs md:text-sm text-text-muted font-body-sm">
+<li>
+<a class="hover:text-primary-container transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+<span>Trang chủ</span>
+</a>
+</li>
+<li><span class="material-symbols-outlined text-xs">chevron_right</span></li>
+<li>
+<a class="hover:text-primary-container transition-colors" href="#">Cửa hàng</a>
+</li>
+<li><span class="material-symbols-outlined text-xs">chevron_right</span></li>
+<li aria-current="page" class="font-semibold text-text-ink">Tìm kiếm sản phẩm &amp; dịch vụ</li>
+</ol>
+</nav>
+<!-- 5. Search Bar & Intelligent Autocomplete Dropdown (Hero & Interactive Focus Center) -->
+<main class="w-full px-6 md:px-12 max-w-7xl mx-auto pt-4 pb-16 flex-1">
+<!-- Search Section Header -->
+<div class="mb-6">
+<h1 class="text-headline-lg font-headline-lg text-text-ink tracking-tight">Cửa hàng &amp; Dịch vụ Chăm sóc</h1>
+<p class="text-body-md font-body-md text-text-muted mt-1">Tìm kiếm hàng nghìn sản phẩm chính hãng và dịch vụ spa làm đẹp cao cấp cho thú cưng</p>
+</div>
+<!-- Active Search Anchor Container (Relative Anchor for Dropdown) -->
+<div class="relative w-full max-w-4xl mx-auto z-40 mb-10">
+<!-- Search Input Container -->
+<div class="relative flex items-center bg-surface-container-lowest rounded-2xl border-2 border-primary-container shadow-lg transition-all duration-200 ring-4 ring-primary-container/10">
+<div class="pl-5 pr-2 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl font-bold">search</span>
+</div>
+<input aria-controls="search-suggestions-dropdown" aria-expanded="true" class="w-full py-4 px-2 text-text-ink font-body-md text-base bg-transparent border-0 focus:ring-0 focus:outline-none" placeholder="Nhập tên phụ kiện, thức ăn hoặc dịch vụ cần tìm..." type="text" value="tắm sấy"/>
+<!-- Clear Button (✕) -->
+<button class="p-2 text-text-muted hover:text-text-ink transition-colors mr-1 rounded-full hover:bg-surface-container-low" title="Xóa nội dung">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+<!-- Submit Button -->
+<div class="pr-3">
+<button class="h-11 px-6 rounded-xl bg-primary-container hover:bg-primary-hover text-on-primary font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm transition-all duration-150 active:scale-95">
+<span>Tìm kiếm</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ======================================================== -->
+<!-- FRAME C: GROUPED SUGGESTION DROPDOWN OVERLAY (Centerpiece) -->
+<!-- ======================================================== -->
+<div class="absolute left-0 right-0 top-full mt-3 bg-surface-container-lowest rounded-2xl border border-border-subtle shadow-2xl overflow-hidden z-50 transition-all duration-200" id="search-suggestions-dropdown">
+<!-- Suggestion Summary Header -->
+<div class="bg-surface-cream/70 px-6 py-3.5 border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2 text-sm text-text-ink">
+<span class="material-symbols-outlined text-secondary text-lg" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span>Gợi ý thông minh cho từ khóa: <strong>"tắm sấy"</strong></span>
+</div>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-surface-container-lowest text-secondary border border-border-subtle">
+            8 kết quả khả dụng
+          </span>
+</div>
+<!-- Scrollable Content with Groupings -->
+<div class="max-h-[580px] overflow-y-auto custom-scroll p-6 divide-y divide-border-subtle space-y-6">
+<!-- ================= GROUP 1: DỊCH VỤ LIÊN QUAN ================= -->
+<div class="pt-0">
+<div class="flex items-center justify-between mb-3.5">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-secondary">
+<span class="w-6 h-6 rounded-md bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">pets</span>
+</span>
+<span>DỊCH VỤ LIÊN QUAN (2 dịch vụ)</span>
+</div>
+<a class="text-xs font-semibold text-primary-container hover:underline flex items-center gap-0.5" href="#">
+                Xem tất cả dịch vụ <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<!-- Service Item Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+<!-- Service Item 1 -->
+<div class="group relative flex items-start justify-between p-3.5 rounded-xl border border-border-subtle hover:border-primary-container hover:shadow-md bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-200">
+<div class="flex gap-3">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-cream flex-shrink-0 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A warm pet spa setting in Vietnam showing a friendly groomer gently bathing a happy fluffy golden retriever with organic shampoo foam under soft warm ambient lighting, emphasizing tactile care and pristine hygiene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqKJVwteWQ28lGWMY0u96wUY6V6iWURK0-ySPA5TeQwtVthH-D3gbBDcBCBcFuMXsnLHuo6AcLfEd8QjgjdwjQaA3CwfXyl8Kx18ZRtfqqlM8h7jL0LHh9NKUjzMrt4uLcrg2k8drIrc5wxTC-ofCiYDz_4eXj_lRvZNHOrbwbMZHzdRYwCs7ecjmJbidZZIsmDUtR7v4JSuovRU6HFmCCZjY_3RktAiH4YJU7-t5A"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[9px] font-semibold bg-text-ink/70 text-white rounded backdrop-blur-sm">Ảnh minh họa</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 text-[11px] font-semibold rounded-md bg-surface-cream text-secondary border border-border-subtle">Gói cơ bản</span>
+<span class="text-[11px] text-text-muted flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span> 4.9 (128)
+                      </span>
+</div>
+<h4 class="font-title-md text-title-md text-text-ink group-hover:text-primary-container text-sm leading-snug line-clamp-1">
+                      Tắm sấy &amp; Chăm sóc lông thảo mộc (Grooming)
+                    </h4>
+<p class="text-xs text-text-muted mt-0.5">Bao gồm vệ sinh tai, vắt tuyến hôi, sấy phồng</p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="text-xs text-text-muted">Giá từ:</span>
+<span class="px-2 py-0.5 rounded-md bg-[#F8D38C] text-text-ink font-bold text-xs tracking-tight">200.000đ/lượt</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 self-center pl-2">
+<button class="h-9 px-3 rounded-lg border border-primary-container text-primary-container hover:bg-primary-container hover:text-white font-label-md text-xs font-semibold transition-colors duration-150 whitespace-nowrap flex items-center gap-1">
+<span>Đặt lịch</span>
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+</button>
+</div>
+</div>
+<!-- Service Item 2 -->
+<div class="group relative flex items-start justify-between p-3.5 rounded-xl border border-border-subtle hover:border-primary-container hover:shadow-md bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-200">
+<div class="flex gap-3">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-cream flex-shrink-0 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A professional pet grooming salon interior where a small white poodle is receiving high-end fur styling and blow-drying by an attentive stylist wearing an apron in a warm modern studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAsOhMcHIfxVQmN2QgynCGMP9If-Otu44JOj7Et0Og46ucZypk0gwF9Ld1NDPbSwRdqhbpMK97tvSpE9_hkLKwGUW_U7bWFoPYRRRI4wNS1htlveJe7QMuBdswHBswdbeL8j9yNpfuimFKHrNJ9tMtLtTxq2lW9E0uy6sycZBwYOn97O3Uk9X4-d-zG4ev3ARdMwLqlwquj9vqSB28M4zD8X77m7Ov0ll1iklhcUkG"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[9px] font-semibold bg-text-ink/70 text-white rounded backdrop-blur-sm">Ảnh minh họa</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 text-[11px] font-semibold rounded-md bg-primary-fixed text-primary border border-primary-container/20">Phổ biến</span>
+<span class="text-[11px] text-text-muted flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-status-warning" style="font-variation-settings: 'FILL' 1;">star</span> 5.0 (214)
+                      </span>
+</div>
+<h4 class="font-title-md text-title-md text-text-ink group-hover:text-primary-container text-sm leading-snug line-clamp-1">
+                      Gói Spa toàn diện: Tắm massage + Cắt tỉa tạo kiểu
+                    </h4>
+<p class="text-xs text-text-muted mt-0.5">Massage bùn khoáng Nhật Bản + Tỉa form chuẩn</p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="text-xs text-text-muted">Giá từ:</span>
+<span class="px-2 py-0.5 rounded-md bg-[#F8D38C] text-text-ink font-bold text-xs tracking-tight">350.000đ/lượt</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0 self-center pl-2">
+<button class="h-9 px-3 rounded-lg border border-primary-container text-primary-container hover:bg-primary-container hover:text-white font-label-md text-xs font-semibold transition-colors duration-150 whitespace-nowrap flex items-center gap-1">
+<span>Đặt lịch</span>
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= GROUP 2: SẢN PHẨM PHÙ HỢP ================= -->
+<div class="pt-6">
+<div class="flex items-center justify-between mb-3.5">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-secondary">
+<span class="w-6 h-6 rounded-md bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</span>
+<span>SẢN PHẨM PHÙ HỢP (4 sản phẩm)</span>
+</div>
+<span class="text-xs text-text-muted">Giao nhanh 2h tại Đà Nẵng</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+<!-- Product 1 -->
+<div class="group flex flex-col justify-between p-3 rounded-xl border border-border-subtle bg-surface-container-lowest hover:border-primary-container hover:shadow-md transition-all duration-200">
+<div>
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2.5 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean product shot of an organic pet shampoo bottle with natural herbal botanical illustrations and Vietnamese labelling standing on a clean wooden pedestal with gentle studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQXiL8YjWoQXoG_1UUmRGXlLagoJQyVGy4wuU4rr8ARofQsmLmqtQGtbS_lhV_ehKFrUQC0jMQuZu3m8bkrg9xQ5geIfVM-1NW0rejUOx6VDbiUppLFS-x_ufTr4hO3ib6nBa5xQ_A0wi1IfGRV2eEe_DVsFghnXHL7g7dkH6ruiQBbe7n5K4Q2NKb10zeB_Ocy0jdUEGcq6X11KXJioLCYRoReX8zZOGtX041Ytb_"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[8px] font-semibold bg-text-ink/70 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[#EAF5EE] text-[#2E7D4F] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">check_circle</span> Sẵn hàng
+                    </span>
+</div>
+<h5 class="text-xs font-semibold text-text-ink leading-tight line-clamp-2 group-hover:text-primary-container">
+                    Sữa tắm thảo mộc dịu nhẹ dưỡng ẩm lông Forcans (550ml)
+                  </h5>
+</div>
+<div class="mt-2.5 pt-2 border-t border-border-subtle flex items-center justify-between">
+<span class="text-sm font-bold text-primary-container">210.000đ</span>
+<button class="h-7 px-2.5 rounded-lg bg-surface-container-low hover:bg-primary-container hover:text-white text-text-ink text-xs font-medium transition-colors">
+                    Chi tiết
+                  </button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col justify-between p-3 rounded-xl border border-border-subtle bg-surface-container-lowest hover:border-primary-container hover:shadow-md transition-all duration-200">
+<div>
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2.5 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A high-end compact pet hair blow-dryer designed specifically for dogs and cats in a modern matte cream finish on a clean tabletop with pet accessories." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJZfQWXmZcJVR1SK9K63IcuCuqJfbg3Zylt754gzhUuUpdtXEG7inkTjAsVQJJerMG2y-jXv2JKIr0k02BwSNGbO4XGVlXbPoIUV28zTmIl-6uTa2SvEHXnCm7wbkA2hY6eJrCBP7z4ECfuFI5G-huz3OwVLNUjViqJ10anI5YV1A20YITTD8c6rG35sYtaht4_Px6EiL13ciKgYqMFK1-daN6-Lp3Z7JYFxJwQNLQ"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[8px] font-semibold bg-text-ink/70 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[#FEF6E8] text-[#B26A00] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[10px]">timer</span> Còn 3 chiếc
+                    </span>
+</div>
+<h5 class="text-xs font-semibold text-text-ink leading-tight line-clamp-2 group-hover:text-primary-container">
+                    Máy sấy lông chuyên dụng cho thú cưng êm ái Woof Pro
+                  </h5>
+</div>
+<div class="mt-2.5 pt-2 border-t border-border-subtle flex items-center justify-between">
+<span class="text-sm font-bold text-primary-container">680.000đ</span>
+<button class="h-7 px-2.5 rounded-lg bg-surface-container-low hover:bg-primary-container hover:text-white text-text-ink text-xs font-medium transition-colors">
+                    Chi tiết
+                  </button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col justify-between p-3 rounded-xl border border-border-subtle bg-surface-container-lowest hover:border-primary-container hover:shadow-md transition-all duration-200">
+<div>
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2.5 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A set of folded soft microfiber ultra-absorbent pet bath towels in pastel blue and cream tones neatly stacked with a small paw embroidery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO2mt57ndlRlVGDyf6PcfueKHF82sveNQ7xnjFFoL_9_cwTmp8SHGxcwCYCCzs0vSVAh70RM0etHvISA11z3fqXFHIWc5yYuXZrhN5AHlGE0rtDU4rDGNQ7s9Tp4sl1811unhdp4I_ZPexRIyrtTRtaqXTE_B9th0iwakPUXcTy1l5tXYPqF76MVdn0RyQYw_0io3VI7PGsrufjl-8OnJBNaXdQtCKy7R_-b0M3jPC"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[8px] font-semibold bg-text-ink/70 text-white rounded">Ảnh minh họa</span>
+</div>
+<h5 class="text-xs font-semibold text-text-ink leading-tight line-clamp-2 group-hover:text-primary-container">
+                    Khăn tắm siêu thấm hút kháng khuẩn cho chó mèo
+                  </h5>
+</div>
+<div class="mt-2.5 pt-2 border-t border-border-subtle flex items-center justify-between">
+<span class="text-sm font-bold text-primary-container">55.000đ</span>
+<button class="h-7 px-2.5 rounded-lg bg-surface-container-low hover:bg-primary-container hover:text-white text-text-ink text-xs font-medium transition-colors">
+                    Chi tiết
+                  </button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col justify-between p-3 rounded-xl border border-border-subtle bg-surface-container-lowest hover:border-primary-container hover:shadow-md transition-all duration-200">
+<div>
+<div class="relative w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden mb-2.5 border border-border-subtle">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An ergonomic silicone pet grooming and deshedding massage brush with soft flexible bristles held next to a happy cat in a bright warm interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAohjR81K1oOoBftU7lXStde16qcSLHKZIvzK7N89653oJIhd7AbmeBt77HHNeQqr15xaYz_VliYWEsfVEnpAIf0XEXscLbi7mhhe_xWDiVNLSHVFpU5UZ7cOFXQiARwcXLcb_9JIioD-BRVsjiia0cvuNKei9XoM8p9WI1kEnBpTnhVBBUZdqNAajHWrfiiNZXofQCyiqhAXZG3XbSLmguCSG7lqDjBh0tKGSqFec2"/>
+<span class="absolute bottom-1 right-1 px-1 py-0.2 text-[8px] font-semibold bg-text-ink/70 text-white rounded">Ảnh minh họa</span>
+</div>
+<h5 class="text-xs font-semibold text-text-ink leading-tight line-clamp-2 group-hover:text-primary-container">
+                    Lược chải lông rụng và massage da đầu Silicon
+                  </h5>
+</div>
+<div class="mt-2.5 pt-2 border-t border-border-subtle flex items-center justify-between">
+<span class="text-sm font-bold text-primary-container">75.000đ</span>
+<button class="h-7 px-2.5 rounded-lg bg-surface-container-low hover:bg-primary-container hover:text-white text-text-ink text-xs font-medium transition-colors">
+                    Chi tiết
+                  </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= GROUP 3: TỪ KHÓA TÌM KIẾM PHỔ BIẾN ================= -->
+<div class="pt-6">
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-text-muted mb-3">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>TỪ KHÓA TÌM KIẾM PHỔ BIẾN LIÊN QUAN</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<a class="px-3 py-1.5 rounded-full bg-surface-cream text-text-ink border border-border-subtle text-xs hover:border-primary-container hover:text-primary-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-xs text-secondary">search</span>
+<span>sữa tắm cho chó poodle</span>
+</a>
+<a class="px-3 py-1.5 rounded-full bg-surface-cream text-text-ink border border-border-subtle text-xs hover:border-primary-container hover:text-primary-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-xs text-secondary">search</span>
+<span>giá tắm sấy mèo</span>
+</a>
+<a class="px-3 py-1.5 rounded-full bg-surface-cream text-text-ink border border-border-subtle text-xs hover:border-primary-container hover:text-primary-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-xs text-secondary">search</span>
+<span>spa thú cưng ngũ hành sơn</span>
+</a>
+<a class="px-3 py-1.5 rounded-full bg-surface-cream text-text-ink border border-border-subtle text-xs hover:border-primary-container hover:text-primary-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-xs text-secondary">search</span>
+<span>lược chải rối lông</span>
+</a>
+<a class="px-3 py-1.5 rounded-full bg-surface-cream text-text-ink border border-border-subtle text-xs hover:border-primary-container hover:text-primary-container transition-colors flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-xs text-secondary">search</span>
+<span>tắm trị ve rận</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Dropdown Footer with keyboard hint -->
+<div class="bg-surface-container-low px-6 py-3 border-t border-border-subtle flex flex-wrap items-center justify-between text-xs text-text-muted gap-2">
+<a class="text-primary-container font-semibold hover:underline flex items-center gap-1" href="#">
+<span>Nhấn Enter hoặc click để xem tất cả 8 kết quả cho "tắm sấy"</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<div class="flex items-center gap-3 text-[11px]">
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest border border-border-subtle text-text-ink font-mono font-bold text-[10px]">↑</kbd>
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest border border-border-subtle text-text-ink font-mono font-bold text-[10px]">↓</kbd>
+<span>để di chuyển</span>
+</span>
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 rounded bg-surface-container-lowest border border-border-subtle text-text-ink font-mono font-bold text-[10px]">ESC</kbd>
+<span>để đóng</span>
+</span>
+</div>
+</div>
+</div>
+<!-- End Dropdown Overlay -->
+</div>
+<!-- ======================================================== -->
+<!-- 6. Background Shop Canvas (Underlying layout, realistically placed behind) -->
+<!-- ======================================================== -->
+<div class="relative opacity-60 filter blur-[0.5px] pointer-events-none select-none transition-all">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+<!-- Filter Sidebar -->
+<aside class="hidden lg:block space-y-6">
+<div class="bg-surface-container-lowest rounded-2xl p-5 border border-border-subtle">
+<h3 class="font-title-md text-title-md text-text-ink mb-4 flex items-center justify-between">
+<span>Bộ lọc tìm kiếm</span>
+<span class="material-symbols-outlined text-secondary">tune</span>
+</h3>
+<!-- Category list -->
+<div class="space-y-3 mb-6">
+<div class="text-xs font-bold text-secondary uppercase tracking-wider">Danh mục sản phẩm</div>
+<div class="space-y-2 text-sm text-text-ink">
+<label class="flex items-center gap-2"><input checked="" class="rounded border-border-subtle text-primary-container" type="checkbox"/> Thức ăn &amp; Dinh dưỡng (18)</label>
+<label class="flex items-center gap-2"><input checked="" class="rounded border-border-subtle text-primary-container" type="checkbox"/> Vệ sinh &amp; Tắm sấy (12)</label>
+<label class="flex items-center gap-2"><input class="rounded border-border-subtle text-primary-container" type="checkbox"/> Đồ chơi &amp; Phụ kiện (8)</label>
+<label class="flex items-center gap-2"><input class="rounded border-border-subtle text-primary-container" type="checkbox"/> Dịch vụ Spa &amp; Grooming (4)</label>
+</div>
+</div>
+<!-- Price Filter Demo -->
+<div class="space-y-3">
+<div class="text-xs font-bold text-secondary uppercase tracking-wider">Khoảng giá</div>
+<div class="h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="w-2/3 h-full bg-primary-container"></div>
+</div>
+<div class="flex justify-between text-xs text-text-muted">
+<span>0đ</span>
+<span>1.000.000đ+</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area (3 Columns on desktop) -->
+<div class="lg:col-span-3">
+<!-- Toolbar -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-border-subtle mb-6 flex items-center justify-between">
+<span class="text-sm text-text-muted">Đang hiển thị <strong>6</strong> sản phẩm liên quan</span>
+<div class="flex items-center gap-2 text-xs">
+<span>Sắp xếp:</span>
+<span class="font-semibold text-text-ink">Phù hợp nhất ▾</span>
+</div>
+</div>
+<!-- 6 Background Product Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A premium bag of organic grain-free dog food with healthy vegetable and salmon ingredients pictured on the packaging, placed on clean bright background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBulHib0COS-w1M20PZQRJSbgLn4xDVUDt5I98XUAEVeugzGyxN2TfjZZ_FZL7autf8-UpmoUOM8ZaxdoFJsN1-mZlsb-RC5Om3HHOaGVM--Q_hP74aB0AQzkI75PECOPSuyZt-HFJ7YmUrSKTywpl-iAaR-8gpdwqV-0ewfA33cH5dlunmB_gFGZZeJDlp-A0KHM3aplvCFyWaQUXVYi4pLLj-ENYHcsRcuaP3pXg3"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Hạt dinh dưỡng hữu cơ Woof Nutri Vitality</h3>
+<p class="text-xs text-text-muted mt-1">Dành cho chó trưởng thành, bổ sung Omega 3</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">345.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A clean bottle of hypoallergenic cat grooming shampoo with pump dispenser and gentle green aloe vera graphics on a bright surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJyaO_ba2seNjYGcedmylyP_1LuA0PyOv4A3dQEgWqMPyyZ__0molFKx0kAMyt1sA6_SKYJRq82zX6GxszHOnSwPt4b6pag1vOvnfCb2rxpSUFo-nLPOHUplddj6jdBc_jjePexyzrKQyKoNP06qTOOdG6YW4bf-h9FP3HLqRcCoq-8hJ9MwxgIOFXkTpAVOAl5mWyJHGxYP60JJ8ajpGGCOLA3hnBBTuY2FiDyGS3"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Sữa tắm khô khử mùi mèo cưng Whiskers Care</h3>
+<p class="text-xs text-text-muted mt-1">Chiết xuất hoa cúc La Mã dịu nhẹ</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">180.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="An assortment of natural rubber pet chew toys and interactive balls in warm pastel tones neatly arranged on a clean wooden studio floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0m449NaMAdWL7nkLxQ51mjE7xwi4n7PKxNd1P3k8dl1JgY-BcUGCpsEh_EBXG8wZCfoqSwCNBKz8D1xki_NVlksQHDo4nFo8LwgoGWw32bdY_TETl6U6HgVy4eD9Px82ZtC4-qltqWVSHyovdCXzy7NqeLHS18ZcuHOMMLV8xBgGCfoZXpfXrOMOPcB4Th4U0gWczT4bY7kCOv42O2mqYb6cEfyN5N0vCzMj2tdhH"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Bộ đồ chơi gặm sạch răng cao su tự nhiên</h3>
+<p class="text-xs text-text-muted mt-1">An toàn tuyệt đối cho cún con mọc răng</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">120.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A modern pet water fountain with stainless steel top and triple filtration system photographed running quietly in a calm room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp8IDIxhzlD-eDsYS_dSTO8mvmgKkeKP2bgLuHfvQLgdmyen6AVIMM-8LNJzcU8VfbwDLm0CFbslKOFdN02ybFHmuW_E927zYazumcN8F9ehfY-uN7Ncy98OkSg5RP3E-1vk_Fv2qPuFnfibFHUTsDucR9Ae2AuB6C8X_g94Hcb143s0XM-j2qcdBSgKyceG_gtg5MgsLAen2SX3cnpZnjHCX4sGeDUTmk2lDFm0Nc"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Máy lọc nước tự động tuần hoàn siêu êm</h3>
+<p class="text-xs text-text-muted mt-1">Dung tích 2.5L, lọc than hoạt tính</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">490.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A comfortable orthopaedic memory foam dog bed with removable washable cover in soothing linen gray color placed in a sunlit pet room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpTt3fq_h-BzpKk_vRrKoiumu1rwaKGycpSGViLZDvwWSRhtx2gHlGNDmiOfDIiTR2iAmojvaqEl8nXXT32_IdWn6tFI1KxZptR3iid8H6tgrNNvmmGK5hCzElcyEfaLW7rkU1DTvcqNUJoqmvI_NIyEtYsHoZpK_gHD3bU45JwO9Mv-kLNjZ8TK6iQLfHGZ4E3-_ZeQFf9Bwl6htjyk-9PmtqmrTLS-jrZ9BIYEz1"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Đệm nằm êm ái chống thoái hóa khớp size M</h3>
+<p class="text-xs text-text-muted mt-1">Vải lanh tự nhiên, vỏ giặt tháo rời</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">520.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-lowest rounded-2xl border border-border-subtle overflow-hidden p-4 flex flex-col justify-between shadow-sm">
+<div>
+<div class="relative w-full aspect-[4/3] rounded-xl bg-surface-cream overflow-hidden mb-3">
+<img class="w-full h-full object-cover" data-alt="A stylish travel backpack carrier for cats and small dogs with breathable mesh and clear observation bubble in neutral beige tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi9rgY3sjkmfGr_SpX-EtfAQg_Uy37-TqUFidlA_MxBHNv6sR7Y-ZPjCCXeb_0Pr1m2zhj4XAhF4KYjL201u80x8qdrrRyvSNZpeGOghdopwDRC8i7BTKQ8rZqza-GkYFoPB-5NM_MbJo0hL6EAfeeTmIeTt28AR-rxAwo5LBO-Cy2KgQAyoK5dbU91eV6hRRe6xW-roJwKuCo0wBriPlpwGLQQzWIP0iRFkJIBsL_"/>
+<span class="absolute bottom-2 right-2 px-1.5 py-0.5 text-[9px] font-semibold bg-text-ink/75 text-white rounded">Ảnh minh họa</span>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded text-[10px] font-semibold bg-surface-cream text-secondary border border-border-subtle">Sản phẩm demo</span>
+</div>
+<h3 class="font-title-md text-base text-text-ink font-semibold">Balo vận chuyển thông hơi cao cấp đi dạo</h3>
+<p class="text-xs text-text-muted mt-1">Tải trọng tối đa 8kg, thoáng khí đa chiều</p>
+</div>
+<div class="mt-4 pt-3 border-t border-border-subtle flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-[#F8D38C] text-text-ink font-bold text-sm">395.000đ</span>
+<button class="h-9 px-4 rounded-xl bg-primary-container text-white text-xs font-semibold">Thêm vào giỏ</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- 7. Footer (Based on Shared Components Footer & Design System) -->
+<footer class="w-full rounded-t-3xl bg-footer-slate dark:bg-surface-container text-surface-container-lowest dark:text-on-surface border-t border-border-subtle dark:border-outline-variant mt-auto">
+<div class="w-full px-6 md:px-12 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+<!-- Cột 1: Về chúng tôi -->
+<div class="space-y-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl text-surface-cream" style="font-variation-settings: 'FILL' 1;">pets</span>
+<div class="text-headline-md font-headline-md font-bold text-surface-container-lowest dark:text-on-surface">Woof N' Whiskers</div>
+</div>
+<p class="text-surface-container-low text-body-sm font-body-sm leading-relaxed">
+            "A little more love for every little paw."<br/>
+            Hệ sinh thái chăm sóc thú cưng toàn diện: Khách sạn thú cưng, Spa Grooming, Daycare và Cửa hàng phụ kiện tuyển chọn tại Đà Nẵng.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white" href="#" title="Facebook">
+<span class="material-symbols-outlined text-base">public</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white" href="#" title="Instagram">
+<span class="material-symbols-outlined text-base">photo_camera</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white" href="#" title="Zalo Official">
+<span class="material-symbols-outlined text-base">chat</span>
+</a>
+</div>
+</div>
+<!-- Cột 2: Hỗ trợ khách hàng (JSON Footer Links) -->
+<div class="space-y-4">
+<h4 class="text-title-md font-title-md font-semibold text-white">Hỗ trợ khách hàng</h4>
+<ul class="space-y-2.5 text-body-sm font-body-sm">
+<li><a class="text-surface-container-low dark:text-on-surface-variant hover:text-surface-container-lowest dark:hover:text-on-surface transition-colors" href="#">Chính sách đổi trả</a></li>
+<li><a class="text-surface-container-low dark:text-on-surface-variant hover:text-surface-container-lowest dark:hover:text-on-surface transition-colors" href="#">Hướng dẫn đặt lịch</a></li>
+<li><a class="text-surface-container-low dark:text-on-surface-variant hover:text-surface-container-lowest dark:hover:text-on-surface transition-colors" href="#">Câu hỏi thường gặp</a></li>
+<li><a class="text-surface-container-low dark:text-on-surface-variant hover:text-surface-container-lowest dark:hover:text-on-surface transition-colors" href="#">Điều khoản dịch vụ</a></li>
+</ul>
+</div>
+<!-- Cột 3: Liên hệ tại Đà Nẵng -->
+<div class="space-y-4">
+<h4 class="text-title-md font-title-md font-semibold text-white">Địa chỉ &amp; Liên hệ</h4>
+<div class="space-y-3 text-body-sm font-body-sm text-surface-container-low">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-surface-cream text-lg flex-shrink-0 mt-0.5">location_on</span>
+<span>49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-surface-cream text-lg flex-shrink-0">call</span>
+<span>Hotline &amp; Zalo: <strong class="text-white">093 560 5311</strong></span>
+</div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-surface-cream text-lg flex-shrink-0">mail</span>
+<span>care@woofnwhiskers.vn</span>
+</div>
+</div>
+</div>
+<!-- Cột 4: Giờ hoạt động & Cam kết -->
+<div class="space-y-4">
+<h4 class="text-title-md font-title-md font-semibold text-white">Giờ mở cửa</h4>
+<div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between items-center text-white">
+<span>Thứ Hai — Chủ Nhật:</span>
+<strong class="text-surface-cream">08:00 - 20:00</strong>
+</div>
+<p class="text-[11px] text-surface-container-low italic leading-tight">
+              (Giờ demo, cần cập nhật theo lịch trực lễ Tết)
+            </p>
+</div>
+<div class="flex items-center gap-2 text-xs text-surface-container-low">
+<span class="material-symbols-outlined text-status-success text-base" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Tiêu chuẩn chăm sóc y khoa &amp; an toàn sinh học</span>
+</div>
+</div>
+</div>
+<!-- Bottom Bar & Copyright (JSON requirement) -->
+<div class="mt-12 pt-8 border-t border-[#4F7390] flex flex-col sm:flex-row items-center justify-between text-xs text-surface-container-low gap-4">
+<div>© 2026 Woof N' Whiskers. Bảo lưu mọi quyền.</div>
+<div class="flex items-center gap-6">
+<span class="text-surface-cream">Đà Nẵng, Việt Nam</span>
+<span>•</span>
+<span class="hover:text-white cursor-pointer transition-colors">Bảo mật thông tin</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

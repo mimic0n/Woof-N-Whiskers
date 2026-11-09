@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bước 3: Thông tin khách hàng | Đặt lịch - Woof N' Whiskers Đà Nẵng</title>
+<!-- Google Fonts: Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-hover": "#2757A8",
+            "on-primary-fixed": "#001a41",
+            "on-tertiary-fixed": "#261900",
+            "surface": "#f8f9fb",
+            "secondary": "#7b563c",
+            "surface-variant": "#e1e2e4",
+            "on-primary-fixed-variant": "#004492",
+            "on-primary-container": "#f1f3ff",
+            "tertiary-container": "#876b2f",
+            "outline-variant": "#c2c6d4",
+            "primary-fixed-dim": "#acc7ff",
+            "primary-fixed": "#d8e2ff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#613f26",
+            "on-error": "#ffffff",
+            "text-ink": "#2B1D14",
+            "on-secondary-fixed": "#2e1502",
+            "tertiary-fixed-dim": "#e6c27c",
+            "status-success": "#2E7D4F",
+            "primary-container": "#326dca",
+            "status-error": "#B3261E",
+            "text-muted": "#6B5646",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-container": "#fff2df",
+            "inverse-surface": "#2e3132",
+            "secondary-fixed": "#ffdcc5",
+            "border-subtle": "#E8DFD0",
+            "surface-dim": "#d9dadc",
+            "outline": "#737783",
+            "footer-slate": "#3F5F78",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#ffdea2",
+            "primary": "#0454b0",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f8f9fb",
+            "on-secondary-container": "#7a553b",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e1e2e4",
+            "tertiary": "#6d5318",
+            "secondary-container": "#ffcdac",
+            "surface-tint": "#185cb8",
+            "inverse-primary": "#acc7ff",
+            "surface-container-high": "#e7e8ea",
+            "on-surface-variant": "#424752",
+            "error": "#ba1a1a",
+            "background": "#f8f9fb",
+            "on-background": "#191c1e",
+            "inverse-on-surface": "#f0f1f3",
+            "status-warning": "#B26A00",
+            "surface-cream": "#F9EED9",
+            "on-tertiary-fixed-variant": "#5b4308",
+            "surface-container": "#edeef0",
+            "on-surface": "#191c1e",
+            "secondary-fixed-dim": "#edbd9c",
+            "surface-container-low": "#f2f4f6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-3xl": "4rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-2xl": "3rem",
+            "space-xl": "2rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "caption": ["Be Vietnam Pro"],
+            "label-md": ["Be Vietnam Pro"],
+            "headline-xl": ["Be Vietnam Pro"],
+            "headline-lg": ["Be Vietnam Pro"],
+            "headline-sm": ["Be Vietnam Pro"],
+            "title-md": ["Be Vietnam Pro"],
+            "headline-md": ["Be Vietnam Pro"],
+            "label-sm": ["Be Vietnam Pro"],
+            "body-sm": ["Be Vietnam Pro"],
+            "headline-xl-mobile": ["Be Vietnam Pro"],
+            "headline-lg-mobile": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "body-md": ["Be Vietnam Pro"]
+          },
+          "fontSize": {
+            "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-xl": ["44px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    .custom-shadow {
+      box-shadow: 0 2px 8px -1px rgba(43, 29, 20, 0.06), 0 1px 4px -1px rgba(43, 29, 20, 0.04);
+    }
+    .custom-shadow-elevated {
+      box-shadow: 0 8px 24px -4px rgba(43, 29, 20, 0.10), 0 4px 12px -2px rgba(43, 29, 20, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-background text-text-ink font-body-md antialiased min-h-screen flex flex-col selection:bg-surface-cream selection:text-text-ink">
+<!-- Top Announcement Bar -->
+<aside class="bg-surface-cream text-text-ink border-b border-border-subtle py-2 px-margin text-caption font-caption flex items-center justify-between z-50">
+<div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-status-success animate-pulse"></span>
+<span>Đặt lịch online từ Thứ 2 đến Chủ nhật • Hotline: <strong class="font-bold">093 560 5311</strong></span>
+</div>
+<div class="flex items-center gap-4 text-text-muted">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+          49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng
+        </span>
+</div>
+</div>
+</aside>
+<!-- TopNavBar (Shared Component JSON Blueprint) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface text-primary dark:text-inverse-primary docked full-width top-0 sticky z-50 border-b border-border-subtle dark:border-outline shadow-sm">
+<div class="w-full px-gutter md:px-margin max-w-7xl mx-auto flex items-center justify-between min-h-[72px]">
+<!-- Logo -->
+<a class="text-headline-sm font-headline-sm text-secondary dark:text-secondary-fixed font-bold flex items-center gap-space-xs group" href="#">
+<span class="w-10 h-10 rounded-full bg-surface-cream flex items-center justify-center text-secondary border border-border-subtle transition-all duration-200 group-hover:scale-105">
+<span class="material-symbols-outlined text-[24px]">pets</span>
+</span>
+<span class="tracking-tight text-secondary">Woof N' Whiskers</span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav aria-label="Menu chính" class="hidden md:flex items-center gap-6">
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Trang chủ</a>
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Về chúng tôi</a>
+<div class="relative group">
+<button class="flex items-center gap-1 text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200">
+<span>Dịch vụ</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</button>
+</div>
+<a class="text-text-ink dark:text-inverse-on-surface font-label-md text-label-md hover:text-primary dark:hover:text-inverse-primary pb-1 transition-colors duration-200" href="#">Cửa hàng</a>
+<!-- Active Nav: "Đặt lịch" -->
+<a class="text-primary dark:text-inverse-primary font-label-md text-label-md border-b-2 border-primary dark:border-inverse-primary pb-1" href="#">Đặt lịch</a>
+</nav>
+<!-- Utility Actions (Search, Lang, Account, Cart) -->
+<div class="flex items-center gap-3">
+<!-- Search Trigger Icon -->
+<button aria-label="Tìm kiếm" class="w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined">search</span>
+</button>
+<!-- Language Pill VI | EN -->
+<div class="hidden sm:flex items-center border border-border-subtle rounded-full p-0.5 bg-surface-container-low text-caption font-label-sm">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-white font-bold">VI</span>
+<span class="px-2.5 py-1 text-text-muted hover:text-text-ink cursor-pointer">EN</span>
+</div>
+<!-- Account Link -->
+<a class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border-subtle hover:bg-surface-cream text-text-ink font-label-md text-label-md transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_circle</span>
+<span>Đăng nhập</span>
+</a>
+<!-- Cart Trigger -->
+<button aria-label="Giỏ hàng" class="relative w-10 h-10 rounded-full flex items-center justify-center text-secondary hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 w-4 h-4 bg-primary-container text-white font-label-sm text-[10px] rounded-full flex items-center justify-center font-bold">2</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-gutter md:px-margin py-space-lg">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="mb-space-md text-caption font-caption text-text-muted flex items-center gap-1.5 flex-wrap">
+<a class="hover:text-primary transition-colors" href="#">Trang chủ</a>
+<span class="text-outline-variant">›</span>
+<a class="hover:text-primary transition-colors" href="#">Đặt lịch chăm sóc thú cưng</a>
+<span class="text-outline-variant">›</span>
+<span aria-current="page" class="text-text-ink font-semibold">Bước 3: Thông tin khách hàng</span>
+</nav>
+<!-- Top Stepper Header (4 Steps) -->
+<section class="mb-space-xl bg-surface-container-lowest border border-border-subtle rounded-2xl p-4 sm:p-6 custom-shadow">
+<ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+<!-- Step 1: Completed -->
+<li class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low/60 border border-border-subtle/50">
+<div class="w-10 h-10 rounded-full bg-status-success text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="min-w-0">
+<p class="text-caption font-caption text-text-muted">Bước 1</p>
+<p class="font-label-md text-label-md text-text-ink font-semibold truncate">Chọn dịch vụ</p>
+<p class="text-caption font-caption text-status-success font-medium">Lưu trú Deluxe</p>
+</div>
+</li>
+<!-- Step 2: Completed -->
+<li class="flex items-center gap-3 p-2 rounded-xl bg-surface-container-low/60 border border-border-subtle/50">
+<div class="w-10 h-10 rounded-full bg-status-success text-white flex items-center justify-center font-bold shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="min-w-0">
+<p class="text-caption font-caption text-text-muted">Bước 2</p>
+<p class="font-label-md text-label-md text-text-ink font-semibold truncate">Thông tin thú cưng</p>
+<p class="text-caption font-caption text-status-success font-medium truncate">Bé Mochi (Poodle)</p>
+</div>
+</li>
+<!-- Step 3: ACTIVE -->
+<li class="flex items-center gap-3 p-2 rounded-xl bg-primary-fixed/30 border-2 border-primary-container relative">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-bold shrink-0 shadow">
+<span class="text-label-md font-label-md font-bold">3</span>
+</div>
+<div class="min-w-0">
+<span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-white uppercase tracking-wider mb-0.5">Hiện tại</span>
+<p class="font-label-md text-label-md text-primary font-bold truncate">Thông tin khách hàng</p>
+<p class="text-caption font-caption text-text-muted">Điền số ĐT &amp; Email</p>
+</div>
+</li>
+<!-- Step 4: Pending -->
+<li class="flex items-center gap-3 p-2 rounded-xl opacity-60">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-text-muted flex items-center justify-center font-bold shrink-0 border border-border-subtle">
+<span class="text-label-md font-label-md font-semibold">4</span>
+</div>
+<div class="min-w-0">
+<p class="text-caption font-caption text-text-muted">Bước 4</p>
+<p class="font-label-md text-label-md text-text-muted font-medium truncate">Xác nhận đặt lịch</p>
+<p class="text-caption font-caption text-text-muted">Xem lại hóa đơn</p>
+</div>
+</li>
+</ol>
+</section>
+<!-- Main Two-Column Booking Canvas -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Form Canvas & Validation Showcase (65% -> 8 of 12 cols) -->
+<section class="lg:col-span-8 flex flex-col gap-6">
+<!-- Frame Switcher Bar / Visual Control Banner -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-between gap-3 custom-shadow">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">tune</span>
+<span class="font-label-md text-label-md text-text-ink font-semibold">Chế độ giao diện biểu mẫu:</span>
+</div>
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low border border-border-subtle w-full sm:w-auto" role="tablist">
+<button class="px-3.5 py-1.5 rounded-lg text-caption font-label-sm text-text-muted hover:text-text-ink transition-colors flex items-center gap-1.5" role="tab">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Frame A: Biểu mẫu chuẩn</span>
+</button>
+<button aria-selected="true" class="px-3.5 py-1.5 rounded-lg text-caption font-label-sm bg-surface-container-lowest text-primary font-bold shadow-sm border border-border-subtle flex items-center gap-1.5" role="tab">
+<span class="material-symbols-outlined text-[16px] text-status-error">error</span>
+<span>Frame B: Xem trước lỗi Validation (Đang hiển thị)</span>
+</button>
+</div>
+</div>
+<!-- Form Card Container -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-6 md:p-8 custom-shadow relative">
+<!-- Headline & Subtitle -->
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-1">
+<span class="w-8 h-8 rounded-lg bg-surface-cream text-secondary flex items-center justify-center font-bold">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+<h1 class="font-headline-md text-headline-md text-text-ink font-bold">Thông tin liên hệ của bạn</h1>
+</div>
+<p class="text-body-sm font-body-sm text-text-muted mt-1 leading-relaxed">
+              Vui lòng cung cấp số điện thoại và email chính xác để nhân viên Woof N' Whiskers liên hệ xác nhận lịch hẹn và gửi báo cáo hình ảnh/video của bé qua Zalo.
+            </p>
+</div>
+<!-- Error Summary Alert Banner (role="alert") -->
+<div class="mb-8 p-4 rounded-xl bg-[#FDECEB] border border-status-error/30 text-status-error flex items-start gap-3 animate-[fade-in_0.2s_ease-in]" role="alert">
+<span class="material-symbols-outlined text-[24px] text-status-error shrink-0 mt-0.5">warning</span>
+<div class="text-body-sm font-body-sm space-y-1">
+<p class="font-bold text-label-md font-label-md text-status-error">
+                Vui lòng kiểm tra và hoàn thiện 2 thông tin bên dưới trước khi tiếp tục:
+              </p>
+<ul class="list-disc list-inside space-y-0.5 text-text-ink/90 font-medium">
+<li><strong class="text-status-error">Email</strong> chưa đúng định dạng. Ví dụ hợp lệ: <code class="bg-white/80 px-1.5 py-0.5 rounded text-caption font-mono text-status-error">ten@email.com</code></li>
+<li><strong class="text-status-error">Số điện thoại</strong> cần đủ 10 chữ số và bắt đầu bằng số 0 (hiện đang thiếu số).</li>
+</ul>
+</div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-6" onsubmit="event.preventDefault();">
+<!-- Field 1: Họ và tên (VALID STATE) -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-text-ink font-semibold flex items-center gap-1" for="full_name">
+                  Họ và tên của bạn <span class="text-status-error">*</span>
+</label>
+<span class="text-caption font-caption text-status-success font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                  Hợp lệ
+                </span>
+</div>
+<div class="relative">
+<input aria-describedby="name-helper" class="w-full h-11 px-3.5 pr-10 rounded-lg bg-surface-container-lowest border border-status-success/80 text-text-ink font-body-md focus:border-status-success focus:ring-2 focus:ring-status-success/20 transition-all" id="full_name" name="full_name" type="text" value="Nguyễn Phương Thảo"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-status-success">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+</div>
+<p class="mt-1 text-caption font-caption text-text-muted" id="name-helper">
+                Tên hiển thị trên hồ sơ chăm sóc và hợp đồng lưu trú cho bé.
+              </p>
+</div>
+<!-- Field 2 & 3: Two-column Phone & Email (with VALIDATION ERRORS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Field 2: Số điện thoại (ERROR STATE) -->
+<div>
+<label class="font-label-md text-label-md text-text-ink font-semibold flex items-center gap-1 mb-1.5" for="primary_phone">
+                  Số điện thoại <span class="text-status-error">*</span>
+</label>
+<div class="relative">
+<input aria-errormessage="phone-error" aria-invalid="true" class="w-full h-11 px-3.5 pr-10 rounded-lg bg-[#FFF7F7] border-2 border-status-error text-status-error font-body-md focus:border-status-error focus:ring-2 focus:ring-status-error/20 transition-all" id="primary_phone" name="primary_phone" type="tel" value="09356053"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-status-error">
+<span class="material-symbols-outlined text-[20px]">error</span>
+</div>
+</div>
+<!-- Inline Error Message -->
+<p class="mt-1.5 text-caption font-caption text-status-error font-semibold flex items-center gap-1" id="phone-error">
+<span class="material-symbols-outlined text-[15px]">info</span>
+                  Số điện thoại cần 10 chữ số, bắt đầu bằng 0 (ví dụ: 093 560 5311)
+                </p>
+</div>
+<!-- Field 3: Email (ERROR STATE) -->
+<div>
+<label class="font-label-md text-label-md text-text-ink font-semibold flex items-center gap-1 mb-1.5" for="primary_email">
+                  Email nhận xác nhận <span class="text-status-error">*</span>
+</label>
+<div class="relative">
+<input aria-errormessage="email-error" aria-invalid="true" class="w-full h-11 px-3.5 pr-10 rounded-lg bg-[#FFF7F7] border-2 border-status-error text-status-error font-body-md focus:border-status-error focus:ring-2 focus:ring-status-error/20 transition-all" id="primary_email" name="primary_email" type="email" value="phuongthao.petcare@"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-status-error">
+<span class="material-symbols-outlined text-[20px]">error</span>
+</div>
+</div>
+<!-- Inline Error Message -->
+<p class="mt-1.5 text-caption font-caption text-status-error font-semibold flex items-center gap-1" id="email-error">
+<span class="material-symbols-outlined text-[15px]">info</span>
+                  Email chưa đúng định dạng, ví dụ: ten@email.com
+                </p>
+</div>
+</div>
+<!-- Field 4: Số điện thoại phụ / Zalo nhận tin -->
+<div>
+<label class="font-label-md text-label-md text-text-ink font-semibold flex items-center justify-between mb-1.5" for="secondary_phone">
+<span class="flex items-center gap-1.5">
+<span>Số điện thoại phụ / Zalo nhận tin</span>
+<span class="text-caption font-caption text-text-muted font-normal">(không bắt buộc)</span>
+</span>
+<span class="text-caption font-caption text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">chat</span>
+                  Đồng bộ Zalo
+                </span>
+</label>
+<input class="w-full h-11 px-3.5 rounded-lg bg-surface-container-lowest border border-border-subtle text-text-ink placeholder-text-muted font-body-md focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="secondary_phone" name="secondary_phone" placeholder="0905 xxx xxx (nếu khác số chính)" type="tel"/>
+</div>
+<!-- Field 5: Lời nhắn / Ghi chú đặc biệt -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-text-ink font-semibold flex items-center gap-1" for="special_notes">
+<span>Lời nhắn / Ghi chú đặc biệt cho shop</span>
+</label>
+<!-- Explicit Character Counter -->
+<span class="text-caption font-caption text-text-muted font-medium">
+<span class="text-primary font-bold">148</span> / 500 ký tự
+                </span>
+</div>
+<textarea class="w-full p-3.5 rounded-lg bg-surface-container-lowest border border-border-subtle text-text-ink font-body-md focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all resize-none leading-relaxed" id="special_notes" name="special_notes" rows="3">Shop chuẩn bị phòng tầng thấp giúp mình nhé, bé Mochi hơi nhát tiếng ồn sấm sét. Chiều đón bé mình sẽ mang theo hạt riêng của bé.</textarea>
+<p class="mt-1 text-caption font-caption text-text-muted">
+                Bạn có thể dặn dò thói quen ăn uống, sở thích đồ chơi, hoặc cữ thuốc riêng của bé.
+              </p>
+</div>
+<!-- Field 6: Checkbox Zalo -->
+<div class="p-3.5 rounded-xl bg-surface-cream/50 border border-border-subtle">
+<label class="flex items-start gap-3 cursor-pointer select-none">
+<input checked="" class="mt-1 w-5 h-5 rounded border-border-subtle text-primary-container focus:ring-primary-container/20" type="checkbox"/>
+<div class="text-body-sm font-body-sm">
+<p class="font-semibold text-text-ink flex items-center gap-1.5">
+<span>Nhận thông báo cập nhật tình hình sinh hoạt và hình ảnh bé hằng ngày qua Zalo</span>
+<span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-[#EAF5EE] text-status-success">Khuyên dùng</span>
+</p>
+<p class="text-caption font-caption text-text-muted mt-0.5">
+                    Đội ngũ chăm sóc sẽ gửi 2-3 clip ngắn mỗi ngày kèm thời gian biểu ăn, uống, đi dạo và vệ sinh của bé.
+                  </p>
+</div>
+</label>
+</div>
+<!-- Action Buttons Row -->
+<div class="pt-4 border-t border-border-subtle flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
+<!-- Secondary Button -->
+<a class="w-full sm:w-auto min-h-[48px] px-6 py-3 rounded-xl border border-border-subtle bg-surface-container-lowest text-text-ink hover:bg-surface-cream/70 font-label-md text-label-md flex items-center justify-center gap-2 transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Quay lại Bước 2: Thông tin thú cưng</span>
+</a>
+<!-- Primary Button -->
+<button class="w-full sm:w-auto min-h-[48px] px-7 py-3 rounded-xl bg-primary-container hover:bg-primary-hover text-white font-label-md text-label-md font-bold shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all active:scale-[0.98]" type="submit">
+<span>Tiếp tục — Bước 4: Xác nhận &amp; Đặt lịch</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- FAQ Mini Card Accordion Section -->
+<div class="bg-surface-cream border border-border-subtle rounded-2xl p-6 custom-shadow">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary">help</span>
+<h2 class="font-title-md text-title-md text-text-ink font-bold">Giải đáp thắc mắc khi để lại thông tin</h2>
+</div>
+<div class="space-y-3">
+<!-- FAQ Item 1 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-border-subtle p-3.5 transition-all">
+<summary class="flex items-center justify-between font-label-md text-label-md font-semibold text-text-ink cursor-pointer list-none">
+<span>Làm thế nào để nhận video và báo cáo bé qua Zalo?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-2.5 pt-2.5 border-t border-border-subtle/60 text-body-sm font-body-sm text-text-muted leading-relaxed">
+                Ngay khi bạn hoàn tất đặt lịch, nhân viên chăm sóc phụ trách sẽ kết bạn qua Zalo theo số điện thoại bạn đăng ký. Hàng ngày vào các khung giờ 09:30, 15:00 và 20:00, bạn sẽ nhận được video ghi lại hoạt động vui chơi, bữa ăn và tình trạng sức khỏe của bé.
+              </div>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-surface-container-lowest rounded-xl border border-border-subtle p-3.5 transition-all">
+<summary class="flex items-center justify-between font-label-md text-label-md font-semibold text-text-ink cursor-pointer list-none">
+<span>Shop có gọi điện thoại xác nhận lại với mình không?</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="mt-2.5 pt-2.5 border-t border-border-subtle/60 text-body-sm font-body-sm text-text-muted leading-relaxed">
+                Có. Trong vòng 15 - 30 phút sau khi hoàn tất Bước 4, lễ tân Woof N' Whiskers sẽ gọi điện thoại theo số chính để rà soát lần cuối tình trạng tiêm ngừa, khung giờ đón/trả và chuẩn bị phòng nghỉ phù hợp nhất cho bé.
+              </div>
+</details>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Sticky Side Summary Card (35% -> 4 of 12 cols) -->
+<aside class="lg:col-span-4 sticky top-24 space-y-6">
+<!-- Main Booking Recap Card -->
+<div class="bg-surface-container-lowest border border-border-subtle rounded-2xl p-6 custom-shadow relative overflow-hidden">
+<!-- Top Accent Ribbon -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-secondary via-primary-container to-secondary"></div>
+<div class="flex items-center justify-between pb-4 border-b border-border-subtle mb-4">
+<div>
+<p class="text-caption font-caption text-primary font-bold uppercase tracking-wider">Đang hoàn thiện (3/4)</p>
+<h2 class="font-headline-sm text-headline-sm text-text-ink font-bold">Tóm tắt đặt lịch</h2>
+</div>
+<span class="w-9 h-9 rounded-full bg-surface-cream text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</span>
+</div>
+<!-- Pet Info Card Preview -->
+<div class="p-3.5 rounded-xl bg-surface-cream/60 border border-border-subtle mb-4 flex items-center gap-3">
+<div class="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 border border-border-subtle">
+<img class="w-full h-full object-cover" data-alt="A sweet fluffy cream-colored Toy Poodle dog sitting neatly with a warm domestic pet boutique environment in Da Nang, bathed in soft afternoon natural lighting with clean cozy textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6WoV6lt8r33nA4jPgvtKmv4c9hWubjE1uqlZiXdnnAyfc2xuakgOQ6zHS67_UBa-Hz23QQnohcouEoEYD2V5rzocubHBnVwTHEqw6efEqLcQD6XytGMi991atSmtjd_WYjK7aWpkEs2wf7w4_SNDGZaMAL-Wen6Otsklh7KypL1SMTGj_sUxhR-ZT-G0pWqpTepQ75O4SKbgRuNckYXZnGAbjW0xxWqx9Spr7XWRb"/>
+<span class="absolute bottom-0.5 right-0.5 bg-black/65 text-white text-[9px] font-semibold px-1 rounded backdrop-blur-[2px]">Ảnh minh họa</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<h3 class="font-label-md text-label-md text-text-ink font-bold">Bé Mochi</h3>
+<span class="text-[14px]">🐶</span>
+</div>
+<p class="text-caption font-caption text-text-muted">Poodle lông xoăn · 5.2 kg · 2 tuổi</p>
+<span class="inline-flex items-center gap-1 text-[11px] font-bold text-status-success mt-0.5">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+                Đã tiêm đủ 7 bệnh &amp; dại
+              </span>
+</div>
+</div>
+<!-- Step Details Listing -->
+<div class="space-y-3.5 text-body-sm font-body-sm border-b border-border-subtle pb-4">
+<!-- Service Item -->
+<div class="flex items-start justify-between gap-2">
+<div class="text-text-muted">
+<p class="font-semibold text-text-ink flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">hotel</span>
+                  Lưu trú ban đêm (Overnight Boarding)
+                </p>
+<p class="text-caption font-caption">Phòng Deluxe (Dành cho cún 5 - 10kg)</p>
+</div>
+</div>
+<!-- Time Item -->
+<div class="p-3 rounded-lg bg-surface-container-low/70 border border-border-subtle/60 text-caption font-caption space-y-1.5">
+<div class="flex items-center justify-between text-text-ink font-medium">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span>
+                  Thời gian lưu trú:
+                </span>
+<span class="font-bold text-text-ink">24/10/2026 → 26/10/2026</span>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span>Số lượng đêm:</span>
+<span class="font-bold text-text-ink">2 đêm lưu trú</span>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span>Khung giờ nhận/trả:</span>
+<span class="text-text-ink font-medium">14:00 (Nhận) → 11:30 (Trả)</span>
+</div>
+</div>
+<!-- Complimentary Services -->
+<div class="space-y-1 text-caption font-caption">
+<div class="flex items-center justify-between text-status-success font-medium">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                  Nhật ký sinh hoạt &amp; camera:
+                </span>
+<span>Miễn phí kèm theo</span>
+</div>
+<div class="flex items-center justify-between text-status-success font-medium">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sanitizer</span>
+                  Vệ sinh chải lông hàng ngày:
+                </span>
+<span>Miễn phí kèm theo</span>
+</div>
+</div>
+</div>
+<!-- Price Calculation -->
+<div class="py-4 space-y-2 text-body-sm font-body-sm border-b border-border-subtle">
+<div class="flex items-center justify-between text-text-muted">
+<span>Đơn giá phòng Deluxe:</span>
+<span class="font-medium text-text-ink">380.000đ / đêm</span>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span>Thời gian (2 đêm):</span>
+<span class="font-medium text-text-ink">760.000đ</span>
+</div>
+<div class="flex items-center justify-between text-text-muted">
+<span>Phụ thu vệ sinh &amp; tiện ích:</span>
+<span class="text-status-success font-semibold">0đ (Ưu đãi)</span>
+</div>
+</div>
+<!-- Total Calculation -->
+<div class="pt-4">
+<div class="flex items-baseline justify-between mb-1">
+<span class="font-label-md text-label-md text-text-ink font-bold">TỔNG TIỀN TẠM TÍNH</span>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">760.000đ</span>
+<span class="block text-[11px] font-caption text-text-muted">(Chưa gồm phụ thu lễ nếu có)</span>
+</div>
+</div>
+<p class="text-caption font-caption text-text-muted mt-2 bg-surface-container-low p-2 rounded text-center">
+              Khách hàng chỉ thanh toán khi hoàn tất thủ tục bàn giao bé tại quầy.
+            </p>
+</div>
+</div>
+<!-- Security & Privacy Guarantee Box -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-border-subtle custom-shadow flex items-start gap-3">
+<span class="material-symbols-outlined text-[24px] text-secondary shrink-0 mt-0.5">verified_user</span>
+<div>
+<h3 class="font-label-md text-label-md text-text-ink font-bold">Cam kết bảo mật thông tin</h3>
+<p class="text-caption font-caption text-text-muted mt-1 leading-relaxed">
+              Woof N' Whiskers cam kết chỉ sử dụng số điện thoại và email của bạn để liên hệ xác nhận lịch đặt và gửi hình ảnh bé khi lưu trú. Không chia sẻ cho bên thứ ba.
+            </p>
+</div>
+</div>
+<!-- Hotline Card -->
+<div class="p-4 rounded-xl bg-surface-cream border border-border-subtle custom-shadow flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<p class="text-caption font-caption text-text-muted">Cần trợ giúp đặt lịch?</p>
+<p class="font-bold text-text-ink text-label-md">Hotline / Zalo: 093 560 5311</p>
+</div>
+</div>
+<a class="px-3 py-1.5 rounded-lg bg-surface-container-lowest border border-border-subtle text-caption font-bold text-primary hover:bg-white transition-colors" href="tel:0935605311">
+            Gọi ngay
+          </a>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer (Shared Component JSON Blueprint) -->
+<footer class="bg-footer-slate dark:bg-inverse-surface w-full rounded-t-3xl mt-space-3xl border-t border-border-subtle dark:border-outline flat no shadows text-surface-container-lowest dark:text-inverse-on-surface">
+<div class="w-full max-w-7xl mx-auto px-gutter md:px-margin py-space-2xl grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Cột 1: Về chúng tôi & Thương hiệu -->
+<div class="space-y-4">
+<div class="text-headline-md font-headline-md text-surface-container-lowest dark:text-inverse-on-surface font-bold flex items-center gap-2">
+<span class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-surface-cream">
+<span class="material-symbols-outlined text-[22px]">pets</span>
+</span>
+<span>Woof N' Whiskers</span>
+</div>
+<p class="text-body-sm font-body-sm text-surface-variant dark:text-outline-variant italic">
+          "A little more love for every little paw."
+        </p>
+<p class="text-body-sm font-body-sm text-surface-variant dark:text-outline-variant">
+          Trung tâm lưu trú, chăm sóc toàn diện và cửa hàng đồ dùng thú cưng cao cấp hàng đầu tại khu vực Ngũ Hành Sơn, TP. Đà Nẵng.
+        </p>
+<div class="flex items-center gap-3 pt-2">
+<a aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-cream transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+</a>
+<a aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-cream transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</a>
+<a aria-label="Zalo Official" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-surface-cream transition-colors duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+<!-- Cột 2: Hỗ trợ khách hàng -->
+<div>
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest mb-4 font-semibold">Hỗ trợ khách hàng</h4>
+<ul class="space-y-2.5 text-body-sm font-body-sm">
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              Chính sách đổi trả
+            </a>
+</li>
+<li>
+<a class="text-surface-cream dark:text-tertiary-fixed font-bold flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              Hướng dẫn đặt lịch
+            </a>
+</li>
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              Câu hỏi thường gặp (FAQ)
+            </a>
+</li>
+<li>
+<a class="text-surface-variant dark:text-outline-variant hover:text-surface-container-lowest dark:hover:text-inverse-on-surface transition-colors duration-200 flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+              Điều khoản dịch vụ
+            </a>
+</li>
+</ul>
+</div>
+<!-- Cột 3: Liên hệ -->
+<div>
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest mb-4 font-semibold">Liên hệ &amp; Địa chỉ</h4>
+<ul class="space-y-3 text-body-sm font-body-sm text-surface-variant dark:text-outline-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-surface-cream text-[18px] shrink-0 mt-0.5">location_on</span>
+<span>49 Phạm Kiệt, Khuê Mỹ, Ngũ Hành Sơn, Đà Nẵng</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-cream text-[18px] shrink-0">call</span>
+<span class="font-bold text-surface-cream">Hotline: 093 560 5311</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-cream text-[18px] shrink-0">mail</span>
+<span>cskh@woofnwhiskers.vn</span>
+</li>
+</ul>
+</div>
+<!-- Cột 4: Giờ hoạt động -->
+<div>
+<h4 class="text-headline-sm font-headline-sm text-surface-container-lowest mb-4 font-semibold">Giờ hoạt động</h4>
+<div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+<p class="font-bold text-surface-cream text-body-md font-body-md">Thứ 2 - CN: 08:00 - 20:00</p>
+<p class="text-caption font-caption text-surface-variant dark:text-outline-variant italic">
+            (Giờ demo, cần cập nhật)
+          </p>
+<div class="pt-2 border-t border-white/10 text-caption font-caption text-surface-variant">
+            Lễ tân nhận/trả cún mèo cả ngoài giờ khi có lịch hẹn trước.
+          </div>
+</div>
+</div>
+</div>
+<!-- Bottom Copyright Divider -->
+<div class="w-full border-t border-[#4F7390]/50 py-4 px-gutter md:px-margin">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-caption font-caption text-surface-variant gap-2 text-center sm:text-left">
+<p>© 2026 Woof N' Whiskers. Bảo lưu mọi quyền. A little more love for every little paw.</p>
+<p class="text-white/60">Thiết kế chuẩn hóa trải nghiệm chăm sóc thú cưng Đà Nẵng</p>
+</div>
+</div>
+</footer>
+</body></html>

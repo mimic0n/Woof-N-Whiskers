@@ -1,0 +1,56 @@
+/* WnW: a quiet trail between shopping, care, and booking. */
+.pet-landscape { position: relative; isolation: isolate; }
+.pet-landscape > .max-w-7xl { position: relative; z-index: 1; }
+.pet-landscape::before, .pet-landscape::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  width: min(46vw, 620px); height: 300px;
+  border-radius: 65% 35% 54% 46% / 48% 63% 37% 52%;
+}
+#services::before { left: 0; top: 12px; background: #f6e5d5; opacity: .58; }
+#services::after { right: 0; bottom: 18px; background: #f5eacb; opacity: .48; }
+#testimonials::before { right: 0; top: 20px; background: #f4e2d5; opacity: .55; }
+#testimonials::after { left: 0; bottom: 12px; background: #f5ebd9; opacity: .6; }
+.pet-waypoint { position: relative; }
+.paw-trail {
+  position: absolute; top: 8px; right: clamp(24px, 8vw, 160px);
+  width: 370px; height: 50px; pointer-events: none; user-select: none;
+}
+.paw-trail span {
+  position: absolute; width: 21px; height: 25px;
+  background: url(/assets/paw-mark.svg) center / contain no-repeat;
+  opacity: .27; rotate: 65deg;
+}
+.paw-trail span:nth-child(1) { left: 0; top: 21px; rotate: 70deg; }
+.paw-trail span:nth-child(2) { left: 40px; top: 4px; rotate: 76deg; }
+.paw-trail span:nth-child(3) { left: 83px; top: 23px; rotate: 67deg; }
+.paw-trail span:nth-child(4) { left: 125px; top: 2px; rotate: 58deg; }
+.paw-trail span:nth-child(5) { left: 167px; top: 16px; rotate: 48deg; }
+.paw-trail span:nth-child(6) { left: 203px; top: 0; rotate: 38deg; }
+.paw-trail span:nth-child(7) { left: 242px; top: 15px; rotate: 47deg; }
+.paw-trail span:nth-child(8) { left: 279px; top: 0; rotate: 59deg; }
+.paw-trail span:nth-child(9) { left: 316px; top: 20px; rotate: 70deg; }
+.paw-trail span:nth-child(10) { left: 351px; top: 5px; rotate: 61deg; }
+.pet-waypoint:nth-of-type(even) > .paw-trail { right: auto; left: clamp(24px, 8vw, 160px); transform: scaleX(-1); }
+.pet-rest { display: flex; justify-content: flex-end; align-items: flex-end; max-width: 1240px; margin: 0 auto; padding: 4px 24px 0; height: 144px; pointer-events: none; }
+.pet-rest img { display: block; width: 240px; height: 140px; object-fit: contain; object-position: center bottom; }
+@media (max-width: 767px) {
+  .paw-trail { width: 230px; transform: scale(.78); transform-origin: top right; right: 20px; }
+  .pet-waypoint:nth-of-type(even) > .paw-trail { left: auto; right: 20px; transform: scale(.78); }
+  .paw-trail span:nth-child(n+7) { display: none; }
+  .pet-landscape::before, .pet-landscape::after { width: 62vw; height: 220px; }
+  .pet-rest { height: 115px; justify-content: center; }
+  .pet-rest img { width: 200px; height: 112px; }
+}
+
+/* Native image cursors track the pointer without animation frames or overlay elements.
+   Preserve the text caret, resize affordances, and touch behavior. */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: url(/assets/paw-cursor.svg) 16 18, auto; }
+  body :is(a, button, summary, select, label[for], [role="button"],
+  input[type="checkbox"], input[type="radio"], input[type="submit"]) {
+    cursor: url(/assets/paw-cursor.svg) 16 18, pointer;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+  textarea, [contenteditable="true"] { cursor: text; }
+  :disabled, [aria-disabled="true"] { cursor: not-allowed; }
+}
