@@ -12,4 +12,14 @@ design/
 Instruction/
 scripts/
 tests/
-test-results/
+
+# Local environment and generated files
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.impeccable/config.local.json
