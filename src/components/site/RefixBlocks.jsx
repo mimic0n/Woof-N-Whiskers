@@ -1,0 +1,37 @@
+import { useI18n } from "../../i18n";
+import { Button, ImageLabel, Icon } from "./UI";
+const values = [
+  ["Nguy\xEAn li\u1EC7u tuy\u1EC3n ch\u1ECDn", "Handpicked Ingredients", "Ch\xFAng t\xF4i ch\u1ECDn l\u1ECDc k\u1EF9 nh\u1EEFng nguy\xEAn li\u1EC7u cao c\u1EA5p \u0111\u1EC3 m\u1ED7i b\u1EEFa \u0103n \u0111\u1EA1t ch\u1EA5t l\u01B0\u1EE3ng v\u01B0\u1EE3t tr\u1ED9i, g\xF3p ph\u1EA7n n\xE2ng cao s\u1EE9c kh\u1ECFe v\xE0 s\u1EE9c s\u1ED1ng cho th\xFA c\u01B0ng.", "We carefully select premium ingredients to ensure exceptional quality in every meal, promoting overall well-being and vitality in pets."],
+  ["Dinh d\u01B0\u1EE1ng c\xE2n b\u1EB1ng", "Balanced Nutrition", "C\xF4ng th\u1EE9c \u0111\u01B0\u1EE3c x\xE2y d\u1EF1ng c\u1EA9n th\u1EADn, k\u1EBFt h\u1EE3p h\xE0i h\xF2a c\xE1c d\u01B0\u1EE1ng ch\u1EA5t, h\u1ED7 tr\u1EE3 s\u1EE9c kh\u1ECFe v\xE0 s\u1EE9c s\u1ED1ng c\u1EE7a th\xFA c\u01B0ng.", "Our recipes are thoughtfully crafted to provide the perfect blend of nutrients, supporting pets\u2019 health and vitality."],
+  ["Kh\xE1ch h\xE0ng h\xE0i l\xF2ng", "Customer Delight", "Ch\xFAng t\xF4i t\u1EADn t\xE2m \u0111\xE1p \u1EE9ng nhu c\u1EA7u c\u1EE7a c\u1EA3 th\xFA c\u01B0ng v\xE0 ch\u1EE7 nu\xF4i, mang l\u1EA1i s\u1EF1 h\xE0i l\xF2ng v\xE0 ni\u1EC1m vui trong t\u1EEBng b\u1EEFa \u0103n.", "We are devoted to meeting the needs of both pets and pet parents, ensuring satisfaction and delight in every bite."]
+];
+function CoreValues() {
+  const { l } = useI18n();
+  return <section className="container section split core-values"><div><h2>{l("V\xEC sao ch\u1ECDn Woof N' Whiskers", "Why Woof N' Whiskers")}</h2><h3>{l("L\u1EDDi h\u1EE9a d\xE0nh cho th\xFA c\u01B0ng", "Our Promise to Pets")}</h3><p>{l("Ch\xFAng t\xF4i t\u1EADn t\xE2m mang \u0111\u1EBFn cho th\xFA c\u01B0ng s\u1EF1 ch\u0103m s\xF3c v\xE0 dinh d\u01B0\u1EE1ng t\u1ED1t nh\u1EA5t. S\u1EE9 m\u1EC7nh c\u1EE7a ch\xFAng t\xF4i l\xE0 trao cho c\xE1c b\xE9 nh\u1EEFng nguy\xEAn li\u1EC7u tuy\u1EC7t h\u1EA3o nh\u1EA5t cho m\u1ED9t cu\u1ED9c s\u1ED1ng vui kh\u1ECFe.", "We are dedicated to providing pets with the finest care and nutrition. Our mission is to offer them the best ingredients for a joyful and healthy life.")}</p></div><div>{values.map(([vi, en, desc, english], i) => <article key={vi}><Icon name={["paw", "check", "heart"][i]} /><h3>{l(vi, en)}</h3><p>{l(desc, english)}</p></article>)}</div></section>;
+}
+function AboutIntro({ home = false }) {
+  const { l } = useI18n();
+  return <div className="split about-hero"><ImageLabel src="/assets/real/about-shop.webp" alt={l("Kh\xF4ng gian shop v\xE0 th\xFA c\u01B0ng", "Shop space and pets")} /><div><h2>{l("M\u1ED9t n\u01A1i y\xEAu th\u01B0\u01A1ng d\xE0nh cho nh\u1EEFng ng\u01B0\u1EDDi b\u1EA1n b\u1ED1n ch\xE2n", "A caring place for your four-legged friends")}</h2><p>{l("T\u1EA1i Woof N\u2019 Whiskers, ch\xFAng t\xF4i tin r\u1EB1ng m\u1ED7i th\xFA c\u01B0ng \u0111\u1EC1u x\u1EE9ng \u0111\xE1ng \u0111\u01B0\u1EE3c y\xEAu th\u01B0\u01A1ng v\xE0 ch\u0103m s\xF3c chu \u0111\xE1o. Kh\xF4ng ch\u1EC9 l\xE0 c\u1EEDa h\xE0ng cung c\u1EA5p c\xE1c s\u1EA3n ph\u1EA9m d\xE0nh cho th\xFA c\u01B0ng, ch\xFAng t\xF4i c\xF2n mang \u0111\u1EBFn nh\u1EEFng d\u1ECBch v\u1EE5 ch\u0103m s\xF3c to\xE0n di\u1EC7n, t\u1EEB vui ch\u01A1i ban ng\xE0y, l\u01B0u tr\xFA qua \u0111\xEAm \u0111\u1EBFn grooming.", "At Woof N\u2019 Whiskers, we believe every pet deserves love and thoughtful care. Alongside pet products, we offer services from daytime care and overnight stays to grooming.")}</p><p>{l("V\u1EDBi s\u1EF1 t\u1EADn t\xE2m v\xE0 quan t\xE2m \u0111\u1EBFn t\u1EEBng b\xE9, Woof N\u2019 Whiskers mong mu\u1ED1n tr\u1EDF th\xE0nh ng\u01B0\u1EDDi b\u1EA1n \u0111\u1ED3ng h\xE0nh \u0111\xE1ng tin c\u1EADy tr\xEAn h\xE0nh tr\xECnh ch\u0103m s\xF3c th\xFA c\u01B0ng c\u1EE7a b\u1EA1n.", "With attention to every pet, Woof N\u2019 Whiskers hopes to be a trusted companion on your pet care journey.")}</p><blockquote className="brand-quote">A little more love for every little paw.</blockquote><div className="actions"><Button to={home ? "/gioi-thieu/" : "/dat-lich/"}>{l("Tr\u1EA3i nghi\u1EC7m ngay", "Experience our care")}</Button><Button secondary to="/dich-vu/">{l("Kh\xE1m ph\xE1 d\u1ECBch v\u1EE5", "Explore services")}</Button></div></div></div>;
+}
+const familyItems = [
+  ["Kh\xF4ng nh\u1ED1t chu\u1ED3ng, ch\u0103m nh\u01B0 ng\u01B0\u1EDDi nh\xE0", "Cage-free care, like family", "Kh\xF4ng gian vui ch\u01A1i m\u1EDF thay cho l\u1ED3ng nh\u1ED1t, c\xF9ng \u0111\u1ED9i ng\u0169 \u0111\u1ED1i x\u1EED v\u1EDBi b\xE9 nh\u01B0 th\xFA c\u01B0ng c\u1EE7a ch\xEDnh m\xECnh.", "Open play spaces and a team who treats your pet like their own."],
+  ["B\u1EEFa \u0103n t\u01B0\u01A1i, t\u1ED1t cho s\u1EE9c kh\u1ECFe", "Fresh, wholesome meals", "Th\u1EE9c \u0103n \u0111\u01B0\u1EE3c chu\u1EA9n b\u1ECB m\u1ED7i ng\xE0y t\u1EEB nguy\xEAn li\u1EC7u th\u1EADt, gi\xFAp b\xE9 \u0111\u1EE7 n\u0103ng l\u01B0\u1EE3ng v\xE0 kh\u1ECFe m\u1EA1nh.", "Food prepared daily with real ingredients to keep pets healthy and energised."],
+  ["D\u1EA1o ch\u01A1i & ngo\xE0i tr\u1EDDi m\u1ED7i ng\xE0y", "Daily walks & outdoor time", "\u0110i d\u1EA1o \u0111\u1EC1u \u0111\u1EB7n, h\xEDt th\u1EDF kh\xF4ng kh\xED trong l\xE0nh v\xE0 vui ch\u01A1i c\xF3 gi\xE1m s\xE1t \u0111\u1EC3 b\xE9 lu\xF4n n\u0103ng \u0111\u1ED9ng, th\u01B0 gi\xE3n.", "Regular walks, fresh air and supervised play to keep pets active and relaxed."],
+  ["Linh ho\u1EA1t th\u1EDDi gian g\u1EEDi", "Flexible stays", "G\u1EEDi trong ng\xE0y khi b\u1EA1n \u0111i l\xE0m ho\u1EB7c l\u01B0u tr\xFA d\xE0i ng\xE0y khi \u0111i xa, thu\u1EADn ti\u1EC7n \u0111\xF3n \u2013 tr\u1EA3.", "Daytime care while you work or longer stays while away, with convenient collection."]
+];
+function FamilySection() {
+  const { l } = useI18n();
+  return <section className="section"><h2>{l("V\xEC c\xE1c b\xE9 l\xE0 m\u1ED9t ph\u1EA7n c\u1EE7a gia \u0111\xECnh", "Because They\u2019re Family")}</h2><p>{l("Ch\u0103m s\xF3c y\xEAu th\u01B0\u01A1ng, vui ch\u01A1i v\xE0 tho\u1EA3i m\xE1i cho b\xE9 \u2014 nh\u01B0 \u1EDF nh\xE0.", "Loving care, play and comfort \u2014 just like home.")}</p><p>{l("T\u1EA1i Woof N\u2019 Whiskers, b\xE9 \u0111\u01B0\u1EE3c \u0103n u\u1ED1ng t\u01B0\u01A1i ngon, vui ch\u01A1i th\u1ECFa th\xEDch v\xE0 \u0111\u01B0\u1EE3c y\xEAu th\u01B0\u01A1ng \u2014 d\xF9 ch\u1EC9 m\u1ED9t ng\xE0y, m\u1ED9t \u0111\xEAm hay m\u1ED9t bu\u1ED5i spa.", "At Woof N\u2019 Whiskers, pets enjoy fresh meals, play and love \u2014 for a day, a night or a spa visit.")}</p><div className="refix-gallery">{familyItems.map(([vi, en, desc, english], i) => <article key={vi}><ImageLabel src={`/assets/real/we-have-${i + 1}.webp`} alt={l(vi, en)} /><h3>{l(vi, en)}</h3><p>{l(desc, english)}</p></article>)}</div></section>;
+}
+function Spaces() {
+  const { l } = useI18n();
+  return <section className="section"><h2>{l("Kh\xF4ng gian ch\u0103m s\xF3c & Tr\u1EA3i nghi\u1EC7m", "Spaces for care & companionship")}</h2><div className="refix-gallery">{[["L\u1EC5 t\xE2n & \u0111\xF3n ti\u1EBFp", "Reception"], ["Spa & grooming", "Spa & grooming"], ["L\u01B0u tr\xFA", "Boarding"], ["S\xE2n ch\u01A1i daycare", "Daycare play space"]].map(([vi, en], i) => <article key={vi}><ImageLabel src={`/assets/real/space-${i + 1}.webp`} alt={l(vi, en)} /><h3>{l(vi, en)}</h3></article>)}</div></section>;
+}
+export {
+  AboutIntro,
+  CoreValues,
+  FamilySection,
+  Spaces,
+  familyItems,
+  values
+};

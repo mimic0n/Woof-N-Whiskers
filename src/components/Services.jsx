@@ -1,0 +1,11 @@
+const services = [
+ { icon: 'shower', title: 'Chăm sóc lông', price: 'Từ 200.000đ/lượt', description: 'Vệ sinh và chăm sóc bộ lông theo loài, cân nặng, tình trạng lông và gói phù hợp.', image: '/assets/hero-2.webp', service: 'grooming' },
+ { icon: 'hotel', title: 'Lưu trú ban đêm', price: 'Từ 300.000đ/đêm', description: 'Tìm hiểu thông tin lưu trú và trao đổi nhu cầu chăm sóc khi bạn vắng nhà.', image: '/assets/hero-3.webp', service: 'boarding' },
+ { icon: 'sunny', title: 'Chăm sóc ban ngày', price: 'Từ 150.000đ/ngày', description: 'Dành cho thú cưng cần được chăm sóc trong ngày. Shop sẽ xác nhận điều kiện tiếp nhận.', image: '/assets/hero-1.webp', service: 'daycare' }
+];
+export default function Services() {
+ return <section id="services" className="pet-waypoint pet-landscape bg-badge-cream/30 py-20 border-y border-border-subtle"><div className="max-w-7xl mx-auto px-6">
+ <h2 className="text-3xl font-bold text-center">Dịch vụ chăm sóc thú cưng</h2><p className="text-text-muted text-center mt-3 mb-10">Mọi điều thú cưng cần, trong một nơi.</p>
+ <div className="grid grid-cols-1 md:grid-cols-3 gap-6">{services.map(item => <article key={item.service} className="bg-white rounded-2xl overflow-hidden card-shadow-1"><img className="w-full h-52 object-cover" src={item.image} alt="Ảnh minh họa chó mèo" loading="lazy" /><div className="p-6"><span className="text-xs text-text-muted">Ảnh minh họa</span><h3 className="text-xl font-bold mt-2">{item.title}</h3><p className="text-cta font-bold my-3">{item.price}</p><p className="text-sm text-text-muted leading-relaxed">{item.description}</p><a href={`#booking-card`} onClick={event => { event.preventDefault(); window.dispatchEvent(new CustomEvent('wnw:service', { detail: item.service })); document.getElementById('booking-card').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }} className="inline-flex mt-6 min-h-11 items-center gap-2 rounded-full px-5 bg-cta text-white font-semibold">Chọn dịch vụ <span aria-hidden="true">→</span></a></div></article>)}</div>
+ <p className="text-sm text-text-muted mt-6">Giá dự kiến có thể thay đổi theo cân nặng, gói, tình trạng lông, số đêm và nhận/trả ngoài giờ. Gói chuyên sâu, tạo kiểu: báo giá theo nhu cầu.</p></div></section>;
+}

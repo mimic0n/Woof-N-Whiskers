@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.playwright/
+test-results/
+playwright-report/
+.vscode/
+.gemini/
+.codex/
+.impeccable/review/
+Demo/
+design/
+Instruction/
+scripts/
+tests/
+
+# Local environment and generated files
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
+.impeccable/config.local.json

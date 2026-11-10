@@ -1,0 +1,282 @@
+.refix-home .container {
+  width: min(1200px, calc(100% - 32px));
+  margin-inline: auto;
+}
+.refix-home .section {
+  padding-block: 56px;
+}
+.refix-home h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.35;
+  margin-bottom: 24px;
+}
+.refix-home h3 {
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+.refix-home p {
+  line-height: 1.7;
+}
+.refix-home .product-card h3 {
+  font-size: 1rem;
+}
+.refix-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+.refix-gallery.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.refix-gallery img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.refix-gallery h3 {
+  min-height: 3em;
+  margin-block: 16px 8px;
+}
+.wide-banner {
+  margin-block: 24px;
+}
+.wide-banner img {
+  width: 100%;
+  min-height: 360px;
+  max-height: 520px;
+  aspect-ratio: 21/9;
+  object-fit: cover;
+}
+.footer-photos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin-block: 24px 36px;
+}
+.footer-photos img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.socials a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.core-values article {
+  padding-block: 16px;
+  border-bottom: 1px solid #EBE5DF;
+}
+.process-photos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+.process-photos img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.process-photos strong {
+  margin-right: 8px;
+}
+.compact-faq {
+  font-size: .9rem;
+}
+.compact-faq summary {
+  padding: 12px 16px;
+  line-height: 1.4;
+}
+.compact-faq details p {
+  padding: 12px 16px;
+  line-height: 1.5;
+}
+.compact-price {
+  padding-block: 24px;
+}
+.compact-price .product-price {
+  font-size: 1.5rem;
+}
+.product-card .product-image figure {
+  height: 100%;
+  margin: 0;
+}
+.product-card .product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-actions {
+  flex-wrap: wrap;
+}
+.contact-layout input[type=file] {
+  max-width: 100%;
+  width: 100%;
+}
+#lien-he {
+  scroll-margin-top: 24px;
+}
+#lien-he h2:focus {
+  outline: 2px solid #326DCA;
+  outline-offset: 6px;
+}
+.refix-home .quick-booking-wrap {
+  margin-top: 24px;
+}
+.refix-home .service-card p {
+  margin-bottom: 12px;
+}
+.core-values p {
+  max-width: 65ch;
+}
+figure {
+  min-width: 0;
+}
+.product-info select {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .refix-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .footer-photos {
+    display: flex;
+    overflow-x: auto;
+  }
+  .footer-photos figure {
+    flex: 0 0 150px;
+  }
+  .refix-gallery.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .refix-gallery.three {
+    grid-template-columns: 1fr;
+  }
+  .refix-home .section {
+    padding-block: 36px;
+  }
+  .wide-banner img {
+    min-height: 200px;
+  }
+  .refix-gallery {
+    gap: 12px;
+  }
+  .refix-gallery h3 {
+    font-size: 1rem;
+  }
+  .refix-home .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .refix-home .product-card .card-body {
+    padding: 12px;
+  }
+  .refix-home .product-actions .button {
+    padding: 8px;
+    min-width: 0;
+  }
+  .refix-home .product-price {
+    font-size: .95rem;
+  }
+  .refix-home .product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.contact-map {
+  width: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: 16px;
+}
+.site-shell {
+  --font:"Lato","Be Vietnam Pro",sans-serif;
+}
+.site-shell .demo-home,
+.site-shell .demo-home h1,
+.site-shell .demo-home h2,
+.site-shell .demo-home p,
+.site-shell .demo-home button {
+  font-family:
+    "Lato",
+    "Be Vietnam Pro",
+    sans-serif;
+}
+.product-card .image-label {
+  height: 100%;
+}
+.contact-layout {
+  align-items: start;
+}
+
+.site-footer .footer-socials {
+ display:flex;
+ justify-content:flex-start;
+ gap:12px;
+ margin-top:16px;
+}
+.site-footer .footer-social-icon {
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:48px;
+ height:48px;
+ flex-shrink:0;
+ border:0;
+ border-radius:10px;
+ color:inherit;
+ background:transparent;
+}
+.site-footer .footer-social-icon img { width:40px;height:40px;object-fit:contain; }
+.site-footer .footer-social-icon svg { width:24px;height:24px; }
+.site-footer a.footer-social-icon:hover { background:transparent;filter:brightness(.92); }
+
+/* Shared booking banner: existing pet image, with protected space for copy. */
+.site-shell .final-cta-photo {
+ position:relative;
+ isolation:isolate;
+ overflow:hidden;
+ min-height:340px;
+ padding:48px 44% 48px 40px;
+ text-align:left;
+ background:var(--c-cream);
+}
+.site-shell .final-cta-photo::before {
+ content:"";
+ position:absolute;
+ inset:0;
+ z-index:-1;
+ background-image:linear-gradient(90deg,rgba(249,238,217,.98) 0%,rgba(249,238,217,.93) 36%,rgba(249,238,217,.25) 65%,rgba(249,238,217,0) 100%),url('/assets/hero-1.webp');
+ background-size:cover;
+ background-position:center;
+ background-repeat:no-repeat;
+}
+.site-shell .final-cta-photo h2,
+.site-shell .final-cta-photo > p { margin-left:0;margin-right:0; }
+.site-shell .final-cta-photo > p { color:var(--c-ink); }
+.site-shell .final-cta-photo .actions { justify-content:flex-start; }
+@media(max-width:767px) {
+ .site-shell .final-cta-photo { padding:230px 24px 32px;min-height:0; }
+ .site-shell .final-cta-photo::before {
+  height:220px;
+  background-image:linear-gradient(180deg,rgba(249,238,217,0) 55%,rgba(249,238,217,1) 100%),url('/assets/hero-1.webp');
+  background-position:right center;
+ }
+}
+
+/* Show complete packaging and allow supplied photo sets to wrap on small screens. */
+.site-shell .product-detail .detail-image img { object-fit: contain; }
+.site-shell .product-detail .thumbnails { flex-wrap: wrap; gap: 8px; }
+.site-shell .product-detail .thumbnails button { flex: 0 0 72px; }
+.site-shell .product-detail .thumbnails .image-label { height: 100%; margin: 0; }
+@media(max-width:600px) {
+ .site-shell .product-detail .thumbnails button { flex-basis: 60px; width: 60px; height: 60px; }
+}

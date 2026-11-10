@@ -1,0 +1,146 @@
+/* Color follows content: warm stories and shopping, a quiet blue booking area. */
+.site-shell :is(.demo-home, .background-system) { background: var(--bg-ivory); }
+:is(.demo-home, .background-system) .home-scene {
+ position: relative;
+ isolation: isolate;
+ display: flow-root;
+}
+:is(.demo-home, .background-system) .home-scene-intro { background: var(--bg-ivory); padding-bottom: 36px; }
+:is(.demo-home, .background-system) .home-scene-stories { background: var(--bg-ivory); }
+:is(.demo-home, .background-system) .home-scene-essentials { background: #fff; padding-top: 16px; }
+:is(.demo-home, .background-system) .home-scene-featured { background: var(--bg-ivory); }
+:is(.demo-home, .background-system) .home-scene-care { background: var(--bg-care); }
+:is(.demo-home, .background-system) .home-scene-booking { background: var(--bg-sky); }
+:is(.demo-home, .background-system) .home-closing { background: var(--bg-ivory); }
+/* Only the decorative layer clips; foreground cards and hover effects stay free. */
+:is(.demo-home, .background-system) .home-background-art {
+ position: absolute;
+ inset: 0;
+ z-index: -1;
+ overflow: hidden;
+ pointer-events: none;
+ user-select: none;
+}
+:is(.demo-home, .background-system) .home-background-curve {
+ position: absolute;
+ display: block;
+ background: var(--bg-peach);
+}
+:is(.demo-home, .background-system) .home-scene-stories .curve-large {
+ width: min(68vw, 1000px); height: 580px;
+ top: 40px; right: -20%;
+ border-radius: 62% 38% 48% 52% / 48% 62% 38% 52%;
+ rotate: -14deg;
+}
+:is(.demo-home, .background-system) .home-scene-stories .curve-small {
+ width: 420px; height: 300px;
+ left: -220px; bottom: 70px;
+ border-radius: 40% 60% 62% 38% / 50% 35% 65% 50%;
+ background: var(--bg-honey);
+}
+:is(.demo-home, .background-system) .home-scene-booking .curve-large {
+ width: min(72vw, 1000px); height: 760px;
+ right: -28%; bottom: -160px;
+ border-radius: 55% 45% 65% 35% / 45% 60% 40% 55%;
+ background: var(--bg-sky-accent);
+ rotate: -18deg;
+}
+:is(.demo-home, .background-system) .home-scene-booking .curve-small {
+ width: 400px; height: 260px;
+ top: -120px; left: -180px;
+ border-radius: 40% 60% 55% 45% / 45% 35% 65% 55%;
+ background: #e0ebf8;
+}
+:is(.demo-home, .background-system) .background-motif { position: absolute; width: 44px; height: 44px; color: #835d42; opacity: .14; }
+:is(.demo-home, .background-system) .motif-first { top: 32px; right: 6%; rotate: 24deg; }
+:is(.demo-home, .background-system) .motif-second { bottom: 36px; left: 3%; width: 28px; height: 28px; rotate: -24deg; }
+:is(.demo-home, .background-system) .home-scene-booking .background-motif { color: #326dca; }
+:is(.demo-home, .background-system) .home-scene-care #services { background: transparent; border: 0; }
+/* Replace the old repeated landscape blobs with the section's authored surfaces. */
+:is(.demo-home, .background-system) .home-scene-care #services::before,
+:is(.demo-home, .background-system) .home-scene-care #services::after,
+:is(.demo-home, .background-system) #testimonials::before,
+:is(.demo-home, .background-system) #testimonials::after { content: none; }
+:is(.demo-home, .background-system) #testimonials { background: #fff; border: 0; }
+:is(.demo-home, .background-system) .home-scene-booking .quick-booking { border-color: #d7e3f0; }
+:is(.demo-home, .background-system) .home-scene-booking .demo-booking-steps li { background: #fff; }
+/* A few marks at the edges, rather than a repeated all-over pattern. */
+:is(.demo-home, .background-system) .home-scene-essentials .paw-trail { opacity: .4; width: 170px; right: 24px; left: auto; transform: none; }
+:is(.demo-home, .background-system) .home-scene-essentials .paw-trail span:nth-child(n+5) { display: none; }
+:is(.demo-home, .background-system) .motion-paws { background: var(--bg-honey); padding-block: 20px; }
+@media (max-width: 767px) {
+ :is(.demo-home, .background-system) .home-scene-intro { padding-bottom: 16px; }
+ :is(.demo-home, .background-system) .home-scene-stories .curve-large { width: 85vw; height: 420px; right: -48%; top: 100px; }
+ :is(.demo-home, .background-system) .home-scene-booking .curve-large { width: 100vw; height: 600px; right: -65%; bottom: 20px; }
+ :is(.demo-home, .background-system) .background-motif { width: 28px; height: 28px; opacity: .1; }
+ :is(.demo-home, .background-system) .motif-first { right: 16px; top: 16px; }
+ :is(.demo-home, .background-system) .motif-second { display: none; }
+ :is(.demo-home, .background-system) .home-scene-essentials .paw-trail { opacity: .3; right: 16px; scale: .8; transform-origin: top right; }
+}
+
+/* Low curved seams take their color from the preceding section. */
+:is(.demo-home, .background-system) .home-scene-featured { --scene-previous: var(--bg-honey); }
+:is(.demo-home, .background-system) .home-scene-booking { --scene-previous: var(--bg-care); }
+:is(.demo-home, .background-system) .home-scene-reviews { --scene-previous: var(--bg-sky); background: #fff; }
+:is(.demo-home, .background-system) .home-scene-transition {
+ display: block; width: 100%; height: 48px;
+ fill: var(--scene-previous); pointer-events: none;
+}
+:is(.demo-home, .background-system) .home-scene-stories { background: #fcf5e9; }
+:is(.demo-home, .background-system) .home-scene-care .curve-large {
+ width: min(65vw, 900px); height: 540px;
+ top: 80px; right: -30%;
+ border-radius: 58% 42% 38% 62% / 48% 58% 42% 52%;
+ background: #efd9bf; rotate: -12deg;
+}
+:is(.demo-home, .background-system) .home-scene-care .curve-small { display: none; }
+:is(.demo-home, .background-system) .motif-collar {
+ width: 230px; height: 80px;
+ top: 14px; left: 2%; opacity: .16;
+}
+:is(.demo-home, .background-system) .background-motif { translate: 0 var(--motif-scroll, 0px); }
+:is(.demo-home, .background-system) .motif-second { translate: 0 calc(var(--motif-scroll, 0px) * -.6); }
+@media (prefers-reduced-motion: no-preference) {
+ :is(.demo-home, .background-system) .home-background-curve {
+  animation: background-drift 24s ease-in-out infinite alternate;
+  animation-play-state: paused;
+ }
+ :is(.demo-home, .background-system) .curve-small { animation-name: background-drift-small; animation-duration: 29s; animation-delay: -8s; }
+ :is(.demo-home, .background-system) .home-scene[data-background-active] .home-background-curve { animation-play-state: running; }
+}
+@keyframes background-drift {
+ from { transform: translate3d(0, 0, 0); }
+ to { transform: translate3d(-12px, 16px, 0); }
+}
+@keyframes background-drift-small {
+ from { transform: translate3d(0, 0, 0); }
+ to { transform: translate3d(10px, -12px, 0); }
+}
+@media (max-width: 767px) {
+ :is(.demo-home, .background-system) .home-scene-transition { height: 24px; }
+ :is(.demo-home, .background-system) .home-scene-care .curve-large { width: 100vw; height: 500px; right: -70%; top: 180px; }
+ :is(.demo-home, .background-system) .motif-collar { width: 120px; height: 40px; left: -20px; top: 12px; opacity: .1; }
+ :is(.demo-home, .background-system) .home-background-curve { animation-duration: 36s; }
+ @keyframes background-drift { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-3px, 4px, 0); } }
+ @keyframes background-drift-small { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(3px, -3px, 0); } }
+}
+@media (prefers-reduced-motion: reduce) {
+ :is(.demo-home, .background-system) .home-background-curve { animation: none; transform: none; }
+ :is(.demo-home, .background-system) .background-motif { translate: none; }
+}
+
+:is(.demo-home, .background-system) .home-scene-sale { background: var(--bg-honey); }
+:is(.demo-home, .background-system) .home-scene-sale .curve-large {
+ width: min(68vw,940px); height: 640px; top: 100px; left: -25%;
+ border-radius: 42% 58% 36% 64% / 45% 44% 56% 55%; background: #f8dfac; rotate: 16deg;
+}
+:is(.demo-home, .background-system) .home-scene-sale .curve-small {
+ width: 520px; height: 330px; right: -280px; top: -140px;
+ border-radius: 60% 40% 36% 64% / 60% 55% 45% 40%; background: #fbe7bd;
+}
+.refix-home .home-scene .quick-booking-wrap { margin-top: 0; padding-top: 32px; }
+.refix-home .home-scene .core-values { background: transparent; }
+.refix-home .home-scene-essentials { padding-top: 0; }
+@media(max-width:767px) {
+ :is(.demo-home, .background-system) .home-scene-sale .curve-large { width: 100vw; height: 500px; left: -65%; top: 140px; }
+}

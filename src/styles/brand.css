@@ -1,0 +1,65 @@
+/* Logo palette sampled from the supplied artwork: cream, blue, honey and brown. */
+.site-shell .site-header { background: var(--c-cream); border-color: var(--c-line); }
+.site-shell .announcement { background: #f6e7c6; color: #684426; border-color: var(--c-line); }
+.site-shell .announcement a { color: #684426; }
+.site-shell .site-header .brand.brand-image,
+.site-shell .site-footer .brand.brand-image { flex: 0 0 auto; padding: 0; min-width: 0; }
+.site-shell .brand-image .brand-logo {
+ display: block; position: relative; overflow: hidden;
+ width: 230px; height: 88px; max-width: none;
+}
+.site-shell .brand-logo img {
+ position: absolute; width: 118.644%; height: 155.556%; max-width: none;
+ left: -10.17%; top: -24.444%; object-fit: fill;
+}
+.site-shell .site-header .header-inner { min-height: 104px; }
+.site-shell .site-footer {
+ background: var(--c-cream); color: var(--c-brown);
+ border-top: 0;
+}
+.site-shell .site-footer :is(.footer-grid h2, .brand) { color: var(--c-brown); }
+.site-shell .site-footer :is(.footer-grid a, .footer-grid p, .copyright),
+.site-shell .site-footer>.container>p { color: #68543f; }
+.site-shell .site-footer .copyright { border-color: var(--c-line); }
+.site-shell .site-footer .footer-note { background: #f6e7c6; border-color: var(--c-line); }
+.site-shell .site-footer .socials button { background: var(--c-cream); color: var(--c-brown); border-color: #cbb48c; }
+.site-shell .site-footer .brand-logo { width: 280px; height: 107px; }
+.site-shell [data-floating-dock] {
+ --dock-surface: #f6e7c6; --dock-ink: #7b502d;
+ --dock-hover: var(--c-yellow); --dock-active: var(--c-blue); --dock-focus: var(--c-blue-dark);
+}
+.site-shell .demo-home .hero-emphasis { color: var(--c-brown); }
+.site-shell .demo-home .hero-actions a:first-child,
+.site-shell .demo-home :is(.bg-cta, .demo-sale-icon, .demo-to-top):not([data-added]) { background: var(--c-blue); }
+.site-shell .demo-home .hero-actions a:first-child { border-color: var(--c-blue); }
+.site-shell .demo-home .hero-actions a:first-child:hover { background: var(--c-blue-dark); border-color: var(--c-blue-dark); }
+.site-shell .demo-home .hero-actions a+a { color: var(--c-brown); border-color: var(--c-brown); }
+.site-shell .demo-home .demo-final-cta { background: var(--c-brown); }
+.site-shell .demo-home #flash-products .card-head { background: var(--c-blue); }
+.site-shell .demo-home #flash-products :is(.badge, .product-price) { background: var(--c-yellow); color: #513419 !important; }
+.site-shell .demo-home #flash-products .product-cart { color: var(--c-brown); }
+@media (max-width: 1023px) {
+ .site-shell .site-header .brand-image .brand-logo { width: 200px; height: 76px; }
+ .site-shell .site-header .header-inner { min-height: 92px; }
+}
+@media (max-width: 767px) {
+ .site-shell .site-header .brand-image .brand-logo { width: 174px; height: 66px; }
+ .site-shell .site-header .header-inner { min-height: 82px; }
+ .site-shell .site-footer .brand-logo { width: 240px; height: 92px; }
+}
+@media (max-width: 359px) {
+ .site-shell .site-header .brand-image .brand-logo { width: 150px; height: 57px; }
+}
+
+/* Let search fill the space between the logo and the header's utility controls. */
+@media (min-width: 768px) {
+ .site-shell .site-header .header-inner { gap: 28px; }
+ .site-shell .site-header .header-utilities { flex: 1; min-width: 0; margin-left: 0; }
+ .site-shell .site-header .desktop-search { display: block; flex: 1; min-width: 120px; width: auto; }
+ .site-shell .site-header .desktop-search .site-search { width: 100%; }
+ .site-shell .site-header .header-utilities>:not(.desktop-search) { flex-shrink: 0; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+ .site-shell .site-header .header-inner { gap: 16px; }
+ .site-shell .site-header .header-utilities { gap: 8px; }
+}
