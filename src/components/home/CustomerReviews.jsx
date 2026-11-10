@@ -20,14 +20,12 @@ export default function CustomerReviews() {
  const visible = reviews.filter(review=>filter==='all'||review.service===filter);
  const average = (reviews.reduce((sum,review)=>sum+review.rating,0)/reviews.length).toFixed(1);
  return <section id="customer-reviews" className="container section customer-reviews" aria-labelledby="customer-reviews-title">
-  <div className="reviews-heading"><div><h2 id="customer-reviews-title">{l('Đánh giá khách hàng','Customer reviews')}</h2><p>{l('Những câu chuyện nhỏ, thêm một chút yêu thương.','Little stories. A little more love.')}</p></div><span className="review-sample-label">{l('Giao diện mẫu','Interface preview')}</span></div>
-  <p className="review-disclosure">{l('Nội dung và điểm số dưới đây là dữ liệu mẫu để xem trước giao diện, không phải đánh giá thực tế của khách hàng.','The reviews and scores below are sample content for an interface preview, not actual customer feedback.')}</p>
+  <div className="reviews-heading"><div><h2 id="customer-reviews-title">{l('Đánh giá khách hàng','Customer reviews')}</h2><p>{l('Những câu chuyện nhỏ, thêm một chút yêu thương.','Little stories. A little more love.')}</p></div></div>
   <div className="reviews-layout">
    <aside className="reviews-summary" aria-label={l('Tổng hợp điểm mẫu','Sample rating summary')}>
     <div className="review-average"><IconStar size={28} fill="currentColor" aria-hidden="true"/><strong>{average}</strong><span>/ 5</span></div>
     <p>{l('Từ 3 nhận xét mẫu','From 3 sample reviews')}</p>
     <div className="review-distribution">{[5,4,3,2,1].map(rating=>{const count=reviews.filter(review=>review.rating===rating).length;return <div key={rating}><span>{rating} <IconStar size={12} aria-hidden="true"/></span><meter min="0" max={reviews.length} value={count} aria-label={l(`${rating} sao: ${count} nhận xét mẫu`,`${rating} stars: ${count} sample reviews`)}/><span>{count}</span></div>;})}</div>
-    <p className="review-summary-note">{l('Bạn có thể thử lọc theo dịch vụ và đánh dấu nhận xét hữu ích.','Try filtering by service and marking a review as helpful.')}</p>
    </aside>
    <div className="reviews-content">
     <div className="review-filters" role="group" aria-label={l('Lọc đánh giá theo dịch vụ','Filter reviews by service')}>{[['all',['Tất cả','All']],...Object.entries(services)].map(([key,label])=><button type="button" key={key} aria-pressed={filter===key} onClick={()=>setFilter(key)}>{l(label)}</button>)}</div>

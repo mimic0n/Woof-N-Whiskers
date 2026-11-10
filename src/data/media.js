@@ -1,3 +1,4 @@
+import { websiteImages } from './website-images';
 // Existing project images used until the owner supplies the named replacement files.
 // These are illustrative assets, not verified photographs of the shop or product SKUs.
 export const mediaFallbacks = {
@@ -29,6 +30,6 @@ const productSlugs = ['hamster-gerbil-mix','guinea-pig-pellets','rabbit-pellet-f
 for (const slug of productSlugs) mediaFallbacks[`/assets/products/${slug}.webp`] = productImageFallback;
 export const serviceGalleries = {
  daycare: ['/assets/stitch/services-2.webp','/assets/stitch/home-4.webp','/assets/stitch/services-7.webp'],
- boarding: ['/assets/stitch/home-4.webp','/assets/stitch/boarding-3.webp','/assets/stitch/boarding-4.webp','/assets/stitch/services-5.webp'],
+ boarding: ['/assets/stitch/home-4.webp','/assets/stitch/boarding-3.webp','/assets/stitch/boarding-4.webp',websiteImages.boardingSupport],
  grooming: ['/assets/stitch/services-4.webp','/assets/stitch/grooming-3.webp','/assets/stitch/grooming-4.webp'],
 };
