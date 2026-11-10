@@ -4,6 +4,17 @@
 <meta charset="UTF-8" />
 <link rel="icon" type="image/svg+xml" href="/assets/paw-mark.svg" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>
+try {
+ const connection = navigator.connection;
+ const replay = new URLSearchParams(location.search).get('intro') === '1';
+ if (location.pathname === '/' && (!location.hash || replay) && (replay || !sessionStorage.getItem('wnw_intro_seen')) && !matchMedia('(prefers-reduced-motion: reduce)').matches && !(connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType || '')))) {
+  document.documentElement.classList.add('intro-on');
+  window.wnwIntroWatchdog = setTimeout(() => document.documentElement.classList.remove('intro-on'), 3500);
+ }
+} catch { /* The homepage remains usable when storage is unavailable. */ }
+</script>
+<style>html.intro-on{background:#F9EED9}html.intro-on body{overflow:hidden}html.intro-on:not(.intro-ready) #root{visibility:hidden}</style>
 <title>Woof N’Whiskers — Chăm sóc chó mèo tại Đà Nẵng</title>
 <meta name="description" content="Khám phá sản phẩm và dịch vụ chăm sóc ban ngày, lưu trú ban đêm, chăm sóc lông tại Woof N’Whiskers, 49 Phạm Kiệt, Đà Nẵng." />
 </head>

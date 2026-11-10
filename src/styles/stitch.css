@@ -319,7 +319,11 @@ html { scrollbar-color:#bca993 var(--c-mist);scrollbar-width:thin; }
 .accordion>section { background:#fff;border:1px solid var(--c-line);border-radius:10px;margin-bottom:12px;overflow:hidden; }
 .accordion h3 button { padding:20px 22px;font-size:.95rem;min-height:68px; }
 .accordion h3 button[aria-expanded=true] { color:var(--c-blue);background:#f5f8fd; }
-.accordion section>div { padding:0 22px 20px;color:var(--c-muted);font-size:.9rem; }
+.accordion section>[role="region"] { padding:20px 22px;color:var(--c-muted);font-size:.9rem; }
+.accordion section>[role="region"]>p { margin:0; }
+@media (max-width:767px) {
+ .faq-layout .accordion section>[role="region"] { padding:18px; }
+}
 .faq-support { background:var(--c-cream); }
 .faq-support>svg { color:var(--c-brown);margin-bottom:18px; }
 .faq-support p { font-size:.85rem; }

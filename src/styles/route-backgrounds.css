@@ -1,0 +1,49 @@
+/* Shared scenery on every route, with opaque task surfaces for clear reading. */
+.site-shell .route-background .home-scene {
+ --scene-previous: #fff;
+ --route-band: var(--bg-ivory);
+ min-height: 55vh;
+}
+.site-shell .route-background .home-scene-stories { --route-band: #fffaf2; }
+.site-shell .route-background .home-scene-sale { --route-band: var(--bg-ivory); }
+.site-shell .route-background .home-scene-care { --route-band: #fff9ef; }
+.site-shell .route-background .home-scene-booking { --route-band: #f9fbfe; }
+.route-background .route-background-band {
+ position: absolute;
+ top: 34%; left: 0;
+ width: 100%; height: 38%; min-height: 280px; max-height: 900px;
+ fill: var(--route-band);
+}
+.route-background .route-background-end {
+ display: block; width: 100%; height: 48px;
+ fill: var(--c-footer); pointer-events: none;
+}
+.site-shell:has(.route-background) .site-footer { margin-top: 0; border-radius: 0; }
+.site-shell:has(.route-background) .breadcrumb-band { background: #fff; }
+/* Existing full-width editorial sections follow the same palette rhythm. */
+.route-background .warm { background: var(--bg-honey); border: 0; }
+.route-background .location-section { background: var(--bg-sky); }
+.route-background .faq-hero { background: transparent; }
+.route-background :is(.panel, .auth-panel, .filters, .order-summary, .cart-row, .accordion>section) { background: #fff; }
+.route-background .policy-layout>article,
+.route-background .article-body {
+ background: #fffdf9;
+ border-radius: 12px;
+ padding: 24px;
+}
+.route-background .home-scene-transition { height: 32px; }
+.route-background .home-background-art .motif-first { top: 64px; right: 3%; }
+.route-background .home-background-art .motif-collar { left: 1%; right: auto; top: 40px; }
+.route-background .home-background-art .motif-second { bottom: 80px; }
+.route-background .home-scene-stories .curve-large { top: 100px; height: 640px; }
+.route-background .home-scene-booking .curve-large { bottom: 5%; }
+/* Forms and reading routes have quieter decoration around their content. */
+.route-background:is([data-background-page="thanh-toan"], [data-background-page="tai-khoan"], [data-background-page="chinh-sach"]) .background-motif { opacity: .08; }
+@media (max-width: 767px) {
+ .route-background .home-scene-transition { height: 18px; }
+ .route-background .route-background-end { height: 28px; }
+ .route-background .route-background-band { top: 35%; height: 34%; min-height: 180px; }
+ .route-background .policy-layout>article, .route-background .article-body { padding: 18px; }
+ .route-background .home-background-art .motif-first { top: 30px; right: 10px; }
+ .route-background .home-background-art .motif-collar { left: -30px; top: 24px; }
+}

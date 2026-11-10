@@ -1,7 +1,7 @@
 :root {
- --c-brown:#835D42;--c-yellow:#F8D38C;--c-blue:#326DCA;--c-cream:#F9EED9;--c-mist:#F8F9FB;
- --c-ink:#201A16;--c-muted:#6E6259;--c-blue-dark:#2757A8;--c-line:#EBE5DF;
- --c-success:#2E7D4F;--c-warning:#B26A00;--c-danger:#B3261E;--c-footer:#3F5F78;
+ --c-brown:#8A5E37;--c-yellow:#F9C36A;--c-blue:#3872C9;--c-cream:#FBF3E0;--c-mist:#FFFCF5;
+ --c-ink:#201A16;--c-muted:#6E6259;--c-blue-dark:#295BA5;--c-line:#E9DDC8;
+ --c-success:#2E7D4F;--c-warning:#B26A00;--c-danger:#B3261E;--c-footer:#FBF3E0;
  --bg-ivory:#FFFCF7;--bg-honey:#FFF1D6;--bg-peach:#F7DFC9;--bg-care:#F6EBDD;--bg-sky:#EDF4FB;--bg-sky-accent:#DCE9F7;
  --font:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
  --radius:16px;--radius-sm:10px;--radius-pill:999px;--tap:44px;--container:1200px;

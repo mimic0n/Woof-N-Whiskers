@@ -1,0 +1,60 @@
+.wnw-intro {
+ position:fixed;inset:0;z-index:9999;overflow:hidden;background:#F9EED9;color:#835D42;
+ font-family:'Be Vietnam Pro',sans-serif;isolation:isolate;
+ transition:transform .8s cubic-bezier(.77,0,.18,1);
+}
+.wnw-intro[hidden],.wnw-intro [hidden]{display:none!important}
+.intro-playback-note{margin:16px auto;padding:16px 24px;max-width:75ch;background:#F9EED9;color:#835D42;border-radius:12px;font-family:'Be Vietnam Pro',sans-serif;line-height:1.6}
+.demo-home .intro-replay-float{position:fixed;left:max(24px,env(safe-area-inset-left));bottom:104px;z-index:55;display:flex;align-items:center;gap:10px;min-height:46px;padding:12px 18px;background:#fff;color:#835D42;border:1px solid #EBE5DF;border-radius:999px;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;transition:background-color .2s,color .2s}
+.demo-home .intro-replay-float:hover{background:#F9EED9}
+.intro-replay-float:focus-visible{outline:3px solid #326DCA;outline-offset:4px}
+.intro-replay-notice{position:fixed;left:24px;bottom:160px;z-index:56;max-width:min(340px,calc(100vw - 48px));padding:16px;background:#F9EED9;color:#835D42;border-radius:12px;font-size:.8rem;line-height:1.6}
+@media(max-width:767px){.demo-home .intro-replay-float{left:max(20px,env(safe-area-inset-left));bottom:calc(84px + env(safe-area-inset-bottom))}.intro-replay-notice{bottom:144px}}
+.wnw-intro.is-leaving{transform:translateY(-100%);pointer-events:none}
+.wnw-intro__stage{position:absolute;inset:0;perspective:1200px;perspective-origin:50% 45%}
+.wnw-intro__world,.intro-scene{position:absolute;inset:0;transform-style:preserve-3d}
+.intro-scene{visibility:hidden;opacity:0}
+.is-running .intro-scene{will-change:transform,opacity,filter}
+.intro-scene__cutout{position:absolute;left:58%;top:45%;width:min(65vh,56vw);height:auto;transform:translate(-50%,-50%)}
+.intro-scene__lines{position:absolute;inset:0;width:100%;height:100%;transform:translateZ(-80px)}
+.intro-scene__lines path{fill:none;stroke:var(--scene-color);stroke-width:5;stroke-linecap:round}
+.intro-scene__lines path+path{stroke-width:2;opacity:.5}
+.intro-scene__copy{position:absolute;left:max(7vw,24px);right:24px;bottom:12vh;transform:translateZ(40px)}
+.intro-scene__title{display:flex;gap:20px;align-items:baseline;font-size:clamp(1.5rem,3.8vw,3.4rem);font-weight:800;line-height:1.3;letter-spacing:-.025em;margin:0 0 20px}
+.intro-scene__number{font-size:.4em;letter-spacing:.06em;color:#326DCA;align-self:center}
+.intro-scene__price{display:inline-block;min-height:34px;margin:0;background:#F8D38C;color:#2B1D14;border-radius:999px;padding:8px 18px;font-size:clamp(.9rem,1.5vw,1.15rem);font-weight:600}
+[data-intro-type]:not(.is-done)::after{content:'';display:inline-block;width:2px;height:.9em;vertical-align:-.05em;background:currentColor;margin-left:3px;animation:intro-caret .8s steps(1) infinite}
+@keyframes intro-caret{50%{opacity:0}}
+.wnw-intro__skip{position:absolute;top:max(24px,env(safe-area-inset-top));right:max(24px,env(safe-area-inset-right));z-index:3;min-height:46px;padding:10px 20px;border:1px solid #835D42;border-radius:999px;background:#F9EED9;color:#835D42;font-size:.9rem;font-weight:700;opacity:0;visibility:hidden;transition:opacity .2s}
+.skip-ready .wnw-intro__skip{opacity:1;visibility:visible}
+.wnw-intro__skip svg{margin-left:12px;vertical-align:middle}
+.wnw-intro button{cursor:pointer;font-family:inherit}
+.wnw-intro button:focus-visible{outline:3px solid #326DCA;outline-offset:5px}
+.wnw-intro__caption{position:absolute;bottom:max(20px,env(safe-area-inset-bottom));left:24px;font-size:.75rem;margin:0;color:#6B5646}
+.wnw-intro__steps{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+.wnw-intro__steps span{width:24px;height:3px;background:#d5c1a8;border-radius:3px}
+.wnw-intro__steps .is-current{background:#835D42}
+.is-finale .wnw-intro__steps,.is-finale .wnw-intro__caption{visibility:hidden}
+.wnw-intro__finale{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 24px;animation:intro-finale .6s cubic-bezier(.16,1,.3,1) both}
+.wnw-intro__finale>img{width:72px;height:72px;margin-bottom:20px}
+.wnw-intro__wordmark{font-size:clamp(3rem,6.5vw,5.5rem);font-weight:800;line-height:1;letter-spacing:-.04em;margin:0}
+.wnw-intro__wordmark>span:not(.sr-only){color:#326DCA}
+.wnw-intro__tagline{font-size:clamp(.85rem,1.5vw,1.1rem);margin:24px 0 32px;min-height:2.6em;max-width:32ch;line-height:1.6}
+.wnw-intro__enter{display:flex;align-items:center;justify-content:center;gap:28px;min-height:50px;min-width:180px;border:0;border-radius:999px;padding:12px 24px;background:#326DCA;color:white;font-weight:700}
+.wnw-intro__enter:hover{background:#2757A8}
+@keyframes intro-finale{from{opacity:0;transform:translateY(16px) scale(.96)}to{opacity:1;transform:none}}
+.intro-hero-arrive .hero-copy>:is(h1,p,.hero-actions){animation:intro-hero .7s cubic-bezier(.16,1,.3,1) both}
+.intro-hero-arrive .hero-copy>p{animation-delay:.12s}
+.intro-hero-arrive .hero-actions{animation-delay:.22s}
+@keyframes intro-hero{from{opacity:.4;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:767px){
+ .intro-scene__cutout{left:50%;top:40%;width:min(62vw,60vh)}
+ .intro-scene__copy{left:24px;right:24px;bottom:15vh}
+ .intro-scene__title{gap:12px;font-size:clamp(1.5rem,6vw,2.4rem);margin-bottom:16px;min-height:2.6em;align-items:flex-start}
+ .intro-scene__number{align-self:flex-start;margin-top:8px;font-size:.5em}
+ .wnw-intro__skip{top:max(18px,env(safe-area-inset-top));right:18px}
+ .wnw-intro__steps{left:auto;right:24px;transform:none}
+ .wnw-intro__enter{width:min(100%,320px)}
+}
+@media(max-height:500px){.intro-scene__cutout{top:40%;width:45vh}.intro-scene__copy{bottom:16%;left:6vw}.intro-scene__title{font-size:1.5rem;min-height:0;margin-bottom:10px}.wnw-intro__finale>img{display:none}.wnw-intro__wordmark{font-size:2.5rem}.wnw-intro__tagline{margin:12px 0}.wnw-intro__finale{padding:24px}}
+@media(prefers-reduced-motion:reduce){.wnw-intro{display:none!important}.intro-hero-arrive .hero-copy>*{animation:none!important}}
